@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title> Asac</title>
+    <meta content="Abdulaziz Algurar advanced school website" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/images/asac_ltuc_logo.jpg" rel="icon">
+
+    <!-- Template Main CSS File -->
+    <link href="reset_default.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ************ HEADER ************ -->
+    <header>
+        <div class="overlay"></div>
+        <div>
+            <a href="/" class="logo">
+                <img src="assets/images/asac_ltuc_logo.jpg" alt="Logo"></a>
+            <nav id="navbar" class="navbar hide-mobile-nav">
+
+                <button class="hide-on-desktop nav-close-btn">close</button>
+                <a href="" class="mobile-nav-logo hide-on-desktop">
+                    <img src="assets/images/asac_ltuc_logo.jpg" alt="Logo">
+                </a>
+
+                <ul>
+                    <li class="nav-item dropdown ">
+                        <a href='{{self.link_url}}'><span class="h-span">About</span></a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a href='{{self.link_url}}'><span class="h-span">Important numbers</span></a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a href='{{self.link_url}}'><span class="h-span">Majors</span></a>
+                    </li>
+                </ul>
+                <div class="hide-on-desktop mobile-nav-socialM">
+                    <a href="https://facebook.com">
+                        <svg class='fs' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M13.355 22v-9.123h3.062l.459-3.555h-3.52v-2.27c0-1.03.285-1.731 1.761-1.731L17 5.32V2.14A25.233 25.233 0 0 0 14.257 2c-2.715 0-4.573 1.657-4.573 4.7v2.622h-3.07v3.555h3.07V22h3.671Z" />
+                        </svg>
+                    </a>
+                    <a href="https://x.com">
+                        <svg class='tw' width="17" height="16" viewBox="0 0 17 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.78329 2.16668C3.78306 2.6087 3.60726 3.03254 3.29454 3.34494C2.98182 3.65735 2.55781 3.83273 2.11578 3.83251C1.67376 3.83229 1.24992 3.65648 0.937517 3.34377C0.625113 3.03105 0.44973 2.60704 0.449951 2.16501C0.450172 1.72298 0.625979 1.29915 0.938696 0.986742C1.25141 0.674338 1.67542 0.498955 2.11745 0.499176C2.55948 0.499397 2.98331 0.675204 3.29572 0.987921C3.60812 1.30064 3.78351 1.72465 3.78329 2.16668ZM3.83329 5.06668H0.499951V15.5H3.83329V5.06668ZM9.09995 5.06668H5.78329V15.5H9.06662V10.025C9.06662 6.97501 13.0416 6.69168 13.0416 10.025V15.5H16.3333V8.89168C16.3333 3.75001 10.45 3.94168 9.06662 6.46668L9.09995 5.06668Z"
+                                fill="#3A3A3A" />
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com">
+                        <svg class='ln' width="20" height="16" viewBox="0 0 20 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.375 2.27735C18.6717 2.58296 17.9275 2.7843 17.166 2.87501C17.9663 2.4064 18.5681 1.66195 18.8586 0.781256C18.102 1.22368 17.2756 1.5341 16.4148 1.69923C16.0524 1.31935 15.6165 1.01716 15.1336 0.811001C14.6507 0.604845 14.1309 0.499036 13.6059 0.500007C11.4801 0.500007 9.75977 2.19532 9.75977 4.28516C9.75826 4.57585 9.79157 4.86568 9.85898 5.14844C8.33464 5.07698 6.842 4.68812 5.47656 4.00675C4.11111 3.32537 2.90292 2.36648 1.9293 1.19141C1.58772 1.76724 1.40708 2.42424 1.40625 3.09376C1.40625 4.40626 2.09102 5.56641 3.125 6.2461C2.51239 6.23156 1.91234 6.06942 1.37578 5.77344V5.82032C1.37578 7.65626 2.70391 9.1836 4.46172 9.53126C4.13117 9.61938 3.79053 9.66402 3.44844 9.66407C3.20569 9.66449 2.9635 9.64094 2.72539 9.59376C3.21406 11.0977 4.63633 12.1914 6.32109 12.2227C4.9521 13.2777 3.27134 13.848 1.54297 13.8438C1.23618 13.8433 0.929674 13.825 0.625 13.7891C2.38327 14.9118 4.42713 15.5057 6.51328 15.5C13.5977 15.5 17.468 9.73048 17.468 4.72657C17.468 4.56251 17.4637 4.39844 17.4559 4.23829C18.2071 3.70394 18.857 3.03989 19.375 2.27735Z"
+                                fill="#3A3A3A" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+            <svg class='burger-menu-icon' width="24" height="16" viewBox="0 0 24 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M1.33334 16C0.95556 16 0.638671 15.872 0.382671 15.616C0.126671 15.36 -0.000884275 15.0436 4.61361e-06 14.6667C4.61361e-06 14.2889 0.128005 13.972 0.384005 13.716C0.640005 13.46 0.956449 13.3324 1.33334 13.3333H22.6667C23.0444 13.3333 23.3613 13.4613 23.6173 13.7173C23.8733 13.9733 24.0009 14.2898 24 14.6667C24 15.0444 23.872 15.3613 23.616 15.6173C23.36 15.8733 23.0436 16.0009 22.6667 16H1.33334ZM1.33334 9.33334C0.95556 9.33334 0.638671 9.20534 0.382671 8.94934C0.126671 8.69334 -0.000884275 8.37689 4.61361e-06 8C4.61361e-06 7.62223 0.128005 7.30534 0.384005 7.04934C0.640005 6.79334 0.956449 6.66578 1.33334 6.66667H22.6667C23.0444 6.66667 23.3613 6.79467 23.6173 7.05067C23.8733 7.30667 24.0009 7.62312 24 8C24 8.37778 23.872 8.69467 23.616 8.95067C23.36 9.20667 23.0436 9.33423 22.6667 9.33334H1.33334ZM1.33334 2.66667C0.95556 2.66667 0.638671 2.53867 0.382671 2.28267C0.126671 2.02667 -0.000884275 1.71023 4.61361e-06 1.33334C4.61361e-06 0.95556 0.128005 0.638672 0.384005 0.382672C0.640005 0.126672 0.956449 -0.000884275 1.33334 4.6136e-06H22.6667C23.0444 4.6136e-06 23.3613 0.128005 23.6173 0.384005C23.8733 0.640005 24.0009 0.956449 24 1.33334C24 1.71112 23.872 2.028 23.616 2.284C23.36 2.54 23.0436 2.66756 22.6667 2.66667H1.33334Z"
+                    fill="white" />
+            </svg>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- ************ HEADER ************ -->
+        <section id="banner">
+            <div class="banner-img">
+                <img src='https://th.bing.com/th/id/OIP.ADxbxfNWjCnbsap-1FQZlgHaEo?rs=1&pid=ImgDetMain'>
+            </div>
+
+            <div class="banner-content">
+                <div class="banner-content-inner">
+                    <h1>ASAC</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum blanditiis doloribus quidem,
+                        aperiam quaerat nam non, pariatur fugit illum libero explicabo amet suscipit labore ullam sed
+                        modi unde enim voluptates?</p>
+                </div>
+                <svg class="banner-arrow" width="200" height="200" viewBox="0 0 200 200" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="200" height="200" fill="url(#pattern0)" />
+                    <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_108_150" transform="scale(0.00333333)" />
+                        </pattern>
+                        <image id="image0_108_150" width="300" height="300"
+                            xlink:href="data:image/png;base64,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OrL2mIcKVswqOgZ5VkSe9T0d6qb8JSBY7sLdAqdjcvr5d/9gH4gREKyYVXQNcioqp57bpWvarwQEy91YC1wdl6uft/5hPhgrIFixq+kY7KrIXPWcDjVTbgUEayvnc/8IPBqbRz9vFe8jIFjvs+ujv3Qbne1Q2/9VYvt9PpchIFgZe/gWUzwrWmL1La7L6kcI1orNh74SOB0tsXrvuydY773/I7/+VLTE6si6qh4qWFXr6hn26miJVc/uT04qWCd13/zZV0VLrN78Iv3r5wuWu3BU4NFoidXR9dQ9XLDqVtY38DZaYtW369MTC9ZpYc//KXBvtMTKxfmdgGC5F08TmEZLrJ62krovEqy6lXUPfCtaYtW939PTC9ZpYc//rcDncAmVizIREKyJkjMECEQICFbEGgxBgMBEQLAmSs4QIBAhIFgRazAEAQITAcGaKDlDgECEgGBFrMEQBAhMBARrouQMAQIRAoIVsQZDECAwERCsiZIzBAhECAhWxBoMQYDARECwJkrOECAQISBYEWswBAECEwHBmig5Q4BAhIBgRazBEAQITAQEa6LkDAECEQKCFbEGQxAgMBEQrImSMwQIRAgIVsQaDEGAwERAsCZKzhAgECEgWBFrMAQBAhMBwZooOUOAQISAYEWswRAECEwEBGui5AwBAhECghWxBkMQIDAREKyJkjMECEQICFbEGgxBgMBEQLAmSs4QIBAhIFgRazAEAQITAcGaKDlDgECEgGBFrMEQBAhMBARrouQMAQIRAoIVsQZDECAwERCsiZIzBAhECAhWxBoMQYDARECwJkrOECAQISBYEWswBAECEwHBmig5Q4BAhIBgRazBEAQITAQEa6LkDAECEQKCFbEGQxAgMBEQrImSMwQIRAgIVsQaDEGAwERAsCZKzhAgECEgWBFrMAQBAhMBwZooOUOAQISAYEWswRAECEwEBGui5AwBAhECghWxBkMQIDAREKyJkjMECEQICFbEGgxBgMBEQLAmSs4QIBAhIFgRazAEAQITAcGaKDlDgECEgGBFrMEQBAhMBARrouQMAQIRAoIVsQZDECAwERCsiZIzBAhECAhWxBoMQYDARECwJkrOECAQISBYEWswBAECEwHBmig5Q4BAhIBgRazBEAQITAQEa6LkDAECEQKCFbEGQxAgMBEQrImSMwQIRAgIVsQaDEGAwERAsCZKzhAgECEgWBFrMAQBAhMBwZooOUOAQISAYEWswRAECEwEBGui5AwBAhECghWxBkMQIDAREKyJkjMECEQICFbEGgxBgMBEQLAmSs4QIBAhIFgRazAEAQITAcGaKDlDgECEgGBFrMEQBAhMBARrouQMAQIRAoIVsQZDECAwERCsiZIzBAhECAhWxBoMQYDARECwJkrOECAQISBYEWswBAECEwHBmig5Q4BAhIBgRazBEAQITAQEa6LkDAECEQKCFbEGQxAgMBEQrImSMwQIRAgIVsQaDEGAwERAsCZKzhAgECEgWBFrMAQBAhMBwZooOUOAQISAYEWswRAECEwEBGui5AwBAhECghWxBkMQIDAREKyJkjMECEQICFbEGgxBgMBEQLAmSs4QIBAhIFgRazAEAQITAcGaKDlDgECEgGBFrMEQBAhMBARrouQMAQIRAoIVsQZDECAwERCsiZIzBAhECAhWxBoMQYDARECwJkrOECAQISBYEWswBAECEwHBmig5Q4BAhIBgRazBEAQITAQEa6LkDAECEQKCFbEGQxAgMBEQrImSMwQIRAgIVsQaDEGAwERAsCZKzhAgECEgWBFrMAQBAhMBwZooOUOAQISAYEWswRAECEwEBGui5AwBAhECghWxBkMQIDAREKyJkjMECEQICFbEGgxBgMBEQLAmSs4QIBAhIFgRazAEAQITAcGaKDlDgECEgGBFrMEQBAhMBARrouQMAQIRAoIVsQZDECAwERCsiZIzBAhECAhWxBoMQYDARECwJkrOECAQIfA/mLLFPKMfSvQAAAAASUVORK5CYII=" />
+                    </defs>
+                </svg>
+
+            </div>
+        </section>
+
+        <!-- *************** ABOUT THE DEPARTMENT **************** -->
+
+        <section class="text-sec" id='text-sec'>
+            <div class='ltuc-description'>
+                <h1>About the department</h1>
+                <div>The Abdulaziz Al Ghurair Department of Computing (ASAC) was established in 2019 to build the
+                    programming language and development skills and capabilities of learners while qualifying them for
+                    current and future employment in the fields.
+
+                    Modern programs are designed based on extensive studies of oil prices in global markets and
+                    excellence in them.
+
+                    The initial stages of spatial design went through a phase of focused collaborative discussion,
+                    interaction and a sense of community. Our education partner, Classmates Academy, provided more
+                    insight into ideas on developing an environment that encourages learning and growth. Implemented
+                    Architecture, which also designed and built Expedia's Jordan office, also introduced best and best
+                    practices in working at ASAC as technology companies that motivate students to be an impactful and
+                    powerful team.</div>
+            </div>
+        </section>
+
+        <!-- ************** PROGRAMS *************** -->
+        <section id="detailed-programs">
+            <div class="title-and-filter">
+                <h1>Programs</h1>
+
+                <div class="filteration-section">
+                    <form class="search-form">
+                        <input type="text" name="search" placeholder="Search ..." />
+                        <button type="submit">
+                            <svg width="15" height="15" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#555555"
+                                    d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z" />
+                            </svg>
+                        </button>
+                    </form>
+
+                    <div class="relative">
+                        <button class="filter-button degree-button">
+                            <span>Degree</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.0003 20C10.7169 20 10.4793 19.904 10.2873 19.712C10.0953 19.52 9.99959 19.2827 10.0003 19V13L4.20025 5.6C3.95025 5.26667 3.91259 4.91667 4.08725 4.55C4.26192 4.18333 4.56625 4 5.00025 4H19.0003C19.4336 4 19.7379 4.18333 19.9133 4.55C20.0886 4.91667 20.0509 5.26667 19.8003 5.6L14.0003 13V19C14.0003 19.2833 13.9043 19.521 13.7123 19.713C13.5203 19.905 13.2829 20.0007 13.0003 20H11.0003Z" />
+                            </svg>
+
+                        </button>
+                        <form class="filter-form degree-form" onsubmit="event.preventDefault();">
+                            <ul>
+                                <li>
+                                    <label for="Bachelors">
+                                        <input type="checkbox" name="Bachelors" value="Bachelors" />
+                                        Bachelors
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="Technical_diploma">
+                                        <input type="checkbox" name="Technical_diploma" value="Technical_diploma" />
+                                        Technical diploma
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="International_Diploma">
+                                        <input type="checkbox" name="International_Diploma"
+                                            value="International_Diploma" />
+                                        International Diploma
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="Intermediate_university_diploma">
+                                        <input type="checkbox" name="Intermediate_university_diploma"
+                                            value="Intermediate_university_diploma" />
+                                        Intermediate university diploma
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="All">
+                                        <input type="checkbox" name="All" value="All" />
+                                        All
+                                    </label>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+
+                    <div class="relative">
+                        <button class="filter-button location-button">
+                            <span>Location</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.0003 20C10.7169 20 10.4793 19.904 10.2873 19.712C10.0953 19.52 9.99959 19.2827 10.0003 19V13L4.20025 5.6C3.95025 5.26667 3.91259 4.91667 4.08725 4.55C4.26192 4.18333 4.56625 4 5.00025 4H19.0003C19.4336 4 19.7379 4.18333 19.9133 4.55C20.0886 4.91667 20.0509 5.26667 19.8003 5.6L14.0003 13V19C14.0003 19.2833 13.9043 19.521 13.7123 19.713C13.5203 19.905 13.2829 20.0007 13.0003 20H11.0003Z" />
+                            </svg>
+
+                        </button>
+                        <form class="filter-form location-form" onsubmit="event.preventDefault();">
+                            <ul>
+                                <li>
+                                    <label for="Amman">
+                                        <input type="checkbox" name="Amman" value="Amman" />
+                                        Amman
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="Irbid">
+                                        <input type="checkbox" name="Irbid" value="Irbid" />
+                                        Irbid
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="All">
+                                        <input type="checkbox" name="All" value="All" />
+                                        All
+                                    </label>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+
+                    <div class="relative">
+                        <button class="filter-button timing-button">
+                            <span>Location</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.0003 20C10.7169 20 10.4793 19.904 10.2873 19.712C10.0953 19.52 9.99959 19.2827 10.0003 19V13L4.20025 5.6C3.95025 5.26667 3.91259 4.91667 4.08725 4.55C4.26192 4.18333 4.56625 4 5.00025 4H19.0003C19.4336 4 19.7379 4.18333 19.9133 4.55C20.0886 4.91667 20.0509 5.26667 19.8003 5.6L14.0003 13V19C14.0003 19.2833 13.9043 19.521 13.7123 19.713C13.5203 19.905 13.2829 20.0007 13.0003 20H11.0003Z" />
+                            </svg>
+
+                        </button>
+                        <form class="filter-form timing-form" onsubmit="event.preventDefault();">
+                            <ul>
+                                <li>
+                                    <label for="Morning">
+                                        <input type="checkbox" name="Morning" value="Morning" />
+                                        Morning
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="Evening">
+                                        <input type="checkbox" name="Evening" value="Evening" />
+                                        Evening
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="All">
+                                        <input type="checkbox" name="All" value="All" />
+                                        All
+                                    </label>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="result"></div>
+            <table tablefor="{{self.school}} {{self.degree}} {{self.location}}" class="program-table">
+                <thead>
+                    <tr class="displayed-tr">
+                        <th class="col-5">Program name</th>
+                        <th class='col-5' value="degree"> Degree </th>
+                        <th class='col-5' value="location"> Location </th>
+                        <th class='col-5' value="timing"> Timing </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- ************** NUMBERS *************** -->
+
+        <section id='fact-count{% if self.hash_id %} {{self.hash_id}}{% endif %}'>
+            <div class="fact-count">
+                <div class="fact-body">
+                    <h2 class="fact-title"><span class="fact-number">1000</span>Student</h2>
+                    <p class="fact-text ltuc-p">At Present, There Are Five Departments Within The Faculty: Department
+                        Deogrphy And Enviroment.</p>
+                </div>
+                <div class="fact-body">
+                    <h2 class="fact-title"><span class="fact-number">1000</span>Student</h2>
+                    <p class="fact-text ltuc-p">At Present, There Are Five Departments Within The Faculty: Department
+                        Deogrphy And Enviroment.</p>
+                </div>
+                <div class="fact-body">
+                    <h2 class="fact-title"><span class="fact-number">1000</span>Student</h2>
+                    <p class="fact-text ltuc-p">At Present, There Are Five Departments Within The Faculty: Department
+                        Deogrphy And Enviroment.</p>
+                </div>
+            </div>
+        </section>
+        <!-- ************** FOOTER *************** -->
+    </main>
+    
+    <footer id="footer">
+        <div class="footer-upper row">
+            <div class="footer-items row">
+                <div class="footer-item">
+                    <h3>About</h3>
+                    <ul>
+                        <a href="None">
+                            <li>Facts</li>
+                        </a>
+                        <a href="None">
+                            <li>History</li>
+                        </a>
+                        <a href="None">
+                            <li>Contact</li>
+                        </a>
+                        <a href="None">
+                            <li>Management</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h3>Faculty</h3>
+                    <ul>
+                        <a href="None">
+                            <li>Buisness</li>
+                        </a>
+                        <a href="None">
+                            <li>Engineering</li>
+                        </a>
+                        <a href="None">
+                            <li>Law</li>
+                        </a>
+                        <a href="None">
+                            <li>Humanities &amp; Science
+                            </li>
+                        </a>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-item">
+
+                    <h3>Admission</h3>
+                    <ul>
+                        <a href="None">
+                            <li>
+                                Undergraduate
+                            </li>
+                        </a>
+                        <a href="None">
+                            <li>
+                                Graduate
+                            </li>
+                        </a>
+                        <a href="None">
+                            <li>
+                                Financial Aid
+                            </li>
+                        </a>
+                        <a href="None">
+                            <li>
+                                PHD
+                            </li>
+                        </a>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-item">
+
+                    <h3>Updates</h3>
+                    <ul>
+                        <a href="None">
+                            <li>
+                                Notice
+                            </li>
+                        </a>
+                        <a href="None">
+                            <li>
+                                Results
+                            </li>
+                        </a>
+                        <a href="None">
+                            <li>
+                                Login
+                            </li>
+                        </a>
+                        <a href="None">
+                            <li>
+                                Alumni
+                            </li>
+                        </a>
+                    </ul>
+
+                </div>
+
+
+
+
+                <div class="footer-btns">
+
+
+
+                    <a href="None">
+                        APPLYING
+                    </a>
+
+
+                    <a href="None">
+                        SCHOLARSHIP
+                    </a>
+
+
+                    <a href="None">
+                        CAREER
+                    </a>
+
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="footer-lower">
+            <img src="/media/images/MicrosoftTeams-image_2_1_ykCVesb.original.png" class="logo footer">
+
+            <div class="copyrights">
+                <span>Copyright © 2023 Luminus Education Group</span>
+                <span>All rights reserved</span>
+                <a href="/documents/1/ion_logo-twitter_0coTzap.svg"><span>Privacy &amp; Policy</span></a>
+
+            </div>
+
+            <div class="footer-social-media">
+                <a href="http://google.com" class="">
+                    <object class="footer-sm" data="/media/documents/ion_logo-twitter_0coTzap.svg"
+                        type="image/svg+xml">
+                        <img src="/documents/1/ion_logo-twitter_0coTzap.svg">
+                    </object>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
