@@ -23,7 +23,8 @@
         <div class="overlay"></div>
         <div>
             <a href="/" class="logo">
-                <img src="assets/images/asac_ltuc_logo.jpg" alt="Logo"></a>
+                <img src="assets/images/LTUCLogo.png" alt="Logo">
+            </a>
             <nav id="navbar" class="navbar hide-mobile-nav">
 
                 <button class="hide-on-desktop nav-close-btn">close</button>
@@ -33,13 +34,13 @@
 
                 <ul>
                     <li class="nav-item dropdown ">
-                        <a href='{{self.link_url}}'><span class="h-span">About</span></a>
+                        <a href='#text-sec'><span class="h-span">About</span></a>
                     </li>
                     <li class="nav-item dropdown ">
-                        <a href='{{self.link_url}}'><span class="h-span">Important numbers</span></a>
+                        <a href='#fact-count'><span class="h-span">Important numbers</span></a>
                     </li>
                     <li class="nav-item dropdown ">
-                        <a href='{{self.link_url}}'><span class="h-span">Majors</span></a>
+                        <a href='#detailed-programs'><span class="h-span">Majors</span></a>
                     </li>
                 </ul>
                 <div class="hide-on-desktop mobile-nav-socialM">
@@ -81,7 +82,7 @@
         <!-- ************ HEADER ************ -->
         <section id="banner">
             <div class="banner-img">
-                <img src='https://th.bing.com/th/id/OIP.ADxbxfNWjCnbsap-1FQZlgHaEo?rs=1&pid=ImgDetMain'>
+                <img src='assets/images/Uraiqat-Architects-LTUC-Luminus-Technical-Unive.original_minbhPK.png'>
             </div>
 
             <div class="banner-content">
@@ -107,40 +108,59 @@
         </section>
 
         <!-- *************** ABOUT THE DEPARTMENT **************** -->
+        <section class="text-sec" id="text-sec">
+            <div class="ltuc-description">
 
-        <section class="text-sec" id='text-sec'>
-            <div class='ltuc-description'>
                 <h1>About the department</h1>
-                <div>The Abdulaziz Al Ghurair Department of Computing (ASAC) was established in 2019 to build the
-                    programming language and development skills and capabilities of learners while qualifying them for
-                    current and future employment in the fields.
 
-                    Modern programs are designed based on extensive studies of oil prices in global markets and
-                    excellence in them.
 
-                    The initial stages of spatial design went through a phase of focused collaborative discussion,
-                    interaction and a sense of community. Our education partner, Classmates Academy, provided more
-                    insight into ideas on developing an environment that encourages learning and growth. Implemented
-                    Architecture, which also designed and built Expedia's Jordan office, also introduced best and best
-                    practices in working at ASAC as technology companies that motivate students to be an impactful and
-                    powerful team.</div>
+                <div>
+                    <p data-block-key="iewz9">The Abdulaziz Al Ghurair Department of Computing (ASAC) was established in
+                        2019 to build the programming language and development skills and capabilities of learners while
+                        qualifying them for current and future employment in the fields.<br><br></p>
+                    <p data-block-key="chi7u">Modern programs are designed based on extensive studies of oil prices in
+                        global markets and excellence in them.<br><br></p>
+                    <p data-block-key="628c5">The initial stages of spatial design went through a phase of focused
+                        collaborative discussion, interaction and a sense of community. Our education partner,
+                        Classmates Academy, provided more insight into ideas on developing an environment that
+                        encourages learning and growth. Implemented Architecture, which also designed and built
+                        Expedia's Jordan office, also introduced best and best practices in working at ASAC as
+                        technology companies that motivate students to be an impactful and powerful team.</p>
+                </div>
+
+
             </div>
         </section>
+        <!-- ************** NUMBERS *************** -->
 
+        <section id='fact-count'>
+            <div class="fact-count">
+                <div class="fact-body">
+                    <h2 class="fact-title"><span class="fact-number">1000</span>Student</h2>
+                    <p class="fact-text ltuc-p">At Present, There Are Five Departments Within The Faculty: Department
+                        Deogrphy And Enviroment.</p>
+                </div>
+                <div class="fact-body">
+                    <h2 class="fact-title"><span class="fact-number">1000</span>Student</h2>
+                    <p class="fact-text ltuc-p">At Present, There Are Five Departments Within The Faculty: Department
+                        Deogrphy And Enviroment.</p>
+                </div>
+                <div class="fact-body">
+                    <h2 class="fact-title"><span class="fact-number">1000</span>Student</h2>
+                    <p class="fact-text ltuc-p">At Present, There Are Five Departments Within The Faculty: Department
+                        Deogrphy And Enviroment.</p>
+                </div>
+            </div>
+        </section>
         <!-- ************** PROGRAMS *************** -->
         <section id="detailed-programs">
             <div class="title-and-filter">
                 <h1>Programs</h1>
 
                 <div class="filteration-section">
+                    <!-- remove and handle error -->
                     <form class="search-form">
-                        <input type="text" name="search" placeholder="Search ..." />
-                        <button type="submit">
-                            <svg width="15" height="15" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="#555555"
-                                    d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z" />
-                            </svg>
-                        </button>
+
                     </form>
 
                     <div class="relative">
@@ -227,7 +247,7 @@
 
                     <div class="relative">
                         <button class="filter-button timing-button">
-                            <span>Location</span>
+                            <span>Timing</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -262,7 +282,8 @@
                 </div>
             </div>
             <div class="result"></div>
-            <table tablefor="{{self.school}} {{self.degree}} {{self.location}}" class="program-table">
+            <table tablefor="Abdul_Aziz_Al_Ghurair_School_of_Advanced_Computing All_Degrees All_Campuses"
+                class="program-table">
                 <thead>
                     <tr class="displayed-tr">
                         <th class="col-5">Program name</th>
@@ -276,67 +297,79 @@
             </table>
         </section>
 
-        <!-- ************** NUMBERS *************** -->
-
-        <section id='fact-count{% if self.hash_id %} {{self.hash_id}}{% endif %}'>
-            <div class="fact-count">
-                <div class="fact-body">
-                    <h2 class="fact-title"><span class="fact-number">1000</span>Student</h2>
-                    <p class="fact-text ltuc-p">At Present, There Are Five Departments Within The Faculty: Department
-                        Deogrphy And Enviroment.</p>
-                </div>
-                <div class="fact-body">
-                    <h2 class="fact-title"><span class="fact-number">1000</span>Student</h2>
-                    <p class="fact-text ltuc-p">At Present, There Are Five Departments Within The Faculty: Department
-                        Deogrphy And Enviroment.</p>
-                </div>
-                <div class="fact-body">
-                    <h2 class="fact-title"><span class="fact-number">1000</span>Student</h2>
-                    <p class="fact-text ltuc-p">At Present, There Are Five Departments Within The Faculty: Department
-                        Deogrphy And Enviroment.</p>
-                </div>
-            </div>
-        </section>
         <!-- ************** FOOTER *************** -->
     </main>
-    
+
     <footer id="footer">
+
         <div class="footer-upper row">
+
             <div class="footer-items row">
-                <div class="footer-item">
-                    <h3>About</h3>
-                    <ul>
-                        <a href="None">
-                            <li>Facts</li>
-                        </a>
-                        <a href="None">
-                            <li>History</li>
-                        </a>
-                        <a href="None">
-                            <li>Contact</li>
-                        </a>
-                        <a href="None">
-                            <li>Management</li>
-                        </a>
-                    </ul>
-                </div>
+
 
                 <div class="footer-item">
-                    <h3>Faculty</h3>
+
+                    <h3>About</h3>
                     <ul>
+
                         <a href="None">
-                            <li>Buisness</li>
-                        </a>
-                        <a href="None">
-                            <li>Engineering</li>
-                        </a>
-                        <a href="None">
-                            <li>Law</li>
-                        </a>
-                        <a href="None">
-                            <li>Humanities &amp; Science
+                            <li>
+                                Facts
                             </li>
                         </a>
+
+                        <a href="None">
+                            <li>
+                                History
+                            </li>
+                        </a>
+
+                        <a href="None">
+                            <li>
+                                Contact
+                            </li>
+                        </a>
+
+                        <a href="None">
+                            <li>
+                                Management
+                            </li>
+                        </a>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-item">
+
+                    <h3>Faculty</h3>
+                    <ul>
+
+                        <a href="None">
+                            <li>
+                                Buisness
+                            </li>
+                        </a>
+
+                        <a href="None">
+                            <li>
+                                Engineering
+                            </li>
+                        </a>
+
+                        <a href="None">
+                            <li>
+                                Law
+                            </li>
+                        </a>
+
+                        <a href="None">
+                            <li>
+                                Humanities &amp; Science
+                            </li>
+                        </a>
+
                     </ul>
 
                 </div>
@@ -346,26 +379,31 @@
 
                     <h3>Admission</h3>
                     <ul>
+
                         <a href="None">
                             <li>
                                 Undergraduate
                             </li>
                         </a>
+
                         <a href="None">
                             <li>
                                 Graduate
                             </li>
                         </a>
+
                         <a href="None">
                             <li>
                                 Financial Aid
                             </li>
                         </a>
+
                         <a href="None">
                             <li>
                                 PHD
                             </li>
                         </a>
+
                     </ul>
 
                 </div>
@@ -375,26 +413,31 @@
 
                     <h3>Updates</h3>
                     <ul>
+
                         <a href="None">
                             <li>
                                 Notice
                             </li>
                         </a>
+
                         <a href="None">
                             <li>
                                 Results
                             </li>
                         </a>
+
                         <a href="None">
                             <li>
                                 Login
                             </li>
                         </a>
+
                         <a href="None">
                             <li>
                                 Alumni
                             </li>
                         </a>
+
                     </ul>
 
                 </div>
@@ -427,7 +470,8 @@
 
         </div>
         <div class="footer-lower">
-            <img src="/media/images/MicrosoftTeams-image_2_1_ykCVesb.original.png" class="logo footer">
+
+            <img src="./assets/images/LTUCLogo.png" class="logo footer">
 
             <div class="copyrights">
                 <span>Copyright © 2023 Luminus Education Group</span>
@@ -437,17 +481,20 @@
             </div>
 
             <div class="footer-social-media">
-                <a href="http://google.com" class="">
-                    <object class="footer-sm" data="/media/documents/ion_logo-twitter_0coTzap.svg"
-                        type="image/svg+xml">
-                        <img src="/documents/1/ion_logo-twitter_0coTzap.svg">
-                    </object>
+
+                <a href="http://google.com">
+                    <?xml version="1.0" ?><svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" width="24px" height="24px"
+                        viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <path
+                            d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z" />
+                    </svg>
                 </a>
+
             </div>
 
         </div>
     </footer>
-
 
 
 

@@ -8,7 +8,9 @@ html {
 body{
     font-family: "Poppins";
 }
-
+#footer{
+  background-color: #000000;
+}
 /* HEADER */
 section {
   margin-bottom: 2.89vw;
@@ -423,7 +425,6 @@ nav a {
 }
 
 header.active .logo img {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
 
@@ -2069,7 +2070,7 @@ header.active .down-arrow path {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2px;
+  padding: 7px;
   transition: ease 300ms;
 }
 
@@ -4776,6 +4777,7 @@ input[type="checkbox"]:checked::after {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-bottom: 20px;
   }
 
   .mobile-programs .displayed-tr {
@@ -4799,7 +4801,7 @@ input[type="checkbox"]:checked::after {
     font-weight: 500;
     padding-top: 30px;
     padding-bottom: 30px;
-
+    width: 90%;
   }
 
   .mobile-programs .displayed-tr .accordion span:nth-of-type(1) {
