@@ -185,10 +185,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return window.innerWidth < 1023;
         }
         isEnglish() {
-            return "/" + slug.pathname.split("/")[1] + "/" == "/en/";
+            return true
         }
         isArabic() {
-            return "/" + slug.pathname.split("/")[1] + "/" == "/ar/";
+            return false
         }
     }
 
@@ -1561,7 +1561,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollMotion() {
             for (let i = 0; i < this.sliders.length; i++) {
                 this.sliders[i].addEventListener("scroll", (e) => {
-                    if (page_obj.isEnglish()) {
+                    if (true) {
                         this.englishSliding(e, i);
                     } else if (page_obj.isArabic()) {
                         this.arabicSliding(e, i);
@@ -1617,16 +1617,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         hideArrow(slider, scroll_i, right, left) {
             if (slider.classList.contains("left")) {
-                left.classList.toggle("hide", page_obj.isEnglish());
+                left.classList.toggle("hide", true);
                 right.classList.toggle("hide", page_obj.isArabic());
             } else if (slider.classList.contains("right")) {
-                slider.scrollLeft = page_obj.isEnglish()
+                slider.scrollLeft = true
                     ? scroll_i - 0.5 * window.innerWidth
                     : -scroll_i + 0.5 * window.innerWidth;
-                left.classList.toggle("hide", page_obj.isArabic());
-                right.classList.toggle("hide", page_obj.isEnglish());
+                left.classList.toggle("hide", false);
+                right.classList.toggle("hide", true);
             } else if (slider.classList.contains("center")) {
-                slider.scrollLeft = page_obj.isEnglish()
+                slider.scrollLeft = true
                     ? 0.5 * scroll_i - 0.5 * window.innerWidth
                     : -0.5 * scroll_i + 0.5 * window.innerWidth;
             }

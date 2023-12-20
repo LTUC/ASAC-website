@@ -5,12 +5,15 @@
 html {
   scroll-behavior: smooth;
 }
-body{
-    font-family: "Poppins";
+
+body {
+  font-family: "Poppins";
 }
-#footer{
+
+#footer {
   background-color: #000000;
 }
+
 /* HEADER */
 section {
   margin-bottom: 2.89vw;
@@ -451,7 +454,8 @@ header.active .logo {
 }
 
 header.active .h-span {
-  color: black
+  color: black;
+  font-weight: 500;
 }
 
 header.active .burger-menu-icon path {
@@ -497,11 +501,12 @@ header.mobile span {
 
 .nav-item:hover>span,
 .nav-item:hover>a span {
-  background: -webkit-linear-gradient(270deg, #ffffff 0%, #a3238e 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  cursor: pointer;
+  color: #e272cf;
+}
+
+header.active .h-span:hover {
+  color: #a3238e;
+
 }
 
 .nav-item:hover>svg path {
@@ -561,7 +566,7 @@ header.active .down-arrow path {
 
 #banner {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   padding-top: 10vw;
 }
@@ -646,30 +651,35 @@ header.active .down-arrow path {
   animation: upAndDown 3s;
   animation-iteration-count: infinite;
 }
-@keyframes disappearAnimation{
-  0%{
-    opacity:1
-  }
-  50%{
-  opacity:0.5
+
+@keyframes disappearAnimation {
+  0% {
+    opacity: 1
   }
 
-  100%{
-    opacity:0
-  }
-}
-@keyframes appearAnimation{
-  0%{
-    opacity:0
-  }
-  50%{
-  opacity:0.5
+  50% {
+    opacity: 0.5
   }
 
-  100%{
-    opacity:1
+  100% {
+    opacity: 0
   }
 }
+
+@keyframes appearAnimation {
+  0% {
+    opacity: 0
+  }
+
+  50% {
+    opacity: 0.5
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
 @keyframes upAndDown {
   0% {
     transform: translateY(15px);
@@ -993,7 +1003,6 @@ header.active .down-arrow path {
 
 .cardset.active {
   display: inline-flex;
-  margin-top: 68px;
   gap: 32px;
 }
 
@@ -1361,9 +1370,10 @@ header.active .down-arrow path {
 /* -------------- */
 
 .ltuc-description {
-  margin-left: 10%;
+  margin-left: 7.5%;
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
 
 .ltuc-description a {
@@ -1401,12 +1411,18 @@ header.active .down-arrow path {
   line-height: 130%;
   text-transform: capitalize;
 }
-
+.ltuc-description-img{
+  width: 50%;
+}
+.ltuc-description-img img{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
 .ltuc-description p {
   font-weight: 400;
   font-size: 1.157vw;
   line-height: 150%;
-  width: 50vw;
 }
 
 /* -------------- */
@@ -1701,23 +1717,22 @@ header.active .down-arrow path {
 /* -------------- */
 
 .staff-campus {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
 }
+
 
 .staff-campus .ltuc-description {
   margin-left: 0px;
-  margin-bottom: 46px;
 }
 
 .staff-campus .ltuc-description h1 {
   line-height: 130%;
   color: #2a2a2a;
 }
-
 .campus-block .ltuc-description h1 {
   font-weight: 500;
-  font-size: 1.62vw;
+  /* font-size: 1.62vw; */
 }
 
 .staff-block .ltuc-description h1 {
@@ -1735,7 +1750,7 @@ header.active .down-arrow path {
 
 .staff-campus .c-cards {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
@@ -1780,7 +1795,7 @@ header.active .down-arrow path {
   height: 20vw;
 }
 
-.staff-campus .c-card-img img,
+.staff-campus .c-card-img iframe,
 .staff-campus .s-card-img img {
   width: 100%;
   height: 100%;
@@ -1794,8 +1809,13 @@ header.active .down-arrow path {
   justify-content: center;
   align-items: self-start;
   gap: 20px;
+  width: 100%;
 }
-
+.staff-campus .c-card-body >div{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .staff-campus .c-card-body h2 {
   font-weight: 600;
   font-size: 1.39vw;
@@ -2073,7 +2093,12 @@ header.active .down-arrow path {
   padding: 7px;
   transition: ease 300ms;
 }
-
+.footer-social-media a:hover{
+  background-color: white;
+}
+.footer-social-media a:hover svg path{
+  fill: black
+}
 .footer-social-media svg path {
   fill: white;
   z-index: 10px;
@@ -2149,7 +2174,14 @@ header.active .down-arrow path {
 .relative {
   position: relative;
 }
+#detailed-programs table tr a button:hover{
+  background-color: #962F8A;
+}
+#detailed-programs table tr a button:hover span{
+  color: white;
 
+}
+.guidance-plan 
 .title-and-filter {
   display: flex;
   justify-content: space-between;
@@ -2278,7 +2310,7 @@ header.active .down-arrow path {
   line-height: 130%;
   display: flex;
   align-items: center;
-  color: rgba(42, 42, 42, 0.3);
+  color: rgb(42 42 42 / 60%);
   display: flex;
   gap: 12px;
 }
@@ -2453,8 +2485,9 @@ input[type="checkbox"]:checked::after {
 .box-appear {
   display: block;
 }
+
 .box-appear-flex {
-  display:flex
+  display: flex
 }
 
 .highlightted-tr {
@@ -2945,7 +2978,7 @@ input[type="checkbox"]:checked::after {
   /*   BANNER      */
   /* -------------- */
   .banner-arrow {
-    height: 15vw;
+    height: 8vw;
   }
 
   /* -------------- */
@@ -3795,10 +3828,11 @@ input[type="checkbox"]:checked::after {
   .news-list-body div span {
     font-size: 1.56vw;
   }
-  .news-list-body div h2
-  {
+
+  .news-list-body div h2 {
     font-size: 2.3vw;
   }
+
   #news-article {
     width: 90%;
   }
@@ -4743,26 +4777,30 @@ input[type="checkbox"]:checked::after {
     margin-bottom: 20px;
     width: 75%;
     margin-left: 30.76px;
-  
+
   }
-  #news-list .title-and-filter .filteration-section{
-    margin-left:0px;
+
+  #news-list .title-and-filter .filteration-section {
+    margin-left: 0px;
   }
-  .title-and-filter{
+
+  .title-and-filter {
     align-items: flex-start;
     flex-direction: column;
     gap: 20px;
   }
-  .filter-form{
-    left:auto;
-    right:auto;
+
+  .filter-form {
+    left: auto;
+    right: auto;
     padding-top: 20px;
-    
+
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
   }
-  .filter-form ul{
+
+  .filter-form ul {
     width: 90%;
   }
 
@@ -4947,44 +4985,164 @@ input[type="checkbox"]:checked::after {
   /*    News Article    */
   /* -------------- */
 
-  #trendy-news{
+  #trendy-news {
     display: flex;
     flex-direction: column;
     height: fit-content;
-    margin-bottom:17.55vw;
-  }
-  #trendy-news > a{
-    height: 48.8vw;
-
-  }
-  #trendy-news a>div div h1 ,#trendy-news>:nth-child(3) h1, #trendy-news>:nth-child(4) h1,.latest-card a>div p {
-    font-size: 4.65vw;
-    font-weight: 500;
-  }
-  
-  #trendy-news a>div div span ,.latest-card a>div span {
-    font-size: 3.7vw;
-  }
-
-  #latest-news{
     margin-bottom: 17.55vw;
   }
 
-  #latest-news>div{
+  #trendy-news>a {
+    height: 48.8vw;
+
+  }
+
+  #trendy-news a>div div h1,
+  #trendy-news>:nth-child(3) h1,
+  #trendy-news>:nth-child(4) h1,
+  .latest-card a>div p {
+    font-size: 4.65vw;
+    font-weight: 500;
+  }
+
+  #trendy-news a>div div span,
+  .latest-card a>div span {
+    font-size: 3.7vw;
+  }
+
+  #latest-news {
+    margin-bottom: 17.55vw;
+  }
+
+  #latest-news>div {
     flex-direction: column;
   }
-  .latest-card-img{
+
+  .latest-card-img {
 
     height: 48.8vw;
   }
 
- 
 
 
-  
+
+
   /* -------------- */
   /*    News Article END   */
   /* -------------- */
 
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text-image {
+  display: flex;
+  gap: 5%;
+  width: 85%;
+  margin: auto;
+}
+
+.text-image .ltuc-description {
+  margin-bottom: 40px;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .text-image .container div p {
+    font-size: 1.56vw;
+  }
+
+  .text-image .container div img {
+    width: 40.7vw;
+    height: 30.96vw;
+  }
+
+  .text-image .container div:nth-child(2) {
+    width: 50%;
+  }
+
+  .text-image .container .ltuc-description {
+    margin-left: 0px;
+  }
+
+  .text-image .ltuc-description {
+    margin-bottom: 50px;
+  }
+
+  .text-image .ltuc-description p {
+    font-size: 1.56vw;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .text-image .container {
+    flex-direction: column-reverse;
+    row-gap: 36px;
+  }
+
+  .text-image .container div img {
+    width: 100%;
+    height: 65.58vw;
+    border-radius: 0px;
+  }
+
+  .text-image .container div:first-child {
+    left: auto;
+  }
+
+  .text-image .container div:first-child::after {
+    border-radius: 0px;
+  }
+
+  .text-image .container div p {
+    font-size: 3.72vw;
+  }
+
+  .text-image .ltuc-description p {
+    width: 100%;
+  }
+
+  .text-image .container .ltuc-description {
+    margin-left: 0;
+  }
 }
