@@ -9,6 +9,9 @@ html {
 body {
   font-family: "Poppins";
 }
+table{
+      border: 1px dashed #5b5b5b59;
+}
 
 #footer {
   background-color: #000000;
@@ -1040,6 +1043,7 @@ header.active .down-arrow path {
   height: 19.3vw;
   border: 2px solid #2a2a2a;
   border-radius: 20px;
+  transition: 500ms;
 }
 
 .cardset.active div img {
@@ -2091,7 +2095,7 @@ header.active .down-arrow path {
   justify-content: center;
   align-items: center;
   padding: 7px;
-  transition: ease 300ms;
+  transition: ease 1000ms;
 }
 .footer-social-media a:hover{
   background-color: white;
@@ -2193,6 +2197,7 @@ header.active .down-arrow path {
   margin-left: 9%;
   margin-right: 9%;
   margin-top: 20px;
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 1.04vw;
   color: #8d8d8d;
