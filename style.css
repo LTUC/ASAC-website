@@ -123,7 +123,16 @@ header span {
 header span a {
   color: white;
 }
-
+header svg path{
+  fill: white;
+  transition: 500ms;
+}
+header.active svg path{
+  fill: black;
+}
+header svg path:hover{
+  fill: #a3238e;
+}
 header {
   background-color: transparent;
   position: absolute;
@@ -283,6 +292,8 @@ nav>ul {
 .nav-item {
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .overlay {
@@ -1053,7 +1064,18 @@ header.active .down-arrow path {
   width: 220px;
   transition: 300ms ease-in-out;
 }
+.cardset.active div .course-logo{
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 75px;
+  height: 75px;
+  transition: 500ms ease-in-out;
 
+}
+.cardset.active div:hover .course-logo path{
+  fill: white;
+}
 .programs-cards .slider-conterol-btn {
   height: 19.9vw;
 }
@@ -2098,7 +2120,8 @@ header.active .down-arrow path {
   transition: ease 1000ms;
 }
 .footer-social-media a:hover{
-  background-color: white;
+  background-color: #b3118a;
+  border: 1px solid #b3118a;
 }
 .footer-social-media a:hover svg path{
   fill: black
