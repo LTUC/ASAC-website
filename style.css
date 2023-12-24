@@ -9,8 +9,9 @@ html {
 body {
   font-family: "Poppins";
 }
-table{
-      border: 1px dashed #5b5b5b59;
+
+table {
+  border: 1px dashed #5b5b5b59;
 }
 
 #footer {
@@ -123,16 +124,20 @@ header span {
 header span a {
   color: white;
 }
-header svg path{
+
+header svg path {
   fill: white;
   transition: 500ms;
 }
-header.active svg path{
+
+header.active svg path {
   fill: black;
 }
-header svg path:hover{
+
+header svg path:hover {
   fill: #a3238e;
 }
+
 header {
   background-color: transparent;
   position: absolute;
@@ -1063,7 +1068,8 @@ header.active .down-arrow path {
   width: 220px;
   transition: 300ms ease-in-out;
 }
-.cardset.active div .course-logo{
+
+.cardset.active div .course-logo {
   position: absolute;
   bottom: 5%;
   right: 5%;
@@ -1072,9 +1078,11 @@ header.active .down-arrow path {
   transition: 500ms ease-in-out;
 
 }
-.cardset.active div:hover .course-logo path{
+
+.cardset.active div:hover .course-logo path {
   fill: white;
 }
+
 .programs-cards .slider-conterol-btn {
   height: 19.9vw;
 }
@@ -1254,7 +1262,28 @@ header.active .down-arrow path {
 /* -------------- */
 /* NEWS SECTION BLOCK */
 /* -------------- */
+.latest-see-more{
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+  width: 100%;
+  background: transparent;
+  border: 1px dashed #2e5c66;
+  color: #2e5c66;
+  transition: 300ms;
+  font-family: poppins;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.latest-see-more:hover{
+  background-color: #2e5c66;
+  opacity: 0.5;
+  color: white;
 
+}
 #news .slider-conterol-btn {
   height: 20vw;
 }
@@ -1436,14 +1465,17 @@ header.active .down-arrow path {
   line-height: 130%;
   text-transform: capitalize;
 }
-.ltuc-description-img{
+
+.ltuc-description-img {
   width: 50%;
 }
-.ltuc-description-img img{
+
+.ltuc-description-img img {
   width: 100%;
   object-fit: cover;
   height: 100%;
 }
+
 .ltuc-description p {
   font-weight: 400;
   font-size: 1.157vw;
@@ -1755,6 +1787,7 @@ header.active .down-arrow path {
   line-height: 130%;
   color: #2a2a2a;
 }
+
 .campus-block .ltuc-description h1 {
   font-weight: 500;
   /* font-size: 1.62vw; */
@@ -1836,11 +1869,13 @@ header.active .down-arrow path {
   gap: 20px;
   width: 100%;
 }
-.staff-campus .c-card-body >div{
+
+.staff-campus .c-card-body>div {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .staff-campus .c-card-body h2 {
   font-weight: 600;
   font-size: 1.39vw;
@@ -2118,13 +2153,16 @@ header.active .down-arrow path {
   padding: 7px;
   transition: ease 1000ms;
 }
-.footer-social-media a:hover{
+
+.footer-social-media a:hover {
   background-color: #b3118a;
   border: 1px solid #b3118a;
 }
-.footer-social-media a:hover svg path{
+
+.footer-social-media a:hover svg path {
   fill: black
 }
+
 .footer-social-media svg path {
   fill: white;
   z-index: 10px;
@@ -2200,15 +2238,17 @@ header.active .down-arrow path {
 .relative {
   position: relative;
 }
-#detailed-programs table tr a button:hover{
+
+#detailed-programs table tr a button:hover {
   background-color: #962F8A;
 }
-#detailed-programs table tr a button:hover span{
+
+#detailed-programs table tr a button:hover span {
   color: white;
 
 }
-.guidance-plan 
-.title-and-filter {
+
+.guidance-plan .title-and-filter {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2569,7 +2609,7 @@ input[type="checkbox"]:checked::after {
 
 .content {
   width: 100%;
-  height: 14vw;
+  height: 20vw;
   filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
   border-radius: 10px;
   position: relative;
@@ -2579,8 +2619,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .content h2 {
-  width: 60%;
-  height: 64px;
+  width: 70%;
   font-weight: 600;
   font-size: 1.21vw;
   line-height: 150%;
@@ -2742,8 +2781,12 @@ input[type="checkbox"]:checked::after {
 
 #latest-news>div {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
   margin-left: 0;
+}
+
+.latest-card {
+  width: 31.5%;
 }
 
 .latest-card-img {
@@ -3029,10 +3072,14 @@ input[type="checkbox"]:checked::after {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     overflow-y: scroll;
   }
-  .hide-on-desktop a img{
+  #latest-news>div{
+    gap: 25px;
+  }
+  .hide-on-desktop a img {
     width: 100%;
     height: 100%;
   }
+
   .language-code {
     display: none;
   }
@@ -3073,9 +3120,11 @@ input[type="checkbox"]:checked::after {
   .nav-item svg path {
     fill: #2a2a2a;
   }
-.carosel-section .scroll-img{
-  margin-top: 0;
-}
+
+  .carosel-section .scroll-img {
+    margin-top: 0;
+  }
+
   .hide-mobile-nav {
     display: none;
   }
@@ -4061,6 +4110,10 @@ input[type="checkbox"]:checked::after {
   .gate-icon {
     height: 50px;
     width: 40px;
+  }
+
+  .latest-card {
+    width: 100%;
   }
 
   .side_gates a>div {
@@ -5147,17 +5200,20 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (max-width: 767px) {
-  .text-image  {
+  .text-image {
     flex-direction: column;
     row-gap: 36px;
   }
-  .text-image .ltuc-description-img{
+
+  .text-image .ltuc-description-img {
     width: 100%;
   }
-  .text-image .ltuc-description{
+
+  .text-image .ltuc-description {
     margin-bottom: 0;
   }
-  .text-image  div img {
+
+  .text-image div img {
     width: 100%;
     height: 65.58vw;
     border-radius: 0px;

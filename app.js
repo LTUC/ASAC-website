@@ -519,354 +519,354 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    class NewsManager {
-        constructor() {
-            this.category_button = document.querySelector(".category-button");
-            this.category_form = document.querySelector(".category-form");
-            this.category_checkboxes = null;
-            this.trendy_section = document.getElementById("trendy-news");
-            this.latest_section = document.getElementById("latest-news");
-            this.global_category = "";
-            this.news_list_body = document.querySelector(".news-list-body");
-            this.category_see_more = document.querySelector("#category-see-more");
-            this.news_num_rows = 3;
-            this.news_counter = null;
-            this.news_start_counter = 3;
-            this.news_body = null;
-            this.news_rows = null;
-            this.filter_result = document.querySelector(".result");
-            this.filter_icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <path d="M11.0003 20C10.7169 20 10.4793 19.904 10.2873 19.712C10.0953 19.52 9.99959 19.2827 10.0003 19V13L4.20025 5.6C3.95025 5.26667 3.91259 4.91667 4.08725 4.55C4.26192 4.18333 4.56625 4 5.00025 4H19.0003C19.4336 4 19.7379 4.18333 19.9133 4.55C20.0886 4.91667 20.0509 5.26667 19.8003 5.6L14.0003 13V19C14.0003 19.2833 13.9043 19.521 13.7123 19.713C13.5203 19.905 13.2829 20.0007 13.0003 20H11.0003Z" />
-             </svg>
-           `;
-            this.search_input = null;
-            this.news_search = ''
-            this.search_form = document.querySelector(".search-form");
+    // class NewsManager {
+    //     constructor() {
+    //         this.category_button = document.querySelector(".category-button");
+    //         this.category_form = document.querySelector(".category-form");
+    //         this.category_checkboxes = null;
+    //         this.trendy_section = document.getElementById("trendy-news");
+    //         this.latest_section = document.getElementById("latest-news");
+    //         this.global_category = "";
+    //         this.news_list_body = document.querySelector(".news-list-body");
+    //         this.category_see_more = document.querySelector("#category-see-more");
+    //         this.news_num_rows = 3;
+    //         this.news_counter = null;
+    //         this.news_start_counter = 3;
+    //         this.news_body = null;
+    //         this.news_rows = null;
+    //         this.filter_result = document.querySelector(".result");
+    //         this.filter_icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    //          <path d="M11.0003 20C10.7169 20 10.4793 19.904 10.2873 19.712C10.0953 19.52 9.99959 19.2827 10.0003 19V13L4.20025 5.6C3.95025 5.26667 3.91259 4.91667 4.08725 4.55C4.26192 4.18333 4.56625 4 5.00025 4H19.0003C19.4336 4 19.7379 4.18333 19.9133 4.55C20.0886 4.91667 20.0509 5.26667 19.8003 5.6L14.0003 13V19C14.0003 19.2833 13.9043 19.521 13.7123 19.713C13.5203 19.905 13.2829 20.0007 13.0003 20H11.0003Z" />
+    //          </svg>
+    //        `;
+    //         this.search_input = null;
+    //         this.news_search = ''
+    //         this.search_form = document.querySelector(".search-form");
 
 
 
-        }
-        setSearchInput() {
-            this.search_input = this.search_form.querySelector("input");
-        }
-        setCategoryCheckboxes() {
-            this.category_checkboxes = this.category_form.querySelectorAll(
-                'input[type="checkbox"]'
-            );
-        }
-        async getNews(url) {
-            const response = await fetch(url, {
-                method: "GET", // *GET, POST, PUT, DELETE, etc.
-                mode: "cors", // no-cors, *cors, same-origin
-                cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-                credentials: "same-origin", // include, *same-origin, omit
-                headers: {
-                    "Content-Type": "application/json",
-                    // 'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                redirect: "follow", // manual, *follow, error
-                referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-            });
-            return response.json();
-        }
-        async getTrendyNews() {
-            let url;
-            if (page_obj.isArabic()) {
-                url = "/news/ar/trendy";
-            } else {
-                url = "/news/en/trendy";
-            }
-            let trendy_news = await this.getNews(url);
-            return trendy_news;
-        }
+    //     }
+    //     setSearchInput() {
+    //         this.search_input = this.search_form.querySelector("input");
+    //     }
+    //     setCategoryCheckboxes() {
+    //         this.category_checkboxes = this.category_form.querySelectorAll(
+    //             'input[type="checkbox"]'
+    //         );
+    //     }
+    //     async getNews(url) {
+    //         const response = await fetch(url, {
+    //             method: "GET", // *GET, POST, PUT, DELETE, etc.
+    //             mode: "cors", // no-cors, *cors, same-origin
+    //             cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    //             credentials: "same-origin", // include, *same-origin, omit
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //                 // 'Content-Type': 'application/x-www-form-urlencoded',
+    //             },
+    //             redirect: "follow", // manual, *follow, error
+    //             referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    //         });
+    //         return response.json();
+    //     }
+    //     async getTrendyNews() {
+    //         let url;
+    //         if (page_obj.isArabic()) {
+    //             url = "/news/ar/trendy";
+    //         } else {
+    //             url = "/news/en/trendy";
+    //         }
+    //         let trendy_news = await this.getNews(url);
+    //         return trendy_news;
+    //     }
 
-        createTrendyNews(trendy_news) {
-            for (let i = 0; i < trendy_news.length; i++) {
-                let news_div = document.createElement("div");
-                let inner_news_div = document.createElement("div");
-                let news_div_link = document.createElement("a");
+    //     createTrendyNews(trendy_news) {
+    //         for (let i = 0; i < trendy_news.length; i++) {
+    //             let news_div = document.createElement("div");
+    //             let inner_news_div = document.createElement("div");
+    //             let news_div_link = document.createElement("a");
 
-                news_div_link.href = `${trendy_news[i].url}`;
+    //             news_div_link.href = `${trendy_news[i].url}`;
 
-                news_div.style.background = `linear-gradient(134deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(${trendy_news[i].news_banner_img.url}), lightgray 50% / cover no-repeat`;
-                news_div.style.backgroundRepeat = "no-repeat";
-                news_div.style.backgroundSize = "cover";
+    //             news_div.style.background = `linear-gradient(134deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(${trendy_news[i].news_banner_img.url}), lightgray 50% / cover no-repeat`;
+    //             news_div.style.backgroundRepeat = "no-repeat";
+    //             news_div.style.backgroundSize = "cover";
 
-                let news_category = document.createElement("span");
-                let news_title = document.createElement("h1");
+    //             let news_category = document.createElement("span");
+    //             let news_title = document.createElement("h1");
 
-                news_category.innerHTML = `${trendy_news[i].category}`;
-                news_title.innerHTML = `${trendy_news[i].title}`;
+    //             news_category.innerHTML = `${trendy_news[i].category}`;
+    //             news_title.innerHTML = `${trendy_news[i].title}`;
 
-                inner_news_div.appendChild(news_category);
-                inner_news_div.appendChild(news_title);
+    //             inner_news_div.appendChild(news_category);
+    //             inner_news_div.appendChild(news_title);
 
-                news_div.appendChild(inner_news_div);
-                news_div_link.appendChild(news_div);
-                this.trendy_section.appendChild(news_div_link);
-            }
-        }
-        toggleFilterBoxAppearance(clickedIndex) {
-            this.category_button.addEventListener('click', (e) => {
-                if (page_obj.isMobile()) {
-                    this.category_form.classList.toggle("box-appear-flex");
-                }
-                this.category_form.classList.toggle("box-appear");
+    //             news_div.appendChild(inner_news_div);
+    //             news_div_link.appendChild(news_div);
+    //             this.trendy_section.appendChild(news_div_link);
+    //         }
+    //     }
+    //     toggleFilterBoxAppearance(clickedIndex) {
+    //         this.category_button.addEventListener('click', (e) => {
+    //             if (page_obj.isMobile()) {
+    //                 this.category_form.classList.toggle("box-appear-flex");
+    //             }
+    //             this.category_form.classList.toggle("box-appear");
 
-            })
-        }
-        async getLatestNews() {
-            let url;
-            if (page_obj.isArabic()) {
-                url = "/news/ar/latest-news";
-            } else {
-                url = "/news/en/latest-news";
-            }
-            let latest_news = await this.getNews(url);
-            return latest_news;
-        }
+    //         })
+    //     }
+    //     async getLatestNews() {
+    //         let url;
+    //         if (page_obj.isArabic()) {
+    //             url = "/news/ar/latest-news";
+    //         } else {
+    //             url = "/news/en/latest-news";
+    //         }
+    //         let latest_news = await this.getNews(url);
+    //         return latest_news;
+    //     }
 
-        createLatestNews(latest_news) {
-            this.latest_section.classList.add("s-cards");
+    //     createLatestNews(latest_news) {
+    //         this.latest_section.classList.add("s-cards");
 
-            let inner_latest_section = document.createElement("div");
-            for (let i = 0; i < latest_news.length; i++) {
-                let news_div = document.createElement("div"); //card
-                news_div.classList.add("latest-card");
+    //         let inner_latest_section = document.createElement("div");
+    //         for (let i = 0; i < latest_news.length; i++) {
+    //             let news_div = document.createElement("div"); //card
+    //             news_div.classList.add("latest-card");
 
-                let news_div_link = document.createElement("a");
-                news_div_link.href = `${latest_news[i].url}`;
+    //             let news_div_link = document.createElement("a");
+    //             news_div_link.href = `${latest_news[i].url}`;
 
-                let news_image = document.createElement("img");
-                news_image.src = `${latest_news[i].news_banner_img.url}`;
-                news_image.classList.add("latest-card-img");
+    //             let news_image = document.createElement("img");
+    //             news_image.src = `${latest_news[i].news_banner_img.url}`;
+    //             news_image.classList.add("latest-card-img");
 
-                let inner_latest_news = document.createElement("div");
-                let inner_latest_date = document.createElement("span");
-                let inner_latest_title = document.createElement("p");
+    //             let inner_latest_news = document.createElement("div");
+    //             let inner_latest_date = document.createElement("span");
+    //             let inner_latest_title = document.createElement("p");
 
-                inner_latest_date.innerHTML = `${latest_news[i].publish_date}`;
+    //             inner_latest_date.innerHTML = `${latest_news[i].publish_date}`;
 
-                inner_latest_title.innerHTML = `${latest_news[i].title}`;
+    //             inner_latest_title.innerHTML = `${latest_news[i].title}`;
 
-                inner_latest_news.appendChild(inner_latest_date);
-                inner_latest_news.appendChild(inner_latest_title);
+    //             inner_latest_news.appendChild(inner_latest_date);
+    //             inner_latest_news.appendChild(inner_latest_title);
 
-                news_div_link.appendChild(news_image);
-                news_div_link.appendChild(inner_latest_news);
+    //             news_div_link.appendChild(news_image);
+    //             news_div_link.appendChild(inner_latest_news);
 
-                news_div.appendChild(news_div_link);
+    //             news_div.appendChild(news_div_link);
 
-                inner_latest_section.appendChild(news_div);
-            }
-            this.latest_section.appendChild(inner_latest_section);
-        }
+    //             inner_latest_section.appendChild(news_div);
+    //         }
+    //         this.latest_section.appendChild(inner_latest_section);
+    //     }
 
-        async getListNews() {
-            let url;
-            if (page_obj.isArabic()) {
-                url = `/news/ar?category=${this.global_category}&search=${this.news_search}`;
-            } else {
-                url = `/news/en?category=${this.global_category}&search=${this.news_search}`;
-            }
-            let latest_news = await this.getNews(url);
-            return latest_news;
-        }
+    //     async getListNews() {
+    //         let url;
+    //         if (page_obj.isArabic()) {
+    //             url = `/news/ar?category=${this.global_category}&search=${this.news_search}`;
+    //         } else {
+    //             url = `/news/en?category=${this.global_category}&search=${this.news_search}`;
+    //         }
+    //         let latest_news = await this.getNews(url);
+    //         return latest_news;
+    //     }
 
-        seeMoreEventHandler() {
-            if (this.category_see_more.getAttribute("see-more") === "true") {
-                // Show the next 5 rows
-                for (let i = this.news_start_counter; i < this.news_counter; i++) {
-                    if (this.news_rows[i]) {
-                        this.news_rows[i].classList.remove("hidden-tr");
-                        this.news_rows[i].classList.add("displayed-news-a");
-                    }
-                }
-                // Update the counters
-                this.news_start_counter += 5;
-                this.news_counter += 5;
+    //     seeMoreEventHandler() {
+    //         if (this.category_see_more.getAttribute("see-more") === "true") {
+    //             // Show the next 5 rows
+    //             for (let i = this.news_start_counter; i < this.news_counter; i++) {
+    //                 if (this.news_rows[i]) {
+    //                     this.news_rows[i].classList.remove("hidden-tr");
+    //                     this.news_rows[i].classList.add("displayed-news-a");
+    //                 }
+    //             }
+    //             // Update the counters
+    //             this.news_start_counter += 5;
+    //             this.news_counter += 5;
 
-                if (this.news_start_counter >= this.news_rows.length) {
-                    this.category_see_more.textContent = "See Less";
-                    this.category_see_more.setAttribute("see-more", "false");
-                }
-            } else {
-                // Hide the extra rows
-                this.news_start_counter = 3;
-                this.news_counter = this.news_rows.length;
-                for (let i = this.news_start_counter; i <= this.news_counter; i++) {
-                    if (this.news_rows[i]) {
-                        this.news_rows[i].classList.add("hidden-tr");
-                        this.news_rows[i].classList.remove("displayed-news-a");
-                    }
-                }
-                this.news_counter = this.news_start_counter + 5;
+    //             if (this.news_start_counter >= this.news_rows.length) {
+    //                 this.category_see_more.textContent = "See Less";
+    //                 this.category_see_more.setAttribute("see-more", "false");
+    //             }
+    //         } else {
+    //             // Hide the extra rows
+    //             this.news_start_counter = 3;
+    //             this.news_counter = this.news_rows.length;
+    //             for (let i = this.news_start_counter; i <= this.news_counter; i++) {
+    //                 if (this.news_rows[i]) {
+    //                     this.news_rows[i].classList.add("hidden-tr");
+    //                     this.news_rows[i].classList.remove("displayed-news-a");
+    //                 }
+    //             }
+    //             this.news_counter = this.news_start_counter + 5;
 
-                // // Update the counters
-                // news_start_counter -= 5;
-                // news_counter -= 5;
+    //             // // Update the counters
+    //             // news_start_counter -= 5;
+    //             // news_counter -= 5;
 
-                if (this.news_start_counter <= this.news_num_rows) {
-                    this.category_see_more.textContent = "See More ...";
-                    this.category_see_more.setAttribute("see-more", "true");
-                }
-            }
-        }
+    //             if (this.news_start_counter <= this.news_num_rows) {
+    //                 this.category_see_more.textContent = "See More ...";
+    //                 this.category_see_more.setAttribute("see-more", "true");
+    //             }
+    //         }
+    //     }
 
-        uncheckAllTheCheckBoxes() {
+    //     uncheckAllTheCheckBoxes() {
 
-            let checkboxs = this.category_form.querySelectorAll(
-                'input[type="checkbox"]'
-            );
-            for (let i = 0; i < checkboxs.length; i++) {
-                checkboxs[i].checked = false;
-            }
-        }
-        searchEvent(e) {
-            e.preventDefault();
-            this.uncheckAllTheCheckBoxes();
-            let search = e.target.search.value;
-            this.news_search = search;
-            this.renderNewsCategory(true);
-        }
+    //         let checkboxs = this.category_form.querySelectorAll(
+    //             'input[type="checkbox"]'
+    //         );
+    //         for (let i = 0; i < checkboxs.length; i++) {
+    //             checkboxs[i].checked = false;
+    //         }
+    //     }
+    //     searchEvent(e) {
+    //         e.preventDefault();
+    //         this.uncheckAllTheCheckBoxes();
+    //         let search = e.target.search.value;
+    //         this.news_search = search;
+    //         this.renderNewsCategory(true);
+    //     }
 
 
-        async renderNewsCategoryWithoutUpdate() {
-            const data = await this.getListNews();
-            this.updateNewsList(data);
-            this.ActivateCategoryButton();
-        }
-        async renderNewsCategory(is_searsh = false) {
+    //     async renderNewsCategoryWithoutUpdate() {
+    //         const data = await this.getListNews();
+    //         this.updateNewsList(data);
+    //         this.ActivateCategoryButton();
+    //     }
+    //     async renderNewsCategory(is_searsh = false) {
 
-            const data = await this.getListNews();
-            this.updateNewsList(data);
-            this.updateCategoryResult(data.length, is_searsh);
-            this.ActivateCategoryButton();
+    //         const data = await this.getListNews();
+    //         this.updateNewsList(data);
+    //         this.updateCategoryResult(data.length, is_searsh);
+    //         this.ActivateCategoryButton();
 
-        }
-        news_see_more() {
-            this.news_counter = this.news_num_rows + 5;
+    //     }
+    //     news_see_more() {
+    //         this.news_counter = this.news_num_rows + 5;
 
-            this.news_rows = this.news_list_body.querySelectorAll("a");
-            for (let i = 0; i < this.news_num_rows; i++) {
-                this.news_rows[i].classList.add("displayed-news-a");
-                this.news_rows[i].classList.remove("hidden-tr");
-            }
-            for (let i = this.news_num_rows; i < this.news_rows.length; i++) {
-                this.news_rows[i].classList.add("hidden-tr");
-                this.news_rows[i].classList.remove("displayed-news-a");
-            }
-        }
+    //         this.news_rows = this.news_list_body.querySelectorAll("a");
+    //         for (let i = 0; i < this.news_num_rows; i++) {
+    //             this.news_rows[i].classList.add("displayed-news-a");
+    //             this.news_rows[i].classList.remove("hidden-tr");
+    //         }
+    //         for (let i = this.news_num_rows; i < this.news_rows.length; i++) {
+    //             this.news_rows[i].classList.add("hidden-tr");
+    //             this.news_rows[i].classList.remove("displayed-news-a");
+    //         }
+    //     }
 
-        seeMoreActivation() {
-            if (this.category_see_more) {
-                this.category_see_more.addEventListener("click", (e) => {
-                    this.seeMoreEventHandler();
-                });
-            }
-        }
-        updateNewsList(data) {
-            this.news_list_body.innerHTML = "";
-            for (let i = 0; i < data.length; i++) {
-                let news_list_card = document.createElement("a");
-                news_list_card.classList.add("displayed-news-a");
-                let news_list_card_inner = document.createElement("div");
-                let news_list_card_inner_inner = document.createElement("div");
-                let news_list_span = document.createElement("span");
-                let news_list_title = document.createElement("h2");
-                news_list_span.innerHTML = `${data[i].publish_date}`;
-                news_list_title.innerHTML = `${data[i].title}`;
+    //     seeMoreActivation() {
+    //         if (this.category_see_more) {
+    //             this.category_see_more.addEventListener("click", (e) => {
+    //                 this.seeMoreEventHandler();
+    //             });
+    //         }
+    //     }
+    //     updateNewsList(data) {
+    //         this.news_list_body.innerHTML = "";
+    //         for (let i = 0; i < data.length; i++) {
+    //             let news_list_card = document.createElement("a");
+    //             news_list_card.classList.add("displayed-news-a");
+    //             let news_list_card_inner = document.createElement("div");
+    //             let news_list_card_inner_inner = document.createElement("div");
+    //             let news_list_span = document.createElement("span");
+    //             let news_list_title = document.createElement("h2");
+    //             news_list_span.innerHTML = `${data[i].publish_date}`;
+    //             news_list_title.innerHTML = `${data[i].title}`;
 
-                let news_list_image = document.createElement("img");
-                news_list_image.src = `${data[i].news_banner_img.url}`;
+    //             let news_list_image = document.createElement("img");
+    //             news_list_image.src = `${data[i].news_banner_img.url}`;
 
-                news_list_card.href = `${data[i].url}`;
+    //             news_list_card.href = `${data[i].url}`;
 
-                news_list_card_inner_inner.appendChild(news_list_span);
-                news_list_card_inner_inner.appendChild(news_list_title);
-                news_list_card_inner.appendChild(news_list_card_inner_inner);
-                news_list_card_inner.appendChild(news_list_image);
-                news_list_card.appendChild(news_list_card_inner);
-                this.news_list_body.appendChild(news_list_card);
-            }
-            if (data.length > 5) {
-                this.category_see_more.style.display = 'flex'
+    //             news_list_card_inner_inner.appendChild(news_list_span);
+    //             news_list_card_inner_inner.appendChild(news_list_title);
+    //             news_list_card_inner.appendChild(news_list_card_inner_inner);
+    //             news_list_card_inner.appendChild(news_list_image);
+    //             news_list_card.appendChild(news_list_card_inner);
+    //             this.news_list_body.appendChild(news_list_card);
+    //         }
+    //         if (data.length > 5) {
+    //             this.category_see_more.style.display = 'flex'
 
-                this.news_see_more();
-            }
-            else {
+    //             this.news_see_more();
+    //         }
+    //         else {
 
-                this.category_see_more.style.display = 'none'
-            }
-        }
+    //             this.category_see_more.style.display = 'none'
+    //         }
+    //     }
 
-        updateCategoryResult(num, is_search = false) {
-            let filterd = false;
-            if (this.global_category != "") {
-                filterd = true;
-            }
+    //     updateCategoryResult(num, is_search = false) {
+    //         let filterd = false;
+    //         if (this.global_category != "") {
+    //             filterd = true;
+    //         }
 
-            if (filterd || is_search) {
-                if (page_obj.isArabic()) {
-                    this.filter_result.innerHTML = `${num} نتيجة`;
-                } else {
-                    this.filter_result.innerHTML = `${num} result found`;
-                }
-            } else {
-                this.filter_result.innerHTML = "";
-            }
-        }
+    //         if (filterd || is_search) {
+    //             if (page_obj.isArabic()) {
+    //                 this.filter_result.innerHTML = `${num} نتيجة`;
+    //             } else {
+    //                 this.filter_result.innerHTML = `${num} result found`;
+    //             }
+    //         } else {
+    //             this.filter_result.innerHTML = "";
+    //         }
+    //     }
 
-        ActivateCategoryButton() {
-            if (this.global_category == "") {
-                this.category_button.innerHTML = `Category ${this.filter_icon}`;
-                this.category_button.classList.remove("active");
-            } else {
-                this.category_button.classList.add("active");
-                this.category_button.innerHTML = `${this.global_category.charAt(0).toUpperCase() + this.global_category.slice(1)
-                    } ${this.filter_icon}`;
-            }
-        }
-        updateGlobalCategoryAndRender() {
+    //     ActivateCategoryButton() {
+    //         if (this.global_category == "") {
+    //             this.category_button.innerHTML = `Category ${this.filter_icon}`;
+    //             this.category_button.classList.remove("active");
+    //         } else {
+    //             this.category_button.classList.add("active");
+    //             this.category_button.innerHTML = `${this.global_category.charAt(0).toUpperCase() + this.global_category.slice(1)
+    //                 } ${this.filter_icon}`;
+    //         }
+    //     }
+    //     updateGlobalCategoryAndRender() {
 
-            for (let i = 0; i < this.category_checkboxes.length; i++) {
-                this.category_checkboxes[i].addEventListener("click", (e) => {
-                    if (this.category_checkboxes[i].checked) {
-                        this.global_category = e.target.value;
-                        if (this.category_checkboxes[i].value == "all") {
-                            this.global_category = "";
-                        }
-                    } else {
-                        this.global_category = "";
-                    }
-                    for (let j = 0; j < this.category_checkboxes.length; j++) {
-                        if (this.category_checkboxes[j] != this.category_checkboxes[i]) {
-                            this.category_checkboxes[j].checked = false;
-                        }
-                    }
-                    this.renderNewsCategory();
-                });
-            }
-        }
-        async activateNewsSection() {
-            this.setCategoryCheckboxes();
-            this.updateGlobalCategoryAndRender()
-            this.seeMoreActivation();
-            this.setSearchInput()
-            this.toggleFilterBoxAppearance()
+    //         for (let i = 0; i < this.category_checkboxes.length; i++) {
+    //             this.category_checkboxes[i].addEventListener("click", (e) => {
+    //                 if (this.category_checkboxes[i].checked) {
+    //                     this.global_category = e.target.value;
+    //                     if (this.category_checkboxes[i].value == "all") {
+    //                         this.global_category = "";
+    //                     }
+    //                 } else {
+    //                     this.global_category = "";
+    //                 }
+    //                 for (let j = 0; j < this.category_checkboxes.length; j++) {
+    //                     if (this.category_checkboxes[j] != this.category_checkboxes[i]) {
+    //                         this.category_checkboxes[j].checked = false;
+    //                     }
+    //                 }
+    //                 this.renderNewsCategory();
+    //             });
+    //         }
+    //     }
+    //     async activateNewsSection() {
+    //         this.setCategoryCheckboxes();
+    //         this.updateGlobalCategoryAndRender()
+    //         this.seeMoreActivation();
+    //         this.setSearchInput()
+    //         this.toggleFilterBoxAppearance()
 
-            let trendy_news = await this.getTrendyNews();
-            this.createTrendyNews(trendy_news);
+    //         let trendy_news = await this.getTrendyNews();
+    //         this.createTrendyNews(trendy_news);
 
-            let latest_news = await this.getLatestNews();
-            this.createLatestNews(latest_news);
+    //         let latest_news = await this.getLatestNews();
+    //         this.createLatestNews(latest_news);
 
-            this.renderNewsCategoryWithoutUpdate();
-            this.search_form.addEventListener("submit", (e) => {
-                this.searchEvent(e);
-            });
-        }
-    }
+    //         this.renderNewsCategoryWithoutUpdate();
+    //         this.search_form.addEventListener("submit", (e) => {
+    //             this.searchEvent(e);
+    //         });
+    //     }
+    // }
 
     class ProgramManager {
         constructor() {
@@ -1706,10 +1706,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // news and events
-    let news_section = new NewsManager();
-    if (news_section.category_form) {
-        news_section.activateNewsSection();
-    }
+    // let news_section = new NewsManager();
+    // if (news_section.category_form) {
+    //     news_section.activateNewsSection();
+    // }
 
     // career 
     let career_section = new CareerManager()
