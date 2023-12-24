@@ -9,6 +9,9 @@ html {
 body {
   font-family: "Poppins";
 }
+table{
+      border: 1px dashed #5b5b5b59;
+}
 
 #footer {
   background-color: #000000;
@@ -120,7 +123,16 @@ header span {
 header span a {
   color: white;
 }
-
+header svg path{
+  fill: white;
+  transition: 500ms;
+}
+header.active svg path{
+  fill: black;
+}
+header svg path:hover{
+  fill: #a3238e;
+}
 header {
   background-color: transparent;
   position: absolute;
@@ -280,6 +292,8 @@ nav>ul {
 .nav-item {
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .overlay {
@@ -1039,6 +1053,7 @@ header.active .down-arrow path {
   height: 19.3vw;
   border: 2px solid #2a2a2a;
   border-radius: 20px;
+  transition: 500ms;
 }
 
 .cardset.active div img {
@@ -1048,7 +1063,18 @@ header.active .down-arrow path {
   width: 220px;
   transition: 300ms ease-in-out;
 }
+.cardset.active div .course-logo{
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 75px;
+  height: 75px;
+  transition: 500ms ease-in-out;
 
+}
+.cardset.active div:hover .course-logo path{
+  fill: white;
+}
 .programs-cards .slider-conterol-btn {
   height: 19.9vw;
 }
@@ -2090,10 +2116,11 @@ header.active .down-arrow path {
   justify-content: center;
   align-items: center;
   padding: 7px;
-  transition: ease 300ms;
+  transition: ease 1000ms;
 }
 .footer-social-media a:hover{
-  background-color: white;
+  background-color: #b3118a;
+  border: 1px solid #b3118a;
 }
 .footer-social-media a:hover svg path{
   fill: black
@@ -2192,6 +2219,7 @@ header.active .down-arrow path {
   margin-left: 9%;
   margin-right: 9%;
   margin-top: 20px;
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 1.04vw;
   color: #8d8d8d;
