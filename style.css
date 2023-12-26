@@ -2,6 +2,49 @@
 
 /* move colors to header.html in phase II */
 /* SECTIONS IN THIS CSS FILE */
+.custom-alert {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  width: 70%;
+  height: 400px;
+}
+
+.custom-alert.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly
+}
+
+.custom-alert svg{
+  width: 200px;
+  height: 200px;
+}
+.custom-alert svg path{
+  fill: white;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  font-size: 30px;
+  font-family: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1262,7 +1305,7 @@ header.active .down-arrow path {
 /* -------------- */
 /* NEWS SECTION BLOCK */
 /* -------------- */
-.latest-see-more{
+.latest-see-more {
   display: flex;
   height: 50px;
   justify-content: center;
@@ -1278,12 +1321,14 @@ header.active .down-arrow path {
   border-radius: 10px;
   text-decoration: none;
 }
-.latest-see-more:hover{
+
+.latest-see-more:hover {
   background-color: #2e5c66;
   opacity: 0.5;
   color: white;
 
 }
+
 #news .slider-conterol-btn {
   height: 20vw;
 }
@@ -1355,6 +1400,7 @@ header.active .down-arrow path {
 /* -------------- */
 /* STAFF SECTION BLOCK */
 /* -------------- */
+
 
 .staff-slider {
   position: relative;
@@ -1773,11 +1819,89 @@ header.active .down-arrow path {
 /*    card with image title text */
 /* -------------- */
 
+.staff-campus .contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  /* Adjust the margin top as needed */
+}
+
+.staff-campus .contact-form h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  margin-bottom: 50px;
+}
+
+.staff-campus .contact-form div {
+  margin-bottom: 15px;
+  width: 45%;
+}
+
+.staff-campus .contact-form div:last-of-type {
+  width: 100%;
+}
+
+.staff-campus .contact-form label {
+  display: block;
+  font-size: 1.2rem;
+  color: #2a2a2a;
+  margin-bottom: 5px;
+}
+
+.staff-campus .contact-form input,
+.staff-campus .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.staff-campus .contact-form button {
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.staff-campus .contact-form button:hover {
+  background-color: #28525b;
+}
+
+
+#contactForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.campus-block .ltuc-description {
+  width: 100%;
+}
+
+.campus-block .ltuc-description h1,
+.campus-block .ltuc-description p {
+  width: 100%;
+  text-align: center;
+}
+
 .staff-campus {
   margin-left: 7.5%;
   margin-right: 7.5%;
 }
-
 
 .staff-campus .ltuc-description {
   margin-left: 0px;
@@ -1799,11 +1923,13 @@ header.active .down-arrow path {
 }
 
 .staff-campus .ltuc-description p {
-  font-weight: 400;
-  font-size: 1.157vw;
-  line-height: 150%;
-  color: #1e1e1e;
-  width: 65vw;
+  color: #717171;
+  font-size: 1.357vw;
+  ;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 5%;
+
 }
 
 .staff-campus .c-cards {
@@ -1831,7 +1957,6 @@ header.active .down-arrow path {
   width: 38.75vw;
 }
 
-
 .staff-campus .s-card {
   display: flex;
   justify-content: center;
@@ -1840,8 +1965,6 @@ header.active .down-arrow path {
   gap: 25px;
   width: 18.5vw;
 }
-
-
 
 .staff-campus .c-card-img {
   width: 100%;
@@ -1890,7 +2013,6 @@ header.active .down-arrow path {
   letter-spacing: -0.02em;
   color: #2a3342;
 }
-
 
 
 .staff-campus .s-card-body p {
@@ -3072,9 +3194,11 @@ input[type="checkbox"]:checked::after {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     overflow-y: scroll;
   }
-  #latest-news>div{
+
+  #latest-news>div {
     gap: 25px;
   }
+
   .hide-on-desktop a img {
     width: 100%;
     height: 100%;
