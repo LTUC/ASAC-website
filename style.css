@@ -778,7 +778,7 @@ header.active .down-arrow path {
 }
 
 .faculty-header {
-  margin-left: 10%;
+  margin-left: 7.5%;
 }
 
 .faculty-header p {
@@ -890,7 +890,14 @@ header.active .down-arrow path {
   transition: ease 300ms;
   gap: 10px;
 }
+#programs .ltuc-description{
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
+#programs .ltuc-description h1{
+  margin-bottom: 0;
 
+}
 #faculty-section div a svg {
   padding-left: 15px;
 }
@@ -971,7 +978,7 @@ header.active .down-arrow path {
 .carosel-section .scroll-img {
   display: inline-flex;
   gap: 20px;
-  margin-top: 70px;
+  margin-top: 10px;
 }
 
 .slider-conterol-btn {
@@ -1010,7 +1017,9 @@ header.active .down-arrow path {
 .carosel-section .slider-conterol-btn {
   height: 28.7vw;
 }
-
+.carosel-section .ltuc-description{
+  margin-left: 7.5%;
+}
 .carosel-img {
   width: 39.06vw;
   height: 27.7vw;
@@ -1470,7 +1479,7 @@ header.active .down-arrow path {
 /* -------------- */
 
 #all-programs .ltuc-description{
-  margin-left: 0;
+  margin-left: 7.5%;
   margin-bottom: 5%;
 }
 .ltuc-description {
@@ -2791,10 +2800,11 @@ input[type="checkbox"]:checked::after {
 }
 
 .all-programs-content {
-  margin: 65px 9%;
+  margin: 65px auto;
   display: grid;
   grid-template-columns: auto auto;
   gap: 20px;
+  width: 90%;
 }
 #all-programs .ltuc-description h1{
   margin-bottom: 0;
@@ -2892,7 +2902,7 @@ input[type="checkbox"]:checked::after {
 }
 
 #latest-news {
-  width: 80%;
+  width: 85%;
   margin: auto;
   margin-bottom: 2.89vw;
 }
