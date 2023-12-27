@@ -1469,8 +1469,11 @@ header.active .down-arrow path {
 /* STAFF SECTION BLOCK END*/
 /* -------------- */
 
+#all-programs .ltuc-description{
+  margin-left: 0;
+  margin-bottom: 5%;
+}
 .ltuc-description {
-  margin-left: 7.5%;
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -1776,10 +1779,6 @@ header.active .down-arrow path {
   object-fit: cover;
 }
 
-/* 
-  .title-text-img .ltuc-description ul {
-    margin-bottom: 36px;
-  } */
 
 /* -------------- */
 /*    title text image END    */
@@ -1826,7 +1825,6 @@ header.active .down-arrow path {
   width: 100%;
   margin: 0 auto;
   margin-top: 20px;
-  /* Adjust the margin top as needed */
 }
 
 .staff-campus .contact-form h2 {
@@ -2798,11 +2796,9 @@ input[type="checkbox"]:checked::after {
   grid-template-columns: auto auto;
   gap: 20px;
 }
-
-#all-programs {
-  padding-top: 0px;
+#all-programs .ltuc-description h1{
+  margin-bottom: 0;
 }
-
 .all-programs-content .row {
   display: flex;
   flex-direction: row;
@@ -4196,7 +4192,7 @@ input[type="checkbox"]:checked::after {
   }
 
   .content {
-    height: 20vw;
+    height: 40vw;
   }
 
   .content h2 {
@@ -4212,7 +4208,7 @@ input[type="checkbox"]:checked::after {
   }
 
   .all-programs-content {
-    margin: 85px 20px;
+    margin: 50px 20px;
   }
 
   /* -------------- */
@@ -4226,7 +4222,17 @@ input[type="checkbox"]:checked::after {
     padding-top: 5.7vw;
     margin-bottom: 17.55vw;
   }
-
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .staff-campus .contact-form div{
+    width: 100%;
+  }
+  .staff-campus .contact-form label{
+    font-size: 4.18vw;
+  }
   /* -------------- */
   /*    GATES      */
   /* -------------- */
@@ -5146,12 +5152,12 @@ input[type="checkbox"]:checked::after {
 
   .all-programs-content {
     display: flex;
-    margin: 0px 6.5%;
+    margin: 0;
     flex-direction: column;
   }
 
   .content h2 {
-    width: 65%;
+    width: 90%;
     font-size: 3.72vw;
     font-weight: 500;
   }
@@ -5299,7 +5305,10 @@ input[type="checkbox"]:checked::after {
   .text-image .container div p {
     font-size: 1.56vw;
   }
-
+  .all-programs-content{
+    display: flex;
+    flex-direction: column;
+  }
   .text-image .container div img {
     width: 40.7vw;
     height: 30.96vw;
