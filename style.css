@@ -3839,11 +3839,13 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   /* STAFF SECTION BLOCK END*/
   /* -------------- */
-
   .ltuc-description {
     margin-left: 5%;
   }
-
+  .FAQ .ltuc-description{
+    margin-left: 0;
+  }
+  
   .ltuc-description h1 {
     font-size: 3.1vw;
     width: 60vw;
@@ -4725,6 +4727,9 @@ input[type="checkbox"]:checked::after {
   .ltuc-description {
     margin-left: 6.5%;
     width: 87vw;
+  }
+  .FAQ .ltuc-description{
+    margin-left: 0;
   }
 
   .ltuc-description h1 {
