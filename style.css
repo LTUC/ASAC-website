@@ -25,13 +25,15 @@
   justify-content: space-evenly
 }
 
-.custom-alert svg{
+.custom-alert svg {
   width: 200px;
   height: 200px;
 }
-.custom-alert svg path{
+
+.custom-alert svg path {
   fill: white;
 }
+
 .close-button {
   position: absolute;
   top: 10px;
@@ -890,14 +892,17 @@ header.active .down-arrow path {
   transition: ease 300ms;
   gap: 10px;
 }
-#programs .ltuc-description{
+
+#programs .ltuc-description {
   margin-left: 7.5%;
   margin-right: 7.5%;
 }
-#programs .ltuc-description h1{
+
+#programs .ltuc-description h1 {
   margin-bottom: 0;
 
 }
+
 #faculty-section div a svg {
   padding-left: 15px;
 }
@@ -988,9 +993,11 @@ header.active .down-arrow path {
   bottom: 0;
   cursor: pointer;
 }
-.slider-conterol-btn svg path{
+
+.slider-conterol-btn svg path {
   fill: #0c535c;
 }
+
 .slider-conterol-btn.right-arrow {
   right: 0;
   background: linear-gradient(90deg, transparent, white);
@@ -1020,9 +1027,11 @@ header.active .down-arrow path {
 .carosel-section .slider-conterol-btn {
   height: 28.7vw;
 }
-.carosel-section .ltuc-description{
+
+.carosel-section .ltuc-description {
   margin-left: 7.5%;
 }
+
 .carosel-img {
   width: 39.06vw;
   height: 27.7vw;
@@ -1481,10 +1490,11 @@ header.active .down-arrow path {
 /* STAFF SECTION BLOCK END*/
 /* -------------- */
 
-#all-programs .ltuc-description{
+#all-programs .ltuc-description {
   margin-left: 7.5%;
   margin-bottom: 5%;
 }
+
 .ltuc-description {
   display: flex;
   flex-direction: column;
@@ -1685,7 +1695,7 @@ header.active .down-arrow path {
 }
 
 .accordion>h3 span:nth-of-type(1) {
-  max-width: 55%;
+  max-width: 100%;
 }
 
 .active.accordion {
@@ -1736,6 +1746,7 @@ header.active .down-arrow path {
   display: flex;
   gap: 40px;
   align-items: center;
+  justify-content: space-between;
   font-weight: 500;
   font-size: 1.157vw;
   line-height: 150%;
@@ -2196,7 +2207,12 @@ header.active .down-arrow path {
 
 .footer-item ul a li {
   font-size: 1.27vw;
-  color: rgba(252, 252, 252, 0.9);
+  color: rgba(139, 138, 138, 0.9);
+  transition: 300ms ease-in-out;
+}
+
+.footer-item ul a li:hover {
+  color: white;
 }
 
 .footer-btns {
@@ -2809,9 +2825,11 @@ input[type="checkbox"]:checked::after {
   gap: 20px;
   width: 90%;
 }
-#all-programs .ltuc-description h1{
+
+#all-programs .ltuc-description h1 {
   margin-bottom: 0;
 }
+
 .all-programs-content .row {
   display: flex;
   flex-direction: row;
@@ -3207,9 +3225,11 @@ input[type="checkbox"]:checked::after {
   #latest-news>div {
     gap: 25px;
   }
-  .all-programs-content{
-    width: 100%;
+
+  .all-programs-content {
+    width: 90%;
   }
+
   .hide-on-desktop a img {
     width: 100%;
     height: 100%;
@@ -3589,7 +3609,7 @@ input[type="checkbox"]:checked::after {
   }
 
   .faculty-card img {
-    width: 53.6vw;
+    width: 45.6vw;
   }
 
   .faculty-card div h3 {
@@ -3847,10 +3867,11 @@ input[type="checkbox"]:checked::after {
   .ltuc-description {
     margin-left: 5%;
   }
-  .FAQ .ltuc-description{
+
+  .FAQ .ltuc-description {
     margin-left: 0;
   }
-  
+
   .ltuc-description h1 {
     font-size: 3.1vw;
     width: 60vw;
@@ -4224,9 +4245,9 @@ input[type="checkbox"]:checked::after {
     height: fit-content;
   }
 
-  .all-programs-content {
+  /* .all-programs-content {
     margin: 50px 20px;
-  }
+  } */
 
   /* -------------- */
   /*    all campuses END    */
@@ -4239,22 +4260,26 @@ input[type="checkbox"]:checked::after {
     padding-top: 5.7vw;
     margin-bottom: 17.55vw;
   }
+
   #contactForm {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
-  .staff-campus .contact-form div{
+
+  .staff-campus .contact-form div {
     width: 100%;
   }
-  .staff-campus .contact-form label{
+
+  .staff-campus .contact-form label {
     font-size: 4.18vw;
   }
+
   /* -------------- */
   /*    GATES      */
   /* -------------- */
-.go-top{
-  background-color: #0c535c;
+  .go-top {
+    background-color: #0c535c;
     width: 50px;
     height: 50px;
     border-radius: 10px;
@@ -4265,13 +4290,16 @@ input[type="checkbox"]:checked::after {
     bottom: 14vw;
     right: 7vw;
     filter: saturate(0.5);
-}
-.go-top a{
-  border: none;
-}
-.panel-content{
-  padding: 5vw 2vw;
-}
+  }
+
+  .go-top a {
+    border: none;
+  }
+
+  .panel-content {
+    padding: 5vw 2vw;
+  }
+
   .gate-icon {
     height: 50px;
     width: 40px;
@@ -4751,7 +4779,8 @@ input[type="checkbox"]:checked::after {
     margin-left: 6.5%;
     width: 87vw;
   }
-  .FAQ .ltuc-description{
+
+  .FAQ .ltuc-description {
     margin-left: 0;
   }
 
@@ -4803,12 +4832,7 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   .accordion h3 {
     font-size: 4.1vw;
-    justify-content: space-between;
     gap: 0;
-  }
-
-  .accordion>h3 span:nth-of-type(1) {
-    max-width: 100%;
   }
 
   .panel {
@@ -4923,7 +4947,7 @@ input[type="checkbox"]:checked::after {
   .staff-campus .c-cards .c-card {
     width: 100%;
     gap: 10px;
-    
+
   }
 
   .staff-campus .c-card-img {
@@ -5330,9 +5354,111 @@ input[type="checkbox"]:checked::after {
 
 
 
+.prog-header {
+  background-image: linear-gradient(to top, rgb(22 21 21 / 60%), rgb(22 21 21 / 60%)), url(./assets/images/Acadimec-publication.jpg);
+  ;
+  background-repeat: no-repeat;
+  background-position: right center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 10vw;
+  padding: 0;
+  padding-left: 6vw;
+  gap: 25px;
+  background-size: cover;
+}
 
+.prog-header>div span {
+  color: #ff8000;
+}
 
+.prog-header div:first-child {
+  font-size: 16px;
+}
 
+.prog-header div:last-child {
+  font-size: 28px;
+}
+
+.prog-outline {
+  padding: 0;
+  margin-left: 6vw;
+  background-image: linear-gradient(to top, rgb(255 255 255 / 90%), rgb(255 255 255 / 60%)), url(./assets/icon/icons8-python.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.prog-outline h1 {
+  font-size: 24px;
+  margin-bottom: 2vw;
+  font-weight: 500;
+}
+
+.prog-outline .container {
+  gap: 30px;
+}
+
+.prog-outline div {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.prog-outline div h2 {
+  font-weight: 500;
+}
+
+.prog-outline ul {
+  line-height: 150%;
+  font-size: 1.157vw;
+}
+
+.prog-outline li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10PX;
+}
+
+.apply-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6vw;
+  background: #2e5c66;
+  width: 266px;
+  border-radius: 100px;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 15px;
+  transition: ease 300ms;
+  gap: 10px;
+}
+
+.apply-btn a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.sponsor {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.sponsor img {
+  width: 100px;
+}
 
 .text-image {
   display: flex;
@@ -5348,13 +5474,32 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .prog-header {
+    height: 15vw;
+  }
+
+  .prog-outline .ltuc-description {
+    margin-left: 0;
+  }
+
+  .prog-outline ul {
+    font-size: 1.76vw;
+  }
+
+  .apply-btn {
+    width: 24vw;
+    font-size: 1.65vw;
+  }
+
   .text-image .container div p {
     font-size: 1.56vw;
   }
-  .all-programs-content{
+
+  .all-programs-content {
     display: flex;
     flex-direction: column;
   }
+
   .text-image .container div img {
     width: 40.7vw;
     height: 30.96vw;
@@ -5379,13 +5524,49 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (max-width: 767px) {
+  .prog-header {
+    height: 45vw;
+  }
+
+  .prog-header div:last-child {
+    font-size: 6.6vw;
+  }
+
+  .prog-header div:first-child {
+    font-size: 3.95vw;
+  }
+
+  .prog-outline .ltuc-description {
+    margin-left: 0;
+  }
+
+  .prog-outline ul {
+    font-size: 3.95vw;
+  }
+
+  .prog-outline div h2 {
+    font-size: 4.2vw;
+  }
+
+  .apply-btn {
+    margin: auto;
+    width: 65%;
+    font-size: 3.95vw;
+  }
+
   .text-image {
     flex-direction: column;
     row-gap: 36px;
   }
-  .slider-conterol-btn{
+
+  .accordion>h3 span:nth-of-type(1) {
+    max-width: 55%;
+  }
+
+  .slider-conterol-btn {
     width: 22vw;
   }
+
   .text-image .ltuc-description-img {
     width: 100%;
   }

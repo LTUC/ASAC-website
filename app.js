@@ -621,9 +621,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // let url = "http://api.mediastack.com/v1/news?access_key=${ur puplic key}&keywords=tech&countries=us";
             // let latest_news = await this.getNews(url);
             // return latest_news;
-            let data = await fetch("./news.json")
-            data = await data.json()
-            return data.data.slice(0,3)
+            try{
+                let data = await fetch("./news.json")
+                data = await data.json()
+                return data.data.slice(0,3)
+            } catch(err){
+                console.log(err.message);
+            }
         }
 
         createLatestNews(latest_news){
