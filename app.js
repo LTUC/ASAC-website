@@ -519,13 +519,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    // class NewsManager {
-    //     constructor() {
+    class NewsManager {
+        constructor() {
     //         this.category_button = document.querySelector(".category-button");
     //         this.category_form = document.querySelector(".category-form");
     //         this.category_checkboxes = null;
     //         this.trendy_section = document.getElementById("trendy-news");
-    //         this.latest_section = document.getElementById("latest-news");
+            this.latest_section = document.getElementById("latest-news");
     //         this.global_category = "";
     //         this.news_list_body = document.querySelector(".news-list-body");
     //         this.category_see_more = document.querySelector("#category-see-more");
@@ -545,7 +545,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    //     }
+        }
     //     setSearchInput() {
     //         this.search_input = this.search_form.querySelector("input");
     //     }
@@ -554,21 +554,21 @@ document.addEventListener("DOMContentLoaded", () => {
     //             'input[type="checkbox"]'
     //         );
     //     }
-    //     async getNews(url) {
-    //         const response = await fetch(url, {
-    //             method: "GET", // *GET, POST, PUT, DELETE, etc.
-    //             mode: "cors", // no-cors, *cors, same-origin
-    //             cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    //             credentials: "same-origin", // include, *same-origin, omit
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //                 // 'Content-Type': 'application/x-www-form-urlencoded',
-    //             },
-    //             redirect: "follow", // manual, *follow, error
-    //             referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    //         });
-    //         return response.json();
-    //     }
+        async getNews(url) {
+            const response = await fetch(url, {
+                method: "GET", // *GET, POST, PUT, DELETE, etc.
+                mode: "cors", // no-cors, *cors, same-origin
+                cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: "same-origin", // include, *same-origin, omit
+                headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                redirect: "follow", // manual, *follow, error
+                referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            });
+            return response.json();
+        }
     //     async getTrendyNews() {
     //         let url;
     //         if (page_obj.isArabic()) {
@@ -615,52 +615,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //         })
     //     }
-    //     async getLatestNews() {
-    //         let url;
-    //         if (page_obj.isArabic()) {
-    //             url = "/news/ar/latest-news";
-    //         } else {
-    //             url = "/news/en/latest-news";
-    //         }
-    //         let latest_news = await this.getNews(url);
-    //         return latest_news;
-    //     }
+        async getLatestNews() {
+            // let url = "http://api.mediastack.com/v1/news?access_key=${ur puplic key}&keywords=tech&countries=us";
+            // let latest_news = await this.getNews(url);
+            // return latest_news;
+            let data = await fetch("./news.json")
+            data = await data.json()
+            return data.data.slice(0,3)
+        }
 
-    //     createLatestNews(latest_news) {
-    //         this.latest_section.classList.add("s-cards");
+        createLatestNews(latest_news){
+            // this.latest_section.classList.add("s-cards");
 
-    //         let inner_latest_section = document.createElement("div");
-    //         for (let i = 0; i < latest_news.length; i++) {
-    //             let news_div = document.createElement("div"); //card
-    //             news_div.classList.add("latest-card");
+            let inner_latest_section = document.createElement("div");
 
-    //             let news_div_link = document.createElement("a");
-    //             news_div_link.href = `${latest_news[i].url}`;
+            for (let i = 0; i < latest_news.length; i++) {
+                let news_div = document.createElement("div"); //card
+                news_div.classList.add("latest-card");
 
-    //             let news_image = document.createElement("img");
-    //             news_image.src = `${latest_news[i].news_banner_img.url}`;
-    //             news_image.classList.add("latest-card-img");
+                let news_div_link = document.createElement("a");
+                news_div_link.href = `${latest_news[i].url}`;
 
-    //             let inner_latest_news = document.createElement("div");
-    //             let inner_latest_date = document.createElement("span");
-    //             let inner_latest_title = document.createElement("p");
+                let news_image = document.createElement("img");
+                if (latest_news[i].image ){
+                    news_image.src = `${latest_news[i].image}`;
+                }
+                else{
+                    news_image.src = `./assets/images/OIG.jpg`;
+                }
 
-    //             inner_latest_date.innerHTML = `${latest_news[i].publish_date}`;
+                news_image.classList.add("latest-card-img");
 
-    //             inner_latest_title.innerHTML = `${latest_news[i].title}`;
+                let inner_latest_news = document.createElement("div");
+                let inner_latest_date = document.createElement("span");
+                let inner_latest_title = document.createElement("p");
 
-    //             inner_latest_news.appendChild(inner_latest_date);
-    //             inner_latest_news.appendChild(inner_latest_title);
+                inner_latest_date.innerHTML = `${latest_news[i].published_at}`;
 
-    //             news_div_link.appendChild(news_image);
-    //             news_div_link.appendChild(inner_latest_news);
+                inner_latest_title.innerHTML = `${latest_news[i].title}`;
 
-    //             news_div.appendChild(news_div_link);
+                
 
-    //             inner_latest_section.appendChild(news_div);
-    //         }
-    //         this.latest_section.appendChild(inner_latest_section);
-    //     }
+                inner_latest_news.appendChild(inner_latest_date);
+                inner_latest_news.appendChild(inner_latest_title);
+
+                news_div_link.appendChild(news_image);
+                news_div_link.appendChild(inner_latest_news);
+
+                news_div.appendChild(news_div_link);
+
+                inner_latest_section.appendChild(news_div);
+            }
+            this.latest_section.appendChild(inner_latest_section);
+            
+            let see_more_latest = document.createElement("button")
+            see_more_latest.innerHTML="See More"
+            see_more_latest.classList.add("latest-see-more")
+
+            this.latest_section.appendChild(see_more_latest)
+        }
 
     //     async getListNews() {
     //         let url;
@@ -848,7 +861,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //             });
     //         }
     //     }
-    //     async activateNewsSection() {
+        async activateNewsSection() {
     //         this.setCategoryCheckboxes();
     //         this.updateGlobalCategoryAndRender()
     //         this.seeMoreActivation();
@@ -858,15 +871,18 @@ document.addEventListener("DOMContentLoaded", () => {
     //         let trendy_news = await this.getTrendyNews();
     //         this.createTrendyNews(trendy_news);
 
-    //         let latest_news = await this.getLatestNews();
-    //         this.createLatestNews(latest_news);
+            // let latest_news = await this.getLatestNews();
+
+            let latest_news = await this.getLatestNews();
+
+            this.createLatestNews(latest_news);
 
     //         this.renderNewsCategoryWithoutUpdate();
     //         this.search_form.addEventListener("submit", (e) => {
     //             this.searchEvent(e);
     //         });
-    //     }
-    // }
+        }
+    }
 
     class ProgramManager {
         constructor() {
@@ -1706,9 +1722,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // news and events
-    // let news_section = new NewsManager();
+    let news_section = new NewsManager();
     // if (news_section.category_form) {
-    //     news_section.activateNewsSection();
+        news_section.activateNewsSection();
     // }
 
     // career 
