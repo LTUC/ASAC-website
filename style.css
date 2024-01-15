@@ -891,11 +891,13 @@ header.active .down-arrow path {
   gap: 10px;
 }
 #programs .ltuc-description{
-  margin-left: 7.5%;
-  margin-right: 7.5%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }
 #programs .ltuc-description h1{
   margin-bottom: 0;
+  width: fit-content;
 
 }
 #faculty-section div a svg {
@@ -1065,6 +1067,8 @@ header.active .down-arrow path {
 
 .program-cards {
   overflow-x: scroll;
+  width: 90%;
+  margin: auto;
 }
 
 .cardset {
@@ -1104,10 +1108,10 @@ header.active .down-arrow path {
   justify-content: center;
 }
 
-.cardset.active div {
+.cardset div {
   position: relative;
-  width: 33.2vw;
-  height: 19.3vw;
+  width: 27.2vw;
+  height: 16.3vw;
   border: 2px solid #2a2a2a;
   border-radius: 20px;
   transition: 500ms;
