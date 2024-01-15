@@ -121,11 +121,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         openDropDownOnMobile() {
             if (window.innerWidth <= 1023) {
-                let drop_down_menu = document.querySelectorAll(".drop-down-menu");
+                // let drop_down_menu = document.querySelectorAll(".drop-down-menu");
                 for (let i = 0; i < this.dropdown.length; i++) {
                     this.dropdown[i].addEventListener("click", () => {
-                        drop_down_menu[i].classList.toggle("show-flex");
+                        console.log('hello');
+                        // drop_down_menu[i].classList.toggle("show-flex");
                         this.dropdown[i].classList.toggle("nav-active-color");
+                        this.navbar.classList.toggle('hide-mobile-nav')
                     });
                 }
             }
@@ -619,9 +621,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // let url = "http://api.mediastack.com/v1/news?access_key=${ur puplic key}&keywords=tech&countries=us";
             // let latest_news = await this.getNews(url);
             // return latest_news;
-            let data = await fetch("./news.json")
-            data = await data.json()
-            return data.data.slice(0,3)
+            try{
+                let data = await fetch("./news.json")
+                data = await data.json()
+                return data.data.slice(0,3)
+            } catch(err){
+                console.log(err.message);
+            }
         }
 
         createLatestNews(latest_news){
@@ -1076,6 +1082,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         this.filter_form[i].classList.toggle("box-appear-flex");
                     }
                     else {
+                        console.log('filer');
                         this.filter_form[i].classList.toggle("box-appear");
                     }
                 } else {
@@ -1105,10 +1112,9 @@ document.addEventListener("DOMContentLoaded", () => {
         async getProgramData() {
 
             let data = await this.getPrograms()
-            console.log("data :", data);
+            // console.log("data :", data);
             let result = data
             for (let i = 0; i < this.global_keys.length; i++) {
-                console.log(this.global_filter[this.global_keys[i]])
                 result = result.filter(item => {
                     if (this.global_filter[this.global_keys[i]] == '' || this.global_filter[this.global_keys[i]] == "All") {
                         return true
@@ -1122,7 +1128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         async renderProgramsWithoutUpdateResult() {
             const data = await this.getProgramData();
-            console.log("result: ", data);
+            // console.log("result: ", data);
             if (page_obj.isMobile()) {
                 this.UpdteMobileContent(data);
             } else this.UpdateTable(data);
@@ -1656,7 +1662,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         handelProgramSlider(program) {
-            console.log(program);
+            // console.log(program);
             // remove the "active" class from all
             this.target = program.getAttribute("data-target");
             this.carosel_active = document.querySelector(`#${this.target}`);
