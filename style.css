@@ -896,6 +896,7 @@ header.active .down-arrow path {
   width: 100%;
   margin: auto;
   text-align: center;
+  align-items: center;
 }
 
 #programs .ltuc-description h1 {
@@ -903,7 +904,12 @@ header.active .down-arrow path {
   width: fit-content;
 
 }
-
+#programs .ltuc-description p{
+    width: 50%;
+    padding-top: 15px;
+    
+  
+}
 #faculty-section div a svg {
   padding-left: 15px;
 }
@@ -1032,14 +1038,26 @@ header.active .down-arrow path {
 .carosel-section .ltuc-description {
   margin-left: 7.5%;
 }
+.carosel-img{
+  position: relative;
 
-.carosel-img {
+}
+.carosel-img img {
   width: 39.06vw;
   height: 27.7vw;
   overflow: hidden;
   object-fit: cover;
 }
-
+.carosel-img::after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  content: "";
+  top: 0;
+  left: 0;
+}
 .programs-slider-button {
   display: none;
 }
@@ -1077,7 +1095,7 @@ header.active .down-arrow path {
 }
 
 .program-cards {
-  overflow-x: scroll;
+
   width: 90%;
   margin: auto;
 }
@@ -1088,6 +1106,8 @@ header.active .down-arrow path {
 
 .cardset.active {
   display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 32px;
 }
 
@@ -1124,9 +1144,10 @@ header.active .down-arrow path {
   width: 27.2vw;
   height: 16.3vw;
   border: 2px solid #2a2a2a;
-  border-radius: 20px;
-  transition: 500ms;
+  border-radius: 10px;
+  transition: 300ms ease-in-out;
 }
+
 
 .cardset.active div img {
   position: absolute;
@@ -1159,9 +1180,11 @@ header.active .down-arrow path {
 }
 
 .cardset.active div:hover {
-  background-color: #2a2a2a;
+  background-color: #490341;
   color: white;
+  border: 2px solid #864496;
 }
+
 
 .cardset.active div:hover span {
   border: 1px solid white;
@@ -1843,7 +1866,25 @@ header.active .down-arrow path {
 /* -------------- */
 /*    card with image title text */
 /* -------------- */
+#campus .ltuc-description {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 68px;
+}
 
+#campus .ltuc-description h1 {
+  margin-bottom: 0;
+  width: fit-content;
+
+}
+#campus .ltuc-description p{
+    width: 60%;
+    padding-top: 15px;
+    
+  
+}
 .staff-campus .contact-form {
   display: flex;
   flex-direction: column;
