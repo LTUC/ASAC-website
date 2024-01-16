@@ -656,7 +656,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let inner_latest_date = document.createElement("span");
                 let inner_latest_title = document.createElement("p");
 
-                inner_latest_date.innerHTML = `${latest_news[i].published_at}`;
+                inner_latest_date.innerHTML = `<i class="fa-solid fa-calendar-days" style="color: #A3238E; padding-right: 10px;"></i>${latest_news[i].published_at}`;
 
                 inner_latest_title.innerHTML = `${latest_news[i].title}`;
 

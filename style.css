@@ -18,6 +18,10 @@
   height: 400px;
 }
 
+.about-div {
+  line-height: 150%;
+}
+
 .custom-alert.show {
   display: flex;
   flex-direction: column;
@@ -892,7 +896,8 @@ header.active .down-arrow path {
   transition: ease 300ms;
   gap: 10px;
 }
-#programs .ltuc-description{
+
+#programs .ltuc-description {
   width: 100%;
   margin: auto;
   text-align: center;
@@ -901,15 +906,30 @@ header.active .down-arrow path {
 
 #programs .ltuc-description h1 {
   margin-bottom: 0;
-  width: fit-content;
+}
+
+#programs .ltuc-description h1::after, #campus .ltuc-description h1::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid #a3238e;
+  margin-top: 5px;
+}
+#detailed-programs h1::after{
+  content: "";
+    display: block;
+    border-bottom:4px solid #a3238e;
+    margin: auto;
+    margin-top: 5px;
+    width: 17.69em;
+}
+
+#programs .ltuc-description p {
+  width: 50%;
+  padding-top: 15px;
+
 
 }
-#programs .ltuc-description p{
-    width: 50%;
-    padding-top: 15px;
-    
-  
-}
+
 #faculty-section div a svg {
   padding-left: 15px;
 }
@@ -1038,17 +1058,20 @@ header.active .down-arrow path {
 .carosel-section .ltuc-description {
   margin-left: 7.5%;
 }
-.carosel-img{
+
+.carosel-img {
   position: relative;
 
 }
+
 .carosel-img img {
   width: 39.06vw;
   height: 27.7vw;
   overflow: hidden;
   object-fit: cover;
 }
-.carosel-img::after{
+
+.carosel-img::after {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1058,6 +1081,7 @@ header.active .down-arrow path {
   top: 0;
   left: 0;
 }
+
 .programs-slider-button {
   display: none;
 }
@@ -1358,11 +1382,11 @@ header.active .down-arrow path {
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 20px;
-  width: 100%;
+  margin-top: 40px;
+  width: 200px;
   background: transparent;
-  border: 1px dashed #2e5c66;
-  color: #2e5c66;
+  border: 1px dashed #962f8a;
+  color: #962f8a;
   transition: 300ms;
   font-family: poppins;
   border-radius: 10px;
@@ -1370,8 +1394,7 @@ header.active .down-arrow path {
 }
 
 .latest-see-more:hover {
-  background-color: #2e5c66;
-  opacity: 0.5;
+  background-color: #490341;
   color: white;
 
 }
@@ -1517,10 +1540,15 @@ header.active .down-arrow path {
 /* -------------- */
 
 #all-programs .ltuc-description {
-  margin-left: 7.5%;
   margin-bottom: 5%;
+  text-align: center;
+  width: 100%;
+  align-items: center;
 }
-
+#all-programs .ltuc-description p{
+  width: 50%;
+  margin-top: 15px;
+}
 .ltuc-description {
   display: flex;
   flex-direction: column;
@@ -1876,15 +1904,15 @@ header.active .down-arrow path {
 
 #campus .ltuc-description h1 {
   margin-bottom: 0;
-  width: fit-content;
+}
+
+#campus .ltuc-description p {
+  width: 60%;
+  padding-top: 15px;
+
 
 }
-#campus .ltuc-description p{
-    width: 60%;
-    padding-top: 15px;
-    
-  
-}
+
 .staff-campus .contact-form {
   display: flex;
   flex-direction: column;
@@ -1963,9 +1991,9 @@ header.active .down-arrow path {
   text-align: center;
 }
 
-.staff-campus {
-  margin-left: 7.5%;
-  margin-right: 7.5%;
+.linear-bg {
+  background-image: linear-gradient(45deg,#ff7e00, #d959a2, #bb0e82);
+  padding-bottom: 100px;
 }
 
 .staff-campus .ltuc-description {
@@ -2458,13 +2486,22 @@ header.active .down-arrow path {
   font-family: "Poppins";
 }
 
+.title-and-filter p {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 35px;
+  margin-top: 15px;
+  line-height: 150%;
+}
+
 #detailed-programs h1,
 #career-list h1,
 #news-list h1 {
   font-weight: 600;
   font-size: 2.54vw;
   line-height: 130%;
-  margin-left: 9%;
+  text-align: center;
 }
 
 #detailed-programs table {
@@ -2494,6 +2531,7 @@ header.active .down-arrow path {
   align-items: center;
   gap: 2%;
   justify-content: center;
+  text-align: center;
 }
 
 .col-6 {
@@ -2569,7 +2607,7 @@ header.active .down-arrow path {
   line-height: 130%;
   display: flex;
   align-items: center;
-  color: rgb(42 42 42 / 60%);
+  color: black;
   display: flex;
   gap: 12px;
 }
@@ -2835,8 +2873,24 @@ input[type="checkbox"]:checked::after {
 
 .all-programs-content a {
   transition: all .2s ease-in-out;
+  position: relative;
 }
-
+.all-programs-content a span{
+  z-index: 2;
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  border: 1px solid white;
+  width: 2.3vw;
+  height: 2.3vw;
+  display: flex;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.all-programs-content a span svg path{
+  fill: white;
+}
 .all-programs-content a:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: scale(103%);
@@ -2976,10 +3030,15 @@ input[type="checkbox"]:checked::after {
   display: flex;
   justify-content: space-between;
   margin-left: 0;
+  width: 100%;
 }
-
+#latest-news .ltuc-description h1{
+  text-align: center;
+  width: 100%;
+}
 .latest-card {
   width: 31.5%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .latest-card-img {
@@ -2992,7 +3051,7 @@ input[type="checkbox"]:checked::after {
   display: flex;
   flex-direction: column;
   gap: 0.92vw;
-  margin-top: 1.8vw;
+  padding: 1.8vw;
 }
 
 .latest-card a>div span {
