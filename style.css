@@ -64,7 +64,7 @@ table {
 }
 
 #footer {
-  background-color: #000000;
+  background-color: #21041a;
 }
 
 /* HEADER */
@@ -318,7 +318,7 @@ header>div:not(.overlay, .drop-down-language) {
 nav>ul {
   display: flex;
   justify-content: space-between;
-  gap: 24px;
+  gap: 15px;
   margin-bottom: 0px;
   margin-top: 0px;
 }
@@ -772,7 +772,7 @@ header.active .down-arrow path {
 
 .faculty-section {
   width: 100%;
-  background: #28525b;
+  background: #490341;
 }
 
 #faculty-section>div {
@@ -784,7 +784,7 @@ header.active .down-arrow path {
 }
 
 .faculty-header {
-  margin-left: 7.5%;
+  text-align: center;
 }
 
 .faculty-header p {
@@ -804,7 +804,6 @@ header.active .down-arrow path {
   font-weight: 600;
   font-size: 2.5vw;
   line-height: 130%;
-  width: 48%;
 }
 
 .faculty-card {
@@ -847,7 +846,7 @@ header.active .down-arrow path {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: #2e5c66;
+  background: #601855;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   padding: 30px;
@@ -908,19 +907,21 @@ header.active .down-arrow path {
   margin-bottom: 0;
 }
 
-#programs .ltuc-description h1::after, #campus .ltuc-description h1::after {
+#programs .ltuc-description h1::after,
+#campus .ltuc-description h1::after {
   content: "";
   display: block;
   border-bottom: 4px solid #a3238e;
   margin-top: 5px;
 }
-#detailed-programs h1::after{
+
+#detailed-programs h1::after {
   content: "";
-    display: block;
-    border-bottom:4px solid #a3238e;
-    margin: auto;
-    margin-top: 5px;
-    width: 17.69em;
+  display: block;
+  border-bottom: 4px solid #a3238e;
+  margin: auto;
+  margin-top: 5px;
+  width: 17.69em;
 }
 
 #programs .ltuc-description p {
@@ -1022,7 +1023,7 @@ header.active .down-arrow path {
 }
 
 .slider-conterol-btn svg path {
-  fill: #0c535c;
+  fill: rgb(189 0 119);
 }
 
 .slider-conterol-btn.right-arrow {
@@ -1385,7 +1386,7 @@ header.active .down-arrow path {
   margin-top: 40px;
   width: 200px;
   background: transparent;
-  border: 1px dashed #962f8a;
+  border: 1px solid #962f8a;
   color: #962f8a;
   transition: 300ms;
   font-family: poppins;
@@ -1545,10 +1546,12 @@ header.active .down-arrow path {
   width: 100%;
   align-items: center;
 }
-#all-programs .ltuc-description p{
+
+#all-programs .ltuc-description p {
   width: 50%;
   margin-top: 15px;
 }
+
 .ltuc-description {
   display: flex;
   flex-direction: column;
@@ -1917,7 +1920,7 @@ header.active .down-arrow path {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 85%;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -1941,7 +1944,6 @@ header.active .down-arrow path {
 .staff-campus .contact-form label {
   display: block;
   font-size: 1.2rem;
-  color: #2a2a2a;
   margin-bottom: 5px;
 }
 
@@ -1953,25 +1955,27 @@ header.active .down-arrow path {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  background: #ffffffcc;
+  margin-top: 10px;
 }
 
 .staff-campus .contact-form button {
-  background-color: #2a2a2a;
   color: #fff;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  width: 50%;
   margin: auto;
   margin-bottom: 50px;
   margin-top: 20px;
   transition: background-color 0.3s;
+  width: 200px;
+  background-color: #490341;
 }
 
 .staff-campus .contact-form button:hover {
-  background-color: #28525b;
+  background-color: #962F8A;
 }
 
 
@@ -1992,8 +1996,11 @@ header.active .down-arrow path {
 }
 
 .linear-bg {
-  background-image: linear-gradient(45deg,#ff7e00, #d959a2, #bb0e82);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.70) 0%, rgb(0 0 0 / 74%) 81.18%, rgb(0 0 0 / 85%) 100%), url(./assets/images/luminus-cover.jpg), black 50% / cover no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-bottom: 100px;
+  color: white;
 }
 
 .staff-campus .ltuc-description {
@@ -2002,7 +2009,7 @@ header.active .down-arrow path {
 
 .staff-campus .ltuc-description h1 {
   line-height: 130%;
-  color: #2a2a2a;
+
 }
 
 .campus-block .ltuc-description h1 {
@@ -2016,9 +2023,7 @@ header.active .down-arrow path {
 }
 
 .staff-campus .ltuc-description p {
-  color: #717171;
   font-size: 1.357vw;
-  ;
   font-weight: 500;
   line-height: normal;
   margin-bottom: 5%;
@@ -2062,6 +2067,7 @@ header.active .down-arrow path {
 .staff-campus .c-card-img {
   width: 100%;
   height: 30vw;
+  /* order: 2; */
 }
 
 .staff-campus .s-card-img {
@@ -2451,10 +2457,6 @@ header.active .down-arrow path {
   display: none;
 }
 
-#detailed-programs {
-  margin-top: 100px;
-}
-
 .relative {
   position: relative;
 }
@@ -2776,6 +2778,7 @@ input[type="checkbox"]:checked::after {
   color: #962f8a;
   margin-top: 50px;
   cursor: pointer;
+  padding-bottom: 50px;
   justify-content: center;
 }
 
@@ -2875,7 +2878,8 @@ input[type="checkbox"]:checked::after {
   transition: all .2s ease-in-out;
   position: relative;
 }
-.all-programs-content a span{
+
+.all-programs-content a span {
   z-index: 2;
   position: absolute;
   top: 5%;
@@ -2888,9 +2892,11 @@ input[type="checkbox"]:checked::after {
   align-items: center;
   justify-content: center;
 }
-.all-programs-content a span svg path{
+
+.all-programs-content a span svg path {
   fill: white;
 }
+
 .all-programs-content a:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: scale(103%);
@@ -3032,10 +3038,12 @@ input[type="checkbox"]:checked::after {
   margin-left: 0;
   width: 100%;
 }
-#latest-news .ltuc-description h1{
+
+#latest-news .ltuc-description h1 {
   text-align: center;
   width: 100%;
 }
+
 .latest-card {
   width: 31.5%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -3857,8 +3865,8 @@ input[type="checkbox"]:checked::after {
   }
 
   .cardset.active div {
-    width: 56.7vw;
-    height: 32.7vw;
+    width: 43.7vw;
+    height: 24.7vw;
   }
 
   .cardset.active div span,
@@ -4131,11 +4139,6 @@ input[type="checkbox"]:checked::after {
     width: 100%;
   }
 
-  .staff-campus {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
   /* -------------- */
   /*    card with image title text END    */
   /* -------------- */
@@ -4279,8 +4282,8 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
 
   #detailed-programs h1 {
-    font-size: 4.29vw;
-    margin-left: 5%;
+    font-size: 3.1vw;
+    margin-left: 0;
   }
 
   .result {
@@ -4358,12 +4361,25 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (max-width: 767px) {
-
+  
+  #campus .ltuc-description p, #programs .ltuc-description p, #all-programs .ltuc-description p, .title-and-filter p{
+    width: 85%;
+  }
+  .all-programs-content a span{
+    width: 6.3vw;
+    height: 6.3vw;
+  }
+  #programs .ltuc-description h1, #campus .ltuc-description h1{
+    width: 50%;
+  }
   section {
     padding-top: 5.7vw;
     margin-bottom: 17.55vw;
   }
-
+  .carosel-img img{
+    width: 100%;
+    height: 100%;
+  }
   #contactForm {
     display: flex;
     flex-direction: column;
@@ -4567,10 +4583,6 @@ input[type="checkbox"]:checked::after {
   .faculty-header h1 {
     font-size: 5.5vw;
     width: 100%;
-  }
-
-  .faculty-header {
-    margin-left: 6.5%;
   }
 
   .faculty-header h2 {
@@ -4879,7 +4891,6 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
 
   .ltuc-description {
-    margin-left: 6.5%;
     width: 87vw;
   }
 
@@ -5045,6 +5056,8 @@ input[type="checkbox"]:checked::after {
   .staff-campus .c-cards {
     flex-direction: column;
     gap: 30px;
+    margin: auto;
+    width: 85%;
   }
 
   .staff-campus .c-cards .c-card {
@@ -5056,12 +5069,10 @@ input[type="checkbox"]:checked::after {
   .staff-campus .c-card-img {
     width: 100%;
     height: 65.8vw;
-    order: 2;
   }
 
   .staff-campus .c-card-body {
     gap: 15px;
-    order: 1;
     margin-bottom: 10px;
   }
 
@@ -5076,11 +5087,6 @@ input[type="checkbox"]:checked::after {
 
   .staff-campus .s-card-img {
     height: 83vw;
-  }
-
-  .staff-campus {
-    margin-left: 6.5%;
-    margin-right: 6.5%;
   }
 
   /* -------------- */
@@ -5147,8 +5153,12 @@ input[type="checkbox"]:checked::after {
     line-height: 150%;
     font-weight: 700;
     font-size: 5.5vw;
+    width: 50%;
+    margin: auto;
   }
-
+  #detailed-programs h1::after{
+    width: 100%;
+  }
   .filter-button,
   .search-form input {
     font-size: 3.72vw;
@@ -5577,6 +5587,20 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .all-programs-content a span{
+    width: 4.3vw;
+    height: 4.3vw;
+  }
+  #all-programs .ltuc-description{
+    margin-left: 0;
+  }
+  #latest-news{
+    width: 90%;
+  }
+  .cardset.active{
+    row-gap: 10px;
+    column-gap: 0;
+  }
   .prog-header {
     height: 15vw;
   }
