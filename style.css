@@ -1192,10 +1192,15 @@ header.active .down-arrow path {
 
 }
 
-.cardset.active div:hover .course-logo path {
+.cardset.active div:hover .course-logo path, .cardset.active div:hover .dotnet rect {
   fill: white;
 }
-
+.cardset.active div:hover .dotnet{
+  border: 1px solid #490341;
+}
+.cardset.active div:hover .dotnet path{
+  fill: black;
+}
 .programs-cards .slider-conterol-btn {
   height: 19.9vw;
 }
