@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500;1,600&family=Roboto:wght@400;500;700&display=swap');
+
 
 /* move colors to header.html in phase II */
 /* SECTIONS IN THIS CSS FILE */
@@ -17,7 +23,28 @@
   width: 70%;
   height: 400px;
 }
-
+.code-sign{
+  display: flex;
+  align-items: center;
+  gap:15px;
+}
+.code-sign svg{
+  width: 35px;
+}
+.code-sign::before{
+  display: inline-block;
+  content: "";
+  width: 150px;
+  background-color:#9B1881 ;
+  height: 2px;
+}
+.code-sign::after{
+  display: inline-block;
+  content: "";
+  width: 150px;
+  background-color:#9B1881 ;
+  height: 2px;
+}
 .about-div {
   line-height: 150%;
 }
@@ -663,19 +690,25 @@ header.active .down-arrow path {
 .banner-content {
   position: absolute;
   bottom: 0;
-  left: 9%;
+  width: 100%;
+  /* left: 9%; */
 
   display: flex;
+  align-items: center;
+
   flex-direction: column;
   color: white;
   padding-bottom: 50px;
+  height: 50%;
 }
 
 .banner-content-inner {
   display: flex;
   flex-direction: column;
-
+  align-items: center;
+  text-align: center;
   gap: 15px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .banner-content button {
@@ -697,13 +730,13 @@ header.active .down-arrow path {
 }
 
 .banner-content p {
-  font-size: 1.16vw;
+  font-size: 2.16vw;
   line-height: 150%;
   width: 58.5%;
 }
 
 .banner-content h1 {
-  font-size: 2.66vw;
+  font-size: 4.66vw;
   font-weight: 700;
   line-height: 149%;
   width: 50%;
@@ -896,7 +929,7 @@ header.active .down-arrow path {
   gap: 10px;
 }
 
-#programs .ltuc-description {
+/* #programs .ltuc-description {
   width: 100%;
   margin: auto;
   text-align: center;
@@ -905,9 +938,9 @@ header.active .down-arrow path {
 
 #programs .ltuc-description h1 {
   margin-bottom: 0;
-}
+} */
 
-#programs .ltuc-description h1::after,
+/* #programs .ltuc-description h1::after,
 #campus .ltuc-description h1::after {
   content: "";
   display: block;
@@ -922,14 +955,14 @@ header.active .down-arrow path {
   margin: auto;
   margin-top: 5px;
   width: 17.69em;
-}
-
+} */
+/* 
 #programs .ltuc-description p {
   width: 50%;
   padding-top: 15px;
 
 
-}
+} */
 
 #faculty-section div a svg {
   padding-left: 15px;
@@ -1023,7 +1056,7 @@ header.active .down-arrow path {
 }
 
 .slider-conterol-btn svg path {
-  fill: rgb(189 0 119);
+  fill:rgb(235 116 42);
 }
 
 .slider-conterol-btn.right-arrow {
@@ -1055,10 +1088,10 @@ header.active .down-arrow path {
 .carosel-section .slider-conterol-btn {
   height: 28.7vw;
 }
-
+/* 
 .carosel-section .ltuc-description {
   margin-left: 7.5%;
-}
+} */
 
 .carosel-img {
   position: relative;
@@ -1482,12 +1515,7 @@ header.active .down-arrow path {
   position: relative;
 }
 
-.staff-slider .ltuc-description h1 {
-  font-weight: 600;
-  font-size: 2.55vw;
-  line-height: 130%;
-  color: #2a2a2a;
-}
+
 
 .staff-slider .scroll-img {
   display: inline-flex;
@@ -1545,7 +1573,7 @@ header.active .down-arrow path {
 /* STAFF SECTION BLOCK END*/
 /* -------------- */
 
-#all-programs .ltuc-description {
+/* #all-programs .ltuc-description {
   margin-bottom: 5%;
   text-align: center;
   width: 100%;
@@ -1555,41 +1583,20 @@ header.active .down-arrow path {
 #all-programs .ltuc-description p {
   width: 50%;
   margin-top: 15px;
-}
+} */
 
 .ltuc-description {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
-
-.ltuc-description a {
-  padding: 15px 35px;
-  width: fit-content;
-  background: #a3238e;
-  border-radius: 10px;
-  color: white;
-  margin-top: 36px;
-  text-decoration: none;
+.ltuc-description:not(#about .ltuc-description) {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 68px;
 }
-
-.ltuc-description ul {
-  list-style: disc;
-  line-height: 180%;
-  margin: auto 5%;
-  font-size: 1.157vw;
-}
-
-.ltuc-description li {
-  list-style: disc;
-}
-
-.ltuc-description h3 {
-  font-size: 1.6vw;
-  margin-bottom: 30px;
-  font-weight: 600;
-}
-
 .ltuc-description h1 {
   font-size: 2.5vw;
   margin-bottom: 36px;
@@ -1598,6 +1605,25 @@ header.active .down-arrow path {
   line-height: 130%;
   text-transform: capitalize;
 }
+.ltuc-description h1:not(#about .ltuc-description h1) {
+  margin-bottom: 0;
+}
+.ltuc-description p {
+  width: 60%;
+  padding-top: 10px;
+}
+
+
+
+
+
+
+.ltuc-description h3 {
+  font-size: 1.6vw;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
 
 .ltuc-description-img {
   width: 50%;
@@ -1902,24 +1928,7 @@ header.active .down-arrow path {
 /* -------------- */
 /*    card with image title text */
 /* -------------- */
-#campus .ltuc-description {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 68px;
-}
 
-#campus .ltuc-description h1 {
-  margin-bottom: 0;
-}
-
-#campus .ltuc-description p {
-  width: 60%;
-  padding-top: 15px;
-
-
-}
 
 .staff-campus .contact-form {
   display: flex;
@@ -1990,7 +1999,7 @@ header.active .down-arrow path {
   justify-content: space-between;
 }
 
-.campus-block .ltuc-description {
+/* .campus-block .ltuc-description {
   width: 100%;
 }
 
@@ -1998,7 +2007,7 @@ header.active .down-arrow path {
 .campus-block .ltuc-description p {
   width: 100%;
   text-align: center;
-}
+} */
 
 .linear-bg {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.70) 0%, rgb(0 0 0 / 74%) 81.18%, rgb(0 0 0 / 85%) 100%), url(./assets/images/luminus-cover.jpg), black 50% / cover no-repeat;
@@ -2008,7 +2017,7 @@ header.active .down-arrow path {
   color: white;
 }
 
-.staff-campus .ltuc-description {
+/* .staff-campus .ltuc-description {
   margin-left: 0px;
 }
 
@@ -2019,7 +2028,6 @@ header.active .down-arrow path {
 
 .campus-block .ltuc-description h1 {
   font-weight: 500;
-  /* font-size: 1.62vw; */
 }
 
 .staff-block .ltuc-description h1 {
@@ -2033,7 +2041,7 @@ header.active .down-arrow path {
   line-height: normal;
   margin-bottom: 5%;
 
-}
+} */
 
 .staff-campus .c-cards {
   display: flex;
@@ -2412,14 +2420,7 @@ header.active .down-arrow path {
   flex-direction: column;
 }
 
-.pdf .ltuc-description h1 {
-  margin-bottom: 28px;
-}
 
-.pdf .ltuc-description p {
-  margin-bottom: 30px;
-  width: 70%;
-}
 
 .pdf a {
   border: 1px solid rgba(144, 144, 144, 0.5);
@@ -2935,9 +2936,9 @@ input[type="checkbox"]:checked::after {
   width: 90%;
 }
 
-#all-programs .ltuc-description h1 {
+/* #all-programs .ltuc-description h1 {
   margin-bottom: 0;
-}
+} */
 
 .all-programs-content .row {
   display: flex;
@@ -3044,10 +3045,10 @@ input[type="checkbox"]:checked::after {
   width: 100%;
 }
 
-#latest-news .ltuc-description h1 {
+/* #latest-news .ltuc-description h1 {
   text-align: center;
   width: 100%;
-}
+} */
 
 .latest-card {
   width: 31.5%;
@@ -3948,34 +3949,6 @@ input[type="checkbox"]:checked::after {
   /* STAFF SECTION BLOCK */
   /* -------------- */
 
-  .staff-slider .ltuc-description h1 {
-    font-size: 3.3vw;
-  }
-
-  .staff-slider .card {
-    height: auto;
-  }
-
-  .staff-slider .card .card-body h2 {
-    font-size: 2.3vw;
-  }
-
-  .staff-slider .card .card-body p {
-    font-size: 1.6vw;
-  }
-
-  .staff-slider .card-img {
-    width: 25vw;
-    height: 26vw;
-  }
-
-  .staff-slider .slider-conterol-btn {
-    height: 50vw;
-  }
-
-  .staff-slider .scroll-img {
-    gap: 30px;
-  }
 
   /* -------------- */
   /* STAFF SECTION BLOCK END*/
@@ -4534,6 +4507,7 @@ input[type="checkbox"]:checked::after {
     margin-left: 0;
     width: 87vw;
     left: 6.5%;
+    
   }
 
   .banner-img {
