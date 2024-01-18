@@ -121,13 +121,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         openDropDownOnMobile() {
             if (window.innerWidth <= 1023) {
-                // let drop_down_menu = document.querySelectorAll(".drop-down-menu");
                 for (let i = 0; i < this.dropdown.length; i++) {
                     this.dropdown[i].addEventListener("click", () => {
-                        console.log('hello');
-                        // drop_down_menu[i].classList.toggle("show-flex");
-                        this.dropdown[i].classList.toggle("nav-active-color");
-                        this.navbar.classList.toggle('hide-mobile-nav')
+                        this.dropdown[i].classList.toggle("active");
                     });
                 }
             }
