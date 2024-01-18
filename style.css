@@ -14,8 +14,35 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+
+body {
+  font-family: "Poppins";
+}
+
 body.mobile-menu-open {
   overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  line-height: 150%;
 }
 
 .custom-alert {
@@ -66,9 +93,6 @@ body.mobile-menu-open {
   transition: 0ms;
 }
 
-.about-div {
-  line-height: 150%;
-}
 
 .custom-alert.show {
   display: flex;
@@ -95,17 +119,10 @@ body.mobile-menu-open {
   font-weight: bold;
   width: 20px;
   height: 20px;
-  font-size: 30px;
   font-family: auto;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
-body {
-  font-family: "Poppins";
-}
 
 table {
   border: 1px dashed #5b5b5b59;
@@ -126,96 +143,17 @@ footer {
 }
 
 
-.header-icon {
-  pointer-events: none;
-}
-
-/* -------------- */
-/*    GATES       */
-/* -------------- */
-
-.side_gates {
-  display: flex;
-  position: fixed;
-  flex-direction: column;
-  align-items: flex-end;
-  width: fit-content;
-  right: 0;
-  top: 25%;
-  gap: 12px;
-  z-index: 50;
-}
-
-.side_gates a>div {
-  position: relative;
-  height: 60px;
-  background-color: #4F88BF;
-  border-radius: 10px 0px 0px 10px;
-  width: 50px;
-  transition: all 300ms;
-
-}
-
-.gate-title {
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 15px;
-  height: 60px;
-  width: 150px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 10px;
-  padding-right: 60px;
-  z-index: -1;
-}
-
-.gate-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  height: 60px;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  background-color: #4F88BF;
-  border-radius: 10px 0px 0px 10px;
-
-}
-
-.side_gates a>div:hover {
-  width: 200px;
-}
-
-.side_gates a>div:hover .gate-title {
-  z-index: 0;
-
-}
-
-.side_gates a>div:hover .gate-icon {
-  border-radius: 0px;
-}
-
-.gate-icon object {
-  pointer-events: none
-}
-
-
-/* -------------- */
-/*    GATES END      */
-/* -------------- */
-
 
 /* -------------- */
 /*    HEADER      */
 /* -------------- */
 
+.header-icon {
+  pointer-events: none;
+}
+
 header span {
   color: white;
-  font-size: 1.05vw;
 }
 
 header span a {
@@ -295,7 +233,6 @@ header.active .drop-down-language-a {
 
 .drop-down-language-a {
   color: white;
-  font-size: 1.05vw;
   text-decoration: none;
 }
 
@@ -435,12 +372,10 @@ header.active .dropdown:hover .down-arrow path {
 
 .drop-down-menue-c {
   width: 100%;
-  font-size: 1.2vw;
 }
 
 #navbar ul li .span-c {
   font-weight: 400;
-  font-size: 1.05vw;
   line-height: 150%;
   color: #1e1e1e;
 }
@@ -454,14 +389,12 @@ header.active .dropdown:hover .down-arrow path {
   opacity: 0.7;
   font-weight: 500;
   line-height: 150%;
-  font-size: 0.92vw;
 }
 
 .programs-nav li {
   width: 15.87vw;
   display: flex;
   align-items: center;
-  font-size: 1.1vw;
   gap: 12px;
 }
 
@@ -611,7 +544,7 @@ header.active .down-arrow path {
 
 #banner {
   position: relative;
-  height: 80vh;
+  height: 700px;
   width: 100%;
   padding-top: 10vw;
 }
@@ -664,7 +597,6 @@ header.active .down-arrow path {
 .banner-content button {
   width: fit-content;
   background: #a3238e;
-  font-size: 1.16vw;
   font-weight: 700;
   color: white;
   border-radius: 10px;
@@ -680,74 +612,78 @@ header.active .down-arrow path {
 }
 
 .banner-content p {
-  font-size: 2.16vw;
+  font-size: 2em;
   line-height: 150%;
   width: 58.5%;
 }
 
 .banner-content h1 {
-  font-size: 4.66vw;
+  font-size: 3em;
   font-weight: 700;
   line-height: 149%;
   width: 50%;
 }
 
-.banner-content a {
-  z-index: 1;
-}
-
-.banner-arrow {
-  display: block;
-  width: 100%;
-  animation: upAndDown 3s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes disappearAnimation {
-  0% {
-    opacity: 1
-  }
-
-  50% {
-    opacity: 0.5
-  }
-
-  100% {
-    opacity: 0
-  }
-}
-
-@keyframes appearAnimation {
-  0% {
-    opacity: 0
-  }
-
-  50% {
-    opacity: 0.5
-  }
-
-  100% {
-    opacity: 1
-  }
-}
-
-@keyframes upAndDown {
-  0% {
-    transform: translateY(15px);
-  }
-
-  50% {
-    transform: translateY(0px);
-  }
-
-  100% {
-    transform: translateY(15px);
-  }
-}
-
 /* -------------- */
 /*   BANNER END   */
 /* -------------- */
+
+.ltuc-description:not(#about .ltuc-description) {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 68px;
+}
+
+.ltuc-description h1:not(#about .ltuc-description h1) {
+  margin-bottom: 0;
+}
+
+
+/* -------------- */
+/*   ABOUT   */
+/* -------------- */
+
+#about {
+  display: flex;
+  gap: 5%;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about>div:nth-child(1) {
+  width: 60%;
+}
+
+#about>div:nth-child(1) h1 {
+  margin-bottom: 30px;
+}
+
+.about-div {
+  line-height: 150%;
+
+}
+
+.about-div>div {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.about-div>div div:nth-child(2) {
+  padding-top: 10px;
+}
+
+.about-div>div div:nth-child(2) p {
+  padding-top: 15px;
+}
+
+/* -------------- */
+/*   ABOUT END   */
+/* -------------- */
+
 
 /* -------------- */
 /*   FACITITES    */
@@ -774,7 +710,6 @@ header.active .down-arrow path {
   width: 25%;
   height: 31px;
   font-weight: 400;
-  font-size: 1.39vw;
   line-height: 130%;
   color: rgba(255, 255, 255, 0.8);
   padding-bottom: 16px;
@@ -785,7 +720,6 @@ header.active .down-arrow path {
   text-transform: capitalize;
   color: #ffffff;
   font-weight: 600;
-  font-size: 2.5vw;
   line-height: 130%;
 }
 
@@ -813,7 +747,6 @@ header.active .down-arrow path {
 .faculty-card div h3 {
   width: 100%;
   font-weight: 600;
-  font-size: 17px;
   text-align: center;
   color: #2a2a2a;
 }
@@ -839,7 +772,6 @@ header.active .down-arrow path {
 .faculty-card div h1 {
   width: 80%;
   font-weight: 500;
-  font-size: 27px;
   line-height: 150%;
   display: flex;
   align-items: center;
@@ -848,7 +780,6 @@ header.active .down-arrow path {
 
 .faculty-card div p {
   font-weight: 400;
-  font-size: 1.157vw;
   line-height: 150%;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -879,40 +810,6 @@ header.active .down-arrow path {
   gap: 10px;
 }
 
-/* #programs .ltuc-description {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  align-items: center;
-}
-
-#programs .ltuc-description h1 {
-  margin-bottom: 0;
-} */
-
-/* #programs .ltuc-description h1::after,
-#campus .ltuc-description h1::after {
-  content: "";
-  display: block;
-  border-bottom: 4px solid #a3238e;
-  margin-top: 5px;
-}
-
-#detailed-programs h1::after {
-  content: "";
-  display: block;
-  border-bottom: 4px solid #a3238e;
-  margin: auto;
-  margin-top: 5px;
-  width: 17.69em;
-} */
-/* 
-#programs .ltuc-description p {
-  width: 50%;
-  padding-top: 15px;
-
-
-} */
 
 #faculty-section div a svg {
   padding-left: 15px;
@@ -945,7 +842,6 @@ header.active .down-arrow path {
 
 .fact-text {
   font-weight: 400;
-  font-size: 1.157vw;
   line-height: 150%;
   text-transform: capitalize;
   color: #1e1e1e;
@@ -953,14 +849,12 @@ header.active .down-arrow path {
 
 .fact-number {
   font-weight: 500;
-  font-size: 2.3vw;
   line-height: 150%;
   color: #e31c48;
 }
 
 .fact-title {
   font-weight: 600;
-  font-size: 1.45vw;
   line-height: 150%;
   display: flex;
   align-items: baseline;
@@ -1093,7 +987,6 @@ header.active .down-arrow path {
   background: none;
   border: none;
   font-weight: 600;
-  font-size: 1.38vw;
   color: rgba(42, 42, 42, 0.5);
   width: fit-content;
 }
@@ -1127,7 +1020,6 @@ header.active .down-arrow path {
 
 .cardset.active div h2 {
   font-weight: 600;
-  font-size: 1.38vw;
   width: 50%;
   line-height: 150%;
   margin-top: 10%;
@@ -1258,114 +1150,6 @@ header.active .down-arrow path {
 /* SLIDER CAROSEL INTERACTIVE END */
 /* -------------- */
 
-/* -------------- */
-/* CARDS CARD */
-/* -------------- */
-#cards-section {
-  width: 100%;
-  position: relative;
-}
-
-#cards-section button {
-  height: 75.7vh;
-}
-
-#cards-section>div {
-  display: flex;
-  flex-direction: column;
-}
-
-.cards-section-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 100px;
-  gap: 7%;
-}
-
-.cards-section-header h1 {
-  width: 35%;
-  height: 114px;
-  color: #2a2a2a;
-  font-weight: 600;
-  font-size: 2.5vw;
-  line-height: 130%;
-}
-
-.cards-section-header p {
-  width: 75%;
-  height: 60px;
-  color: #1e1e1e;
-  font-weight: 400;
-  font-size: 1.157vw;
-  line-height: 150%;
-}
-
-.cardContainer .cardContents h3 {
-  width: 100%;
-  font-weight: 500;
-  font-size: 27px;
-  line-height: 150%;
-  display: flex;
-  align-items: center;
-  text-transform: capitalize;
-
-  color: #2a2a2a;
-}
-
-.cardContainer .cardContents p {
-  width: 100%;
-  text-transform: capitalize;
-  color: #1e1e1e;
-  font-weight: 400;
-  font-size: 1.157vw;
-  line-height: 150%;
-}
-
-.cardWrapperOuter {
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-
-.cardWrapper {
-  display: inline-flex;
-  gap: 50px;
-}
-
-.cardContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.cardContainer .cardsImage {
-  width: 33.2vw;
-}
-
-.cardContainer .cardsImage img {
-  width: 100%;
-  height: 20.42vw;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-.cardContainer .cardContents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: start;
-  gap: 20px;
-}
-
-/* -------------- */
-/* CARDS CARD  END */
-/* -------------- */
 
 /* -------------- */
 /* NEWS SECTION BLOCK */
@@ -1432,7 +1216,6 @@ header.active .down-arrow path {
   top: 36px;
   width: 7.4vw;
   height: 2.14vw;
-  font-size: 1.15vw;
   border: 1px solid rgba(42, 42, 42, 0.5);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
   border-radius: 30px;
@@ -1443,7 +1226,6 @@ header.active .down-arrow path {
 
 .newscardset div h2 {
   font-weight: 500;
-  font-size: 1.56vw;
   line-height: 150%;
   width: 90%;
   position: absolute;
@@ -1507,7 +1289,6 @@ header.active .down-arrow path {
 
 .staff-slider .card .card-body h2 {
   font-weight: 600;
-  font-size: 1.6vw;
   line-height: 44px;
   letter-spacing: -0.02em;
   color: #2a2a2a;
@@ -1515,7 +1296,6 @@ header.active .down-arrow path {
 
 .staff-slider .card .card-body p {
   font-weight: 500;
-  font-size: 1vw;
   line-height: 28px;
   color: #a3238e;
 }
@@ -1540,22 +1320,22 @@ header.active .down-arrow path {
   margin-top: 15px;
 } */
 
+
+
+
+
+
+
+
 .ltuc-description {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
 
-.ltuc-description:not(#about .ltuc-description) {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 68px;
-}
+
 
 .ltuc-description h1 {
-  font-size: 2.5vw;
   margin-bottom: 36px;
   font-weight: 600;
   width: 17.69em;
@@ -1563,9 +1343,7 @@ header.active .down-arrow path {
   text-transform: capitalize;
 }
 
-.ltuc-description h1:not(#about .ltuc-description h1) {
-  margin-bottom: 0;
-}
+
 
 .ltuc-description p {
   width: 60%;
@@ -1578,7 +1356,6 @@ header.active .down-arrow path {
 
 
 .ltuc-description h3 {
-  font-size: 1.6vw;
   margin-bottom: 30px;
   font-weight: 600;
 }
@@ -1596,141 +1373,9 @@ header.active .down-arrow path {
 
 .ltuc-description p {
   font-weight: 400;
-  font-size: 1.157vw;
   line-height: 150%;
 }
 
-/* -------------- */
-/* VIDEO BLOCK*/
-/* -------------- */
-.video-body,
-.video {
-  width: 100%;
-  background-color: black;
-}
-
-.video-content {
-  padding-top: 100px;
-  margin-left: 10%;
-}
-
-.video-content p:nth-child(1) {
-  width: 75%;
-  margin-bottom: 16px;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 400;
-  font-size: 1.39vw;
-  line-height: 130%;
-}
-
-.video-content h1 {
-  text-transform: capitalize;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 2.5vw;
-  line-height: 130%;
-}
-
-.video-content p:last-child {
-  width: 65%;
-  color: rgba(252, 252, 252, 0.9);
-  margin-top: 50px;
-  margin-bottom: 128px;
-  font-weight: 400;
-  font-size: 1.157vw;
-  line-height: 150%;
-}
-
-.video_fram {
-  position: relative;
-}
-
-.video_fram video {
-  width: 100%;
-  height: 100%;
-  z-index: -100;
-}
-
-.video-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0px;
-  width: 100%;
-  height: 128px;
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0) 0%,
-      #ffffff 100%);
-}
-
-/* -------------- */
-/* VIDEO BLOCK END*/
-/* -------------- */
-
-/* -------------- */
-/*    SIDE NAV      */
-/* -------------- */
-
-.side-nav-page {
-  display: grid;
-  grid-template-columns: auto auto;
-  margin-top: 90px;
-  margin-bottom: 90px;
-  column-gap: 6%;
-}
-
-.nav_section_content {
-  width: 95%;
-}
-
-
-.side-nav-page section {
-  padding-top: 0px;
-  margin-bottom: 100px
-}
-
-.side-nav-page .staff-campus {
-  margin-left: 0;
-}
-
-.side-nav-page .ltuc-description {
-  margin-left: 0px
-}
-
-.side-navbar {
-  margin-left: 50px;
-  width: fit-content;
-}
-
-.text-sec h2 {
-  font-size: 1.57vw;
-  font-weight: 600;
-}
-
-.side-navbar>div {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.side-nav .text-sec .ltuc-description p {
-  width: 90%;
-}
-
-.side-navbar a {
-  color: black;
-  font-weight: 500;
-  font-size: 1.157vw;
-  line-height: 130%;
-}
-
-.colored-side-link {
-  color: #a3238e;
-}
-
-.side-link {
-  color: #2a2a2a;
-  opacity: 0.5;
-}
 
 .accordion {
   color: #333333;
@@ -1768,7 +1413,6 @@ header.active .down-arrow path {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  font-size: 1.04vw;
 }
 
 .panel-content {
@@ -1795,7 +1439,6 @@ header.active .down-arrow path {
   align-items: center;
   justify-content: space-between;
   font-weight: 500;
-  font-size: 1.157vw;
   line-height: 150%;
 }
 
@@ -1804,85 +1447,9 @@ header.active .down-arrow path {
   align-items: center;
 }
 
-.sub-navs {
-  display: flex;
-  justify-content: flex-start;
-  gap: 15px;
-  margin-bottom: 5.7vw;
-  flex-wrap: wrap;
-}
-
-.sub-navs a {
-  color: white;
-  background-color: rgba(73, 3, 65, 0.4);
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.sub-navs a.active {
-  background-color: #490341;
-}
-
-/* -------------- */
-/*    SIDE NAV END      */
-/* -------------- */
-
-/* -------------- */
-/*    title text image */
-/* -------------- */
-.title-text-img .img-body {
-  height: 37vw;
-  margin-bottom: 36px;
-}
-
-.title-text-img .ltuc-description p {
-  width: 80%;
-}
-
-.title-text-img div:nth-child(2) {
-  margin-bottom: 40px;
-}
-
-.title-text-img .img-body img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 
-/* -------------- */
-/*    title text image END    */
-/* -------------- */
 
-/* -------------- */
-/*    grid 3 images     */
-/* -------------- */
-.image-grid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  width: 80%;
-  margin: auto;
-  align-items: stretch;
-  margin-top: 30px;
-}
-
-.image-grid img {
-  width: 100%;
-}
-
-.image-grid img:nth-child(3) {
-  grid-column-start: 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  height: -webkit-fill-available;
-}
-
-/* -------------- */
-/*    grid 3 images END    */
-/* -------------- */
 
 /* -------------- */
 /*    card with image title text */
@@ -1900,7 +1467,6 @@ header.active .down-arrow path {
 
 .staff-campus .contact-form h2 {
   font-weight: 500;
-  font-size: 1.5rem;
   color: #2a2a2a;
   margin-bottom: 50px;
 }
@@ -1927,7 +1493,6 @@ header.active .down-arrow path {
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
   background: #ffffffcc;
   margin-top: 10px;
 }
@@ -1938,7 +1503,6 @@ header.active .down-arrow path {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
   margin: auto;
   margin-bottom: 50px;
   margin-top: 20px;
@@ -1958,16 +1522,6 @@ header.active .down-arrow path {
   justify-content: space-between;
 }
 
-/* .campus-block .ltuc-description {
-  width: 100%;
-}
-
-.campus-block .ltuc-description h1,
-.campus-block .ltuc-description p {
-  width: 100%;
-  text-align: center;
-} */
-
 .linear-bg {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.70) 0%, rgb(0 0 0 / 74%) 81.18%, rgb(0 0 0 / 85%) 100%), url(./assets/images/luminus-cover.jpg), black 50% / cover no-repeat;
   background-repeat: no-repeat;
@@ -1976,31 +1530,6 @@ header.active .down-arrow path {
   color: white;
 }
 
-/* .staff-campus .ltuc-description {
-  margin-left: 0px;
-}
-
-.staff-campus .ltuc-description h1 {
-  line-height: 130%;
-
-}
-
-.campus-block .ltuc-description h1 {
-  font-weight: 500;
-}
-
-.staff-block .ltuc-description h1 {
-  font-weight: 600;
-  font-size: 2.54vw;
-}
-
-.staff-campus .ltuc-description p {
-  font-size: 1.357vw;
-  font-weight: 500;
-  line-height: normal;
-  margin-bottom: 5%;
-
-} */
 
 .staff-campus .c-cards {
   display: flex;
@@ -2072,14 +1601,12 @@ header.active .down-arrow path {
 
 .staff-campus .c-card-body h2 {
   font-weight: 600;
-  font-size: 1.39vw;
   line-height: 36px;
   color: #000000;
 }
 
 .staff-campus .s-card-body h2 {
   font-weight: 600;
-  font-size: 1.157vw;
   line-height: 150%;
   letter-spacing: -0.02em;
   color: #2a3342;
@@ -2088,21 +1615,18 @@ header.active .down-arrow path {
 
 .staff-campus .s-card-body p {
   font-weight: 500;
-  font-size: 1.04vw;
   line-height: 28px;
   color: #707070;
 }
 
 .staff-campus .c-card-body p {
   font-weight: 400;
-  font-size: 1vw;
   line-height: 150%;
   color: #1e1e1e;
 }
 
 .staff-campus .c-card-body a {
   font-weight: 500;
-  font-size: 1.04vw;
   line-height: 27px;
   color: #2e5c66;
   text-decoration: none;
@@ -2139,7 +1663,6 @@ header.active .down-arrow path {
 
 #news-article p:nth-of-type(1) {
   font-weight: 500;
-  font-size: 1.6vw;
 }
 
 #news-article img {
@@ -2148,21 +1671,15 @@ header.active .down-arrow path {
 }
 
 #news-article span {
-  font-size: 1.04vw;
   color: #2a2a2a;
   opacity: 0.8;
   margin-bottom: 10px;
   margin-left: 2.5%;
 }
 
-#news-article h2 {
-  font-size: 1.39vw;
-}
-
 #news-article p,
 #news-article ul {
   width: 100%;
-  font-size: 1.39vw;
 }
 
 #news-article ul {
@@ -2177,7 +1694,6 @@ header.active .down-arrow path {
 }
 
 #news-article h1 {
-  font-size: 3.2vw;
   font-weight: 700;
   width: fit-content;
   line-height: 150%;
@@ -2197,7 +1713,6 @@ header.active .down-arrow path {
 }
 
 #news-article .news-img p {
-  font-size: 1.04vw;
   font-weight: 400;
   line-height: 170%;
   width: 80%;
@@ -2239,7 +1754,6 @@ header.active .down-arrow path {
 
 .footer-item h3 {
   padding-top: 7px;
-  font-size: 1.5vw;
   margin-bottom: 40px;
   color: white;
   font-weight: 500;
@@ -2256,7 +1770,6 @@ header.active .down-arrow path {
 }
 
 .footer-item ul a li {
-  font-size: 1.27vw;
   color: rgba(139, 138, 138, 0.9);
   transition: 300ms ease-in-out;
 }
@@ -2277,7 +1790,6 @@ header.active .down-arrow path {
   border: 1px solid white;
   border-radius: 50px;
   color: white;
-  font-size: 1.39vw;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
@@ -2329,17 +1841,11 @@ header.active .down-arrow path {
   gap: 30px;
   color: white;
   font-weight: 400;
-  font-size: 14px;
 }
 
 .copyrights a {
   color: white;
-  font-size: 0.81vw;
   text-decoration: none;
-}
-
-.copyrights span {
-  font-size: 0.81vw;
 }
 
 .footer-social-media a {
@@ -2368,43 +1874,6 @@ header.active .down-arrow path {
 
 /* -------------- */
 /*    footer END    */
-/* -------------- */
-
-/* -------------- */
-/*    pdf preview    */
-/* -------------- */
-.pdf {
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-}
-
-
-
-.pdf a {
-  border: 1px solid rgba(144, 144, 144, 0.5);
-  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
-  border-radius: 10px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  color: #909090;
-  display: inline-flex;
-  gap: 11px;
-  padding: 5px;
-  font-size: 1.157vw;
-  width: fit-content;
-  margin-left: 15%;
-  margin-bottom: 50px;
-}
-
-.pdf embed {
-  width: 80%;
-}
-
-/* -------------- */
-/*    pdf preview END    */
 /* -------------- */
 
 /* -------------- */
@@ -2448,7 +1917,6 @@ header.active .down-arrow path {
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 600;
-  font-size: 1.04vw;
   color: #8d8d8d;
   font-family: "Poppins";
 }
@@ -2466,7 +1934,6 @@ header.active .down-arrow path {
 #career-list h1,
 #news-list h1 {
   font-weight: 600;
-  font-size: 2.54vw;
   line-height: 130%;
   text-align: center;
 }
@@ -2477,13 +1944,11 @@ header.active .down-arrow path {
 }
 
 #detailed-programs table tr th {
-  font-size: 1.157vw;
   font-weight: 600;
   color: #2a2a2a;
 }
 
 #detailed-programs table tr td {
-  font-size: 1.04vw;
   font-weight: 500;
   color: #962f8a;
 }
@@ -2518,7 +1983,6 @@ header.active .down-arrow path {
 }
 
 #detailed-programs table tr a button span {
-  font-size: 0.86vw;
   line-height: 150%;
   display: flex;
   align-items: center;
@@ -2529,7 +1993,6 @@ header.active .down-arrow path {
 
 #detailed-programs table tr a button {
   font-weight: 600;
-  font-size: 0.86vw;
   line-height: 150%;
   border: 1px solid #a3238e;
   border-radius: 50px;
@@ -2570,7 +2033,6 @@ header.active .down-arrow path {
   cursor: pointer;
   outline: none;
   font-weight: 500;
-  font-size: max(12px, 1.04vw);
   line-height: 130%;
   display: flex;
   align-items: center;
@@ -2609,7 +2071,6 @@ header.active .down-arrow path {
 
 /* Style the filter options */
 .filter-form h2 {
-  font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -2706,7 +2167,6 @@ input[type="checkbox"]:checked::after {
   padding-right: 20px;
   padding-left: 10px;
   font-weight: 400;
-  font-size: max(12px, 1.04vw);
   line-height: 130%;
   /* or 23px */
   display: flex;
@@ -2737,7 +2197,6 @@ input[type="checkbox"]:checked::after {
   border: none;
   font-weight: 600;
   width: 30%;
-  font-size: 1.04vw;
   line-height: 150%;
   display: flex;
   color: #962f8a;
@@ -2816,10 +2275,9 @@ input[type="checkbox"]:checked::after {
   background-size: cover;
 }
 
-.content h2 {
+.content p {
   width: 70%;
-  font-weight: 600;
-  font-size: 1.21vw;
+  font-weight: 500;
   line-height: 150%;
   display: flex;
   align-items: center;
@@ -2943,7 +2401,6 @@ input[type="checkbox"]:checked::after {
 }
 
 #trendy-news a>div div span {
-  font-size: 0.9vw;
   font-weight: 400;
   opacity: 0.8;
   line-height: 150%;
@@ -2951,7 +2408,7 @@ input[type="checkbox"]:checked::after {
 }
 
 #trendy-news a>div div h1 {
-  font-size: 1.6vw;
+
   font-weight: 600;
   line-height: 150%;
 }
@@ -2980,8 +2437,7 @@ input[type="checkbox"]:checked::after {
 }
 
 #trendy-news>:nth-child(3) h1,
-#trendy-news>:nth-child(4) h1 {
-  font-size: 0.92vw;
+#trendy-news>:nth-child(4) h1;
 }
 
 #trendy-news>:nth-child(5) {
@@ -3027,19 +2483,16 @@ input[type="checkbox"]:checked::after {
   padding: 1.8vw;
 }
 
-.latest-card a>div span {
-  font-size: 0.92vw;
-  font-weight: 400;
-  line-height: 150%;
-  color: #2A2A2A;
-  opacity: 0.8;
+.latest-card a>div span;
+font-weight: 400;
+line-height: 150%;
+color: #2A2A2A;
+opacity: 0.8;
 }
 
-.latest-card a>div p {
-  font-size: 1.1vw;
-  font-weight: 500;
-  line-height: 150%;
-  color: #2A2A2A;
+.latest-card a>div p font-weight: 500;
+line-height: 150%;
+color: #2A2A2A;
 }
 
 .latest-card a,
@@ -3110,20 +2563,18 @@ input[type="checkbox"]:checked::after {
   gap: 1.09vw;
 }
 
-.news-list-body div span {
-  font-size: 1.09vw;
-  font-weight: 400;
-  line-height: 150%;
-  color: #2a2a2a;
-  opacity: 0.8;
+.news-list-body div span;
+font-weight: 400;
+line-height: 150%;
+color: #2a2a2a;
+opacity: 0.8;
 }
 
-.news-list-body div h2 {
-  font-size: 1.39vw;
-  font-weight: 500;
-  line-height: 150%;
-  color: #2a2a2a;
-  text-transform: capitalize;
+.news-list-body div h2;
+font-weight: 500;
+line-height: 150%;
+color: #2a2a2a;
+text-transform: capitalize;
 }
 
 /* -------------- */
@@ -3256,6 +2707,10 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   /*    HEADER      */
   /* -------------- */
+  html {
+    font-size: 16px;
+  }
+
   .drop-span {
     color: black;
   }
@@ -3311,7 +2766,6 @@ input[type="checkbox"]:checked::after {
     margin-top: 16px;
     width: 65px;
     height: 25px;
-    font-size: 4vw;
   }
 
   .nav-item {
@@ -3423,36 +2877,34 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   /*   HEADER END   */
   /* -------------- */
-
-  /* -------------- */
-  /* VIDEO BLOCK*/
-  /* -------------- */
-  .video-content p:nth-child(1) {
-    font-size: 18px;
-    margin-top: 68px;
-    width: 75%;
+  .banner-content p {
+    width: auto;
   }
 
-  .video-content h2 {
-    font-size: 24px;
-    width: 95%;
+
+  /* ABOUT */
+
+  #about>div:nth-child(1) {
+    width: 100%;
+    text-align: center;
   }
 
-  .video-content p:last-child {
-    font-size: 16px;
-    margin-bottom: 71px;
-    width: 85%;
+  #about {
+    flex-direction: column;
   }
 
-  .video-overlay {
-    background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0) 70%,
-        #ffffff 100%);
+  .about-div>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
   }
 
-  /* -------------- */
-  /* VIDEO BLOCK END*/
-  /* -------------- */
+  .ltuc-description-img {
+    width: 100%;
+  }
+
+  /* END */
 
   /* -------------- */
   /*    footer     */
@@ -3519,9 +2971,7 @@ input[type="checkbox"]:checked::after {
     display: none;
   }
 
-  .drop-span {
-    font-size: 3vw;
-  }
+
 
   #navbar>ul {
     display: flex;
@@ -3545,11 +2995,6 @@ input[type="checkbox"]:checked::after {
     gap: 100px;
   }
 
-  .h-span,
-  .language-code-inside,
-  #navbar button {
-    font-size: 3vw;
-  }
 
   .drop-down-lang-inside {
     margin-top: 15px;
@@ -3557,7 +3002,6 @@ input[type="checkbox"]:checked::after {
 
   .drop-down-language-a {
     color: #2a2a2a;
-    font-size: 3.7vw;
     padding: 0px;
   }
 
@@ -3568,13 +3012,9 @@ input[type="checkbox"]:checked::after {
   }
 
   .programs-nav li span {
-    font-size: 3vw;
     line-height: 150%;
   }
 
-  #navbar ul li .span-c {
-    font-size: 3vw;
-  }
 
   .programs-nav-3,
   .drop-down-menu-1>li .programs-nav-1 {
@@ -3598,21 +3038,17 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   /*   BANNER       */
   /* -------------- */
-  #banner {
+  /* #banner {
     height: 70vh;
-  }
+  } */
 
   .banner-content h1 {
-    font-size: 3.5vw;
     width: 65%;
   }
 
-  .banner-content p {
-    font-size: 1.757vw;
-  }
+
 
   .banner-content button {
-    font-size: 1.757vw;
     width: 22.36vw;
     height: 4.6vw;
   }
@@ -3628,16 +3064,13 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   /*   FACITITES    */
   /* -------------- */
-  .faculty-header p {
-    font-size: 2.3vw;
-  }
+
 
   .faculty-header {
     margin-left: 6.5%;
   }
 
   .faculty-header h1 {
-    font-size: 3.12vw;
     width: 60%;
   }
 
@@ -3649,21 +3082,13 @@ input[type="checkbox"]:checked::after {
     width: 45.6vw;
   }
 
-  .faculty-card div h3 {
-    font-size: 1.95vw;
-  }
 
   .faculty-card div h1 {
     width: 100%;
-    font-size: 2.3vw;
   }
 
-  .faculty-card div p {
-    font-size: 1.75vw;
-  }
 
   #faculty-section div a {
-    font-size: 1.95vw;
     padding: 10px 8px;
     width: 25.9vw;
   }
@@ -3699,14 +3124,9 @@ input[type="checkbox"]:checked::after {
     gap: 9.7vw;
   }
 
-  .fact-title,
-  .fact-number {
-    font-size: 3.9vw;
-  }
 
   .fact-text {
     text-align: center;
-    font-size: 1.95vw;
   }
 
   /* -------------- */
@@ -3723,7 +3143,6 @@ input[type="checkbox"]:checked::after {
   }
 
   .programs-cards button {
-    font-size: 1.95vw;
     font-weight: 500;
   }
 
@@ -3739,7 +3158,6 @@ input[type="checkbox"]:checked::after {
   }
 
   .cards-section-header h1 {
-    font-size: 3.125vw;
     width: 45%;
     height: fit-content;
     padding-bottom: 22px;
@@ -3748,7 +3166,6 @@ input[type="checkbox"]:checked::after {
   .cards-section-header p {
     width: 100%;
     height: fit-content;
-    font-size: 1.758vw;
   }
 
   .cardContainer .cardsImage {
@@ -3763,7 +3180,6 @@ input[type="checkbox"]:checked::after {
 
   .cardContainer .cardContents p {
     font-weight: 400;
-    font-size: 1.953vw;
     line-height: 150%;
     text-transform: capitalize;
     color: #1e1e1e;
@@ -3771,7 +3187,6 @@ input[type="checkbox"]:checked::after {
 
   .cardContainer .cardContents h3 {
     font-weight: 500;
-    font-size: 3.72vw;
     line-height: 150%;
     text-transform: capitalize;
     color: #2a2a2a;
@@ -3784,10 +3199,6 @@ input[type="checkbox"]:checked::after {
   .right-arrow svg,
   .left-arrow svg {
     width: 70%;
-  }
-
-  .cardset.active div h2 {
-    font-size: 2.3vw;
   }
 
   .cardset.active div {
@@ -3841,12 +3252,9 @@ input[type="checkbox"]:checked::after {
   .newscard-type {
     width: 12.6vw;
     height: 3.61vw;
-    font-size: 1.95vw;
   }
 
-  .newscardset div h2 {
-    font-size: 2.63vw;
-  }
+
 
   #news .slider-conterol-btn {
     height: 33.7vw;
@@ -3882,12 +3290,10 @@ input[type="checkbox"]:checked::after {
   }
 
   .ltuc-description h1 {
-    font-size: 3.1vw;
     width: 60vw;
   }
 
   .ltuc-description p {
-    font-size: 1.76vw;
     width: 79vw;
   }
 
@@ -3900,17 +3306,14 @@ input[type="checkbox"]:checked::after {
   }
 
   .video-content p:nth-child(1) {
-    font-size: 2.3vw;
     margin-top: 0px;
   }
 
   .video-content h1 {
-    font-size: 3vw;
     width: 55%;
   }
 
   .video-content p:last-child {
-    font-size: 1.757vw;
     margin-top: 3vw;
   }
 
@@ -3930,14 +3333,6 @@ input[type="checkbox"]:checked::after {
   }
 
 
-  .side-navbar a {
-    font-size: 1.95vw;
-  }
-
-  .sub-navs a {
-    font-size: 1.56vw;
-  }
-
   .sub-navs {
     column-gap: 15px;
     row-gap: 15px;
@@ -3945,14 +3340,6 @@ input[type="checkbox"]:checked::after {
 
   .side-navbar {
     margin-left: 25px;
-  }
-
-  .accordion h3 {
-    font-size: 2vw;
-  }
-
-  .panel {
-    font-size: 1.56vw;
   }
 
   /* -------------- */
@@ -3971,9 +3358,6 @@ input[type="checkbox"]:checked::after {
     margin-left: 5%;
   }
 
-  .title-text-img .ltuc-description h3 {
-    font-size: 2.7vw;
-  }
 
   /* -------------- */
   /*    title text image END    */
@@ -3994,32 +3378,14 @@ input[type="checkbox"]:checked::after {
   /*    card with image title text */
   /* -------------- */
 
-  .staff-campus .ltuc-description h1 {
-    font-size: 2.73vw;
-  }
-
   .staff-campus .ltuc-description p {
-    font-size: 1.76vw;
     width: 100%;
-  }
-
-  .staff-campus .c-card-body a {
-    font-size: 1.76vw;
   }
 
   .staff-campus .c-card {
     width: 43.5vw;
   }
 
-  .staff-campus .c-card-body h2,
-  .staff-campus .s-card-body h2 {
-    font-size: 1.95vw;
-  }
-
-  .staff-campus .c-card-body p,
-  .staff-campus .s-card-body p {
-    font-size: 1.56vw;
-  }
 
   .staff-campus .c-card-body {
     gap: 15px;
@@ -4045,66 +3411,16 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   /*    News Article    */
   /* -------------- */
-  #trendy-news a>div div h1 {
-    font-size: 2.7vw;
-  }
-
-  #trendy-news>:nth-child(3) h1,
-  #trendy-news>:nth-child(4) h1 {
-    font-size: 1.56vw;
-  }
-
-  #trendy-news>:nth-child(3) h1,
-  #trendy-news>:nth-child(4) h1 {
-    font-size: 1.56vw;
-  }
-
-  .latest-card a>div span {
-    font-size: 1.56vw;
-  }
-
-  .latest-card a>div p {
-    font-size: 1.85vw;
-  }
-
-
-  .news-list-body div span {
-    font-size: 1.56vw;
-  }
-
-  .news-list-body div h2 {
-    font-size: 2.3vw;
-  }
 
   #news-article {
     width: 90%;
   }
 
-  #news-article h1 {
-    font-size: 4.5vw;
-  }
-
-  #news-article p:nth-of-type(1) {
-    font-size: 2.7vw;
-  }
 
   #news-article .news-img p {
-    font-size: 1.76vw;
     width: 100%;
   }
 
-  #news-article h2 {
-    font-size: 2.3vw;
-  }
-
-  #news-article span {
-    font-size: 1.76vw;
-  }
-
-  #news-article p,
-  #news-article ul {
-    font-size: 2.3vw;
-  }
 
   /* -------------- */
   /*    News Article END    */
@@ -4126,66 +3442,20 @@ input[type="checkbox"]:checked::after {
     grid-column-start: 3;
   }
 
-  .copyrights span {
-    font-size: 1.36vw;
-  }
-
-  .footer-item ul a li {
-    font-size: 2.14vw;
-  }
-
-  .footer-item h3 {
-    font-size: 2.5vw;
-  }
-
-  .footer-btns a {
-    font-size: 1.95vw;
-  }
-
   /* -------------- */
   /*    footer END    */
   /* -------------- */
 
-  /* -------------- */
-  /*    pdf preview    */
-  /* -------------- */
-  .pdf .ltuc-description p,
-  .pdf a {
-    font-size: 1.75vw;
-  }
-
-  .pdf .ltuc-description p {
-    width: 90%;
-  }
-
-  .pdf .ltuc-description h1 {
-    font-size: 2.757vw;
-  }
-
-  .pdf a {
-    margin-left: 6.5%;
-  }
-
-  .pdf embed {
-    width: 90%;
-    margin: auto;
-  }
-
-  /* -------------- */
-  /*    pdf preview END    */
-  /* -------------- */
 
   /* -------------- */
   /* Detailed Programs */
   /* -------------- */
 
   #detailed-programs h1 {
-    font-size: 3.1vw;
     margin-left: 0;
   }
 
   .result {
-    font-size: 1.75vw;
     margin-left: 5%;
   }
 
@@ -4200,22 +3470,8 @@ input[type="checkbox"]:checked::after {
 
   #detailed-programs table tr th,
   #detailed-programs table tr td {
-    font-size: 1.56vw;
     flex-wrap: wrap;
     height: 15vw;
-  }
-
-  #detailed-programs table tr a button,
-  #detailed-programs table tr a button span {
-    font-size: 1.46vw;
-  }
-
-  .filter-button,
-  .search-form input,
-  #see-more-button,
-  #category-see-more,
-  #career-see-more {
-    font-size: 1.75vw;
   }
 
   /* -------------- */
@@ -4239,7 +3495,6 @@ input[type="checkbox"]:checked::after {
 
   .content h2 {
     font-weight: 500;
-    font-size: 17px;
   }
 
   .content svg {
@@ -4260,6 +3515,19 @@ input[type="checkbox"]:checked::after {
 
 @media (max-width: 767px) {
 
+  .code-sign::before,
+  .code-sign::after {
+    width: 100px;
+  }
+
+  .code-sign svg {
+    width: 20px;
+  }
+
+  html {
+    font-size: 12px;
+  }
+
   #campus .ltuc-description p,
   #programs .ltuc-description p,
   #all-programs .ltuc-description p,
@@ -4267,9 +3535,7 @@ input[type="checkbox"]:checked::after {
     width: 85%;
   }
 
-  .drop-span {
-    font-size: 3.2vw;
-  }
+
 
   .all-programs-content a span {
     width: 6.3vw;
@@ -4301,9 +3567,7 @@ input[type="checkbox"]:checked::after {
     width: 100%;
   }
 
-  .staff-campus .contact-form label {
-    font-size: 4.18vw;
-  }
+
 
   /* -------------- */
   /*    GATES      */
@@ -4359,7 +3623,6 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   .h-span,
   .language-code-inside {
-    font-size: 3.7vw;
     font-weight: 500;
     line-height: 24px;
   }
@@ -4371,7 +3634,6 @@ input[type="checkbox"]:checked::after {
   }
 
   .programs-nav li span {
-    font-size: 3.7vw;
     font-weight: 500;
     line-height: 150%;
     color: rgba(51, 51, 51, 0.7);
@@ -4391,7 +3653,6 @@ input[type="checkbox"]:checked::after {
 
   .drop-down-language-a {
     color: #2a2a2a;
-    font-size: 3.7vw;
     padding: 0px;
   }
 
@@ -4399,10 +3660,6 @@ input[type="checkbox"]:checked::after {
     width: 230px;
     height: 35px;
     margin: 60px auto;
-  }
-
-  #navbar ul li .span-c {
-    font-size: 3.7vw;
   }
 
   .hide-on-desktop a {
@@ -4418,7 +3675,6 @@ input[type="checkbox"]:checked::after {
   /*   BANNER       */
   /* -------------- */
   .banner-content h1 {
-    font-size: 5.6vw;
     width: 90%;
     margin: auto;
     line-height: 149%;
@@ -4436,15 +3692,15 @@ input[type="checkbox"]:checked::after {
   }
 
   .banner-content p {
-    font-size: 3.72vw;
     width: 87%;
+
+    font-size: 1.5em;
     margin: auto;
   }
 
   .banner-content button {
     width: 48.1vw;
     height: 10.23vw;
-    font-size: 3.72vw;
     margin-left: 6.5vw;
   }
 
@@ -4455,6 +3711,7 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   /*   BANNER END   */
   /* -------------- */
+
 
   /* -------------- */
   /*   FACITITES    */
@@ -4481,18 +3738,13 @@ input[type="checkbox"]:checked::after {
   }
 
   .faculty-header h1 {
-    font-size: 5.5vw;
     width: 100%;
   }
 
   .faculty-header h2 {
-    font-size: 22px;
     width: 100%;
   }
 
-  .faculty-header p {
-    font-size: 4.6vw;
-  }
 
   .cards-wrapper {
     width: 87%;
@@ -4509,22 +3761,16 @@ input[type="checkbox"]:checked::after {
     height: 50vh;
   }
 
-  .faculty-card div h3 {
-    font-size: 4.65vw;
-  }
 
   .faculty-card div h1 {
-    font-size: 5.58vw;
     width: 100%;
   }
 
   .faculty-card div p {
-    font-size: 3.7vw;
     line-height: 165%;
   }
 
   #faculty-section div a {
-    font-size: 3.95vw;
     width: 61.86vw;
     padding: 2.3vw 1.16vw;
   }
@@ -4537,35 +3783,7 @@ input[type="checkbox"]:checked::after {
   /*   END FACITITES    */
   /* -------------- */
 
-  /* -------------- */
-  /* ENFOGRAPHIC COUNTER  */
-  /* -------------- */
 
-  .fact-count {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 80px;
-    margin-left: 6.5%;
-    width: auto;
-    align-items: center;
-  }
-
-  .fact-number,
-  .fact-title {
-    font-size: 9.3vw;
-  }
-
-  .fact-text {
-    font-size: 3.95vw;
-  }
-
-  .fact-body {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 87vw;
-  }
 
   /* -------------- */
   /* SLIDER CAROSEL INTERACTIVE */
@@ -4575,9 +3793,7 @@ input[type="checkbox"]:checked::after {
     height: 53.2vw;
   }
 
-  .cardset.active div h2 {
-    font-size: 4.18vw;
-  }
+
 
   .cardset.active div span,
   .newscard-side-arrow {
@@ -4610,18 +3826,13 @@ input[type="checkbox"]:checked::after {
     padding-left: 0px;
   }
 
-  .programs-cards button {
-    font-size: 4.65vw;
-  }
 
   .cardset.active div {
     width: 86.9vw;
     height: 53.2vw;
   }
 
-  .cardset.active div h2 {
-    font-size: 4.18vw;
-  }
+
 
   .cardset.active div span,
   .newscard-side-arrow {
@@ -4667,68 +3878,6 @@ input[type="checkbox"]:checked::after {
   /* SLIDER CAROSEL INTERACTIVE END*/
   /* -------------- */
 
-  /* -------------- */
-  /* CARDS CARD MOBILE  */
-  /* -------------- */
-
-  .cards-section-header h1 {
-    width: 45%;
-    height: fit-content;
-    padding-bottom: 5.11vw;
-    font-weight: 700;
-    font-size: 5.58vw;
-    line-height: 150%;
-    color: #2a2a2a;
-  }
-
-  .cards-section-header p {
-    width: 100%;
-    height: fit-content;
-    font-weight: 400;
-    font-size: 4.65vw;
-    line-height: 180%;
-  }
-
-  .cards-section-header {
-    flex-direction: column;
-    align-items: normal;
-    width: 87%;
-    margin: 50px auto;
-  }
-
-  .cardContainer .cardsImage {
-    width: 91vw;
-    height: 53vw;
-  }
-
-  .cardContainer .cardsImage img {
-    height: 100%;
-    width: 100%;
-  }
-
-  .cardContainer .cardContents h3 {
-    font-weight: 500;
-    font-size: 5.12vw;
-    line-height: 150%;
-    text-transform: capitalize;
-    color: #2a2a2a;
-  }
-
-  .cardContainer .cardContents p {
-    font-weight: 400;
-    font-size: 3.72vw;
-    line-height: 180%;
-    text-transform: capitalize;
-    color: #1e1e1e;
-  }
-
-  #cards-section button {
-    height: 75%;
-  }
-
-  /* -------------- */
-  /* CARDS CARD  END */
-  /* -------------- */
 
   /* -------------- */
   /* NEWS SECTION BLOCK */
@@ -4742,11 +3891,6 @@ input[type="checkbox"]:checked::after {
   .newscard-type {
     width: 30vw;
     height: 8.6vw;
-    font-size: 4.65vw;
-  }
-
-  .newscardset div h2 {
-    font-size: 4.65vw;
   }
 
   #news .slider-conterol-btn {
@@ -4757,38 +3901,7 @@ input[type="checkbox"]:checked::after {
   /* NEWS SECTION BLOCK END*/
   /* -------------- */
 
-  /* -------------- */
-  /* STAFF SECTION BLOCK */
-  /* -------------- */
 
-  .staff-slider .ltuc-description h1 {
-    font-size: 6.8vw;
-  }
-
-  .staff-slider .card .card-body h2 {
-    font-size: 5.6vw;
-  }
-
-  .staff-slider .card .card-body p {
-    font-size: 3.7vw;
-  }
-
-  .staff-slider .card-img {
-    width: 63.9vw;
-    height: 68.4vw;
-  }
-
-  .staff-slider .card {
-    height: auto;
-  }
-
-  .staff-slider .slider-conterol-btn {
-    height: 117vw;
-  }
-
-  /* -------------- */
-  /* STAFF SECTION BLOCK */
-  /* -------------- */
 
   .ltuc-description {
     width: 87vw;
@@ -4801,157 +3914,29 @@ input[type="checkbox"]:checked::after {
   .ltuc-description h1 {
     line-height: 150%;
     font-weight: 700;
-    font-size: 5.5vw;
     width: 100%;
   }
 
   .ltuc-description p {
-    font-size: 3.95vw;
     width: 100%;
     line-height: 180%;
   }
 
-  /* -------------- */
-  /* VIDEO BLOCK */
-  /* -------------- */
 
-  .video-content {
-    margin-left: 6.5%;
-    padding-top: 15.8%;
-  }
-
-  .video-content p:nth-child(1) {
-    margin-top: 0px;
-    font-size: 4.65vw;
-  }
-
-  .video-content h1 {
-    font-size: 5.6vw;
-    width: 90%;
-  }
-
-  .video-content p:last-child {
-    font-size: 3.7vw;
-    margin-top: 9.3vw;
-    margin-bottom: 9.8vw;
-    width: 100%;
-  }
-
-  /* -------------- */
-  /* VIDEO BLOCK END */
-  /* -------------- */
-
-  /* -------------- */
-  /*    SIDE NAV       */
-  /* -------------- */
   .accordion h3 {
-    font-size: 4.1vw;
     gap: 0;
   }
-
-  .panel {
-    font-size: 3.7vw;
-  }
-
-  .side-nav-page {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .side-navbar>div {
-    display: flex;
-    flex-direction: row;
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .side-navbar {
-    margin-left: 6.5vw;
-  }
-
-  .sub-navs {
-    margin-right: 6.5%;
-    margin-left: 6.5%;
-    gap: 4vw;
-  }
-
-  .side-navbar a {
-    width: 45%;
-    font-size: 3.7vw;
-  }
-
-  .sub-navs a {
-    font-size: 3.7vw;
-  }
-
-  /* -------------- */
-  /*    SIDE NAV END      */
-  /* -------------- */
-
-  /* -------------- */
-  /*    title text image */
-  /* -------------- */
-
-  .title-text-img .img-body {
-    height: 109vw;
-    margin-left: 6.5%;
-    margin-right: 6.5%;
-  }
-
-  .title-text-img .ltuc-description h3 {
-    font-size: 4.18vw;
-  }
-
-  .title-text-img .ltuc-description p {
-    width: 100%;
-  }
-
-  /* -------------- */
-  /*    title text image END    */
-  /* -------------- */
-
-  /* -------------- */
-  /*    grid 3 images     */
-  /* -------------- */
-  .image-grid {
-    display: flex;
-    flex-direction: column;
-    width: 87vw;
-  }
-
-  /* -------------- */
-  /*    grid 3 images END    */
-  /* -------------- */
 
   /* -------------- */
   /*    card with image title text */
   /* -------------- */
 
-  .staff-campus .ltuc-description h1 {
-    font-size: 5.58vw;
-  }
-
   .staff-campus .ltuc-description p {
-    font-size: 4.18vw;
     width: 100%;
   }
 
-  .staff-campus .c-card-body a {
-    font-size: 4.18vw;
-  }
 
-  .staff-campus .c-card-body h2,
-  .staff-campus .s-card-body h2 {
-    font-size: 4.65vw;
-  }
 
-  .staff-campus .c-card-body p,
-  .staff-campus .s-card-body p {
-    font-size: 3.7vw;
-  }
 
   .staff-campus .c-cards {
     flex-direction: column;
@@ -5000,50 +3985,12 @@ input[type="checkbox"]:checked::after {
     display: none;
   }
 
-  .copyrights span {
-    font-size: 3.25vw;
-  }
 
-  .footer-item ul a li {
-    font-size: 4.18vw;
-  }
-
-  .footer-item h3 {
-    font-size: 4.65vw;
-  }
 
   /* -------------- */
   /*    footer END    */
   /* -------------- */
 
-  /* -------------- */
-  /*    pdf preview    */
-  /* -------------- */
-
-  .pdf .ltuc-description p {
-    width: 100%;
-  }
-
-  .pdf a {
-    font-size: 3.95vw;
-  }
-
-  .pdf {
-    margin-left: 0px;
-  }
-
-  .pdf a {
-    margin-left: 6.5%;
-  }
-
-  .pdf embed {
-    width: 90%;
-    margin: auto;
-  }
-
-  /* -------------- */
-  /*    pdf preview END    */
-  /* -------------- */
 
   /* -------------- */
   /* Detailed Programs */
@@ -5052,7 +3999,6 @@ input[type="checkbox"]:checked::after {
   #detailed-programs h1 {
     line-height: 150%;
     font-weight: 700;
-    font-size: 5.5vw;
     width: 50%;
     margin: auto;
   }
@@ -5063,7 +4009,6 @@ input[type="checkbox"]:checked::after {
 
   .filter-button,
   .search-form input {
-    font-size: 3.72vw;
     padding-left: 0px;
 
   }
@@ -5120,7 +4065,6 @@ input[type="checkbox"]:checked::after {
     flex-direction: column;
     width: 87vw;
     margin: auto;
-    font-size: 3.72vw;
   }
 
   .mobile-programs .displayed-tr:nth-child(odd) {
@@ -5133,7 +4077,6 @@ input[type="checkbox"]:checked::after {
     justify-content: space-between;
     align-items: center;
     color: #962f8a;
-    font-size: 3.72vw;
     font-weight: 500;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -5158,7 +4101,6 @@ input[type="checkbox"]:checked::after {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    font-size: 3.72vw;
   }
 
   .mobile-programs .guidance-plan {
@@ -5192,25 +4134,16 @@ input[type="checkbox"]:checked::after {
   .mobile-programs .guidance-plan button,
   .mobile-programs .apply button {
     border: none;
-    font-size: 15px;
     line-height: 150%;
     display: flex;
     align-items: center;
     text-align: center;
-    font-size: 3.48vw;
     justify-content: space-around;
     background: transparent;
     gap: 10px;
   }
 
-  #see-more-button,
-  #category-see-more,
-  #career-see-more {
-    font-size: 4.18vw;
-  }
-
   .result {
-    font-size: 3.75vw;
     margin-bottom: 20px;
   }
 
@@ -5242,7 +4175,6 @@ input[type="checkbox"]:checked::after {
 
   .content h2 {
     width: 90%;
-    font-size: 3.72vw;
     font-weight: 500;
   }
 
@@ -5296,18 +4228,6 @@ input[type="checkbox"]:checked::after {
 
   }
 
-  #trendy-news a>div div h1,
-  #trendy-news>:nth-child(3) h1,
-  #trendy-news>:nth-child(4) h1,
-  .latest-card a>div p {
-    font-size: 4.65vw;
-    font-weight: 500;
-  }
-
-  #trendy-news a>div div span,
-  .latest-card a>div span {
-    font-size: 3.7vw;
-  }
 
   #latest-news {
     margin-bottom: 17.55vw;
@@ -5390,13 +4310,6 @@ input[type="checkbox"]:checked::after {
   color: #ff8000;
 }
 
-.prog-header div:first-child {
-  font-size: 16px;
-}
-
-.prog-header div:last-child {
-  font-size: 28px;
-}
 
 .prog-outline {
   padding: 0;
@@ -5408,7 +4321,6 @@ input[type="checkbox"]:checked::after {
 }
 
 .prog-outline h1 {
-  font-size: 24px;
   margin-bottom: 2vw;
   font-weight: 500;
 }
@@ -5429,7 +4341,6 @@ input[type="checkbox"]:checked::after {
 
 .prog-outline ul {
   line-height: 150%;
-  font-size: 1.157vw;
 }
 
 .prog-outline li {
@@ -5448,7 +4359,6 @@ input[type="checkbox"]:checked::after {
   width: 266px;
   border-radius: 100px;
   font-weight: 400;
-  font-size: 18px;
   padding: 15px;
   transition: ease 300ms;
   gap: 10px;
@@ -5475,18 +4385,9 @@ input[type="checkbox"]:checked::after {
   width: 100px;
 }
 
-.text-image {
-  display: flex;
-  gap: 5%;
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.text-image .ltuc-description {
-  margin-bottom: 40px;
-  margin-left: 0;
-}
+
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .all-programs-content a span {
@@ -5515,18 +4416,11 @@ input[type="checkbox"]:checked::after {
     margin-left: 0;
   }
 
-  .prog-outline ul {
-    font-size: 1.76vw;
-  }
 
   .apply-btn {
     width: 24vw;
-    font-size: 1.65vw;
   }
 
-  .text-image .container div p {
-    font-size: 1.56vw;
-  }
 
   .all-programs-content {
     display: flex;
@@ -5551,7 +4445,6 @@ input[type="checkbox"]:checked::after {
   }
 
   .text-image .ltuc-description p {
-    font-size: 1.56vw;
     width: 100%;
   }
 }
@@ -5561,30 +4454,13 @@ input[type="checkbox"]:checked::after {
     height: 45vw;
   }
 
-  .prog-header div:last-child {
-    font-size: 6.6vw;
-  }
-
-  .prog-header div:first-child {
-    font-size: 3.95vw;
-  }
-
   .prog-outline .ltuc-description {
     margin-left: 0;
-  }
-
-  .prog-outline ul {
-    font-size: 3.95vw;
-  }
-
-  .prog-outline div h2 {
-    font-size: 4.2vw;
   }
 
   .apply-btn {
     margin: auto;
     width: 65%;
-    font-size: 3.95vw;
   }
 
   .text-image {
@@ -5622,9 +4498,6 @@ input[type="checkbox"]:checked::after {
     border-radius: 0px;
   }
 
-  .text-image .container div p {
-    font-size: 3.72vw;
-  }
 
   .text-image .ltuc-description p {
     width: 100%;
