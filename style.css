@@ -23,28 +23,39 @@
   width: 70%;
   height: 400px;
 }
-.code-sign{
+
+.code-sign {
   display: flex;
   align-items: center;
-  gap:15px;
+  gap: 15px;
 }
-.code-sign svg{
+
+.code-sign svg {
   width: 35px;
 }
-.code-sign::before{
+
+.code-sign::before {
   display: inline-block;
   content: "";
   width: 150px;
-  background-color:#9B1881 ;
+  background-color: #9B1881;
   height: 2px;
 }
-.code-sign::after{
+
+.code-sign::after {
   display: inline-block;
   content: "";
   width: 150px;
-  background-color:#9B1881 ;
+  background-color: #9B1881;
   height: 2px;
 }
+
+.drop-span {
+  color: white;
+  width: 100%;
+  transition: 0ms;
+}
+
 .about-div {
   line-height: 150%;
 }
@@ -360,6 +371,7 @@ nav>ul {
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
+  position: relative;
 }
 
 .display-none {
@@ -377,41 +389,61 @@ nav>ul {
   padding-right: 5px;
 }
 
-.overlay {
-  display: none;
-  content: "";
-  position: fixed;
-  height: 100%;
-  width: 100%;
+.drop-div {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
   top: 70px;
-  left: 0px;
-  background-color: black;
-  opacity: 0.5;
-  z-index: -2;
+  left: 0;
+  width: 120%;
+  background-color: white;
+  transition: 200ms ease-in-out;
+  text-align: center;
 }
 
-.dropdown:hover .overlay {
-  display: block;
+.dropdown:hover .drop-div {
+  max-height: 100px;
+  height: 100px;
+  /* padding-top: 58px;
+  padding-bottom: 58px; */
+
 }
 
 .drop-down-menu {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  display: none;
-  flex-direction: row;
-  gap: 60px;
-  position: fixed;
-  top: 70px;
-  background-color: white;
-  width: 100%;
-  left: 0;
-  padding-left: 4%;
-  padding-top: 58px;
-  padding-bottom: 58px;
   font-family: "Poppins";
   font-style: normal;
-  animation: dropDownEnter linear 1s;
+  max-height: inherit;
+  overflow: inherit;
+  height: 100%;
+  width: 100%;
+}
+.drop-down-menu li{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.drop-down-menu li a{
+  width: 100%;
+  height: 100%;
+  transition: 300ms ease;
+}
+.drop-down-menu li a:hover{
+  background-color: #962F8A;
+}
+.dropdown:hover .drop-down-menu li a:hover span{
+  color: white;
 }
 
+header.active .dropdown:hover .down-arrow path{
+  fill: rgb(226, 114, 207);
+}
+
+
+.dropdown:hover .drop-down-menu li a .drop-span{
+  color: black;
+}
 .drop-down-menue-c {
   width: 100%;
   font-size: 1.2vw;
@@ -629,7 +661,6 @@ header.active .h-span:hover {
   fill: #2a2a2a;
 }
 
-#navbar ul li a span,
 #navbar ul li .down-arrow path {
   transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -1056,7 +1087,7 @@ header.active .down-arrow path {
 }
 
 .slider-conterol-btn svg path {
-  fill:rgb(235 116 42);
+  fill: rgb(235 116 42);
 }
 
 .slider-conterol-btn.right-arrow {
@@ -1088,6 +1119,7 @@ header.active .down-arrow path {
 .carosel-section .slider-conterol-btn {
   height: 28.7vw;
 }
+
 /* 
 .carosel-section .ltuc-description {
   margin-left: 7.5%;
@@ -1225,15 +1257,19 @@ header.active .down-arrow path {
 
 }
 
-.cardset.active div:hover .course-logo path, .cardset.active div:hover .dotnet rect {
+.cardset.active div:hover .course-logo path,
+.cardset.active div:hover .dotnet rect {
   fill: white;
 }
-.cardset.active div:hover .dotnet{
+
+.cardset.active div:hover .dotnet {
   border: 1px solid #490341;
 }
-.cardset.active div:hover .dotnet path{
+
+.cardset.active div:hover .dotnet path {
   fill: black;
 }
+
 .programs-cards .slider-conterol-btn {
   height: 19.9vw;
 }
@@ -1590,6 +1626,7 @@ header.active .down-arrow path {
   flex-direction: column;
   width: 50%;
 }
+
 .ltuc-description:not(#about .ltuc-description) {
   width: 100%;
   margin: auto;
@@ -1597,6 +1634,7 @@ header.active .down-arrow path {
   align-items: center;
   margin-bottom: 68px;
 }
+
 .ltuc-description h1 {
   font-size: 2.5vw;
   margin-bottom: 36px;
@@ -1605,9 +1643,11 @@ header.active .down-arrow path {
   line-height: 130%;
   text-transform: capitalize;
 }
+
 .ltuc-description h1:not(#about .ltuc-description h1) {
   margin-bottom: 0;
 }
+
 .ltuc-description p {
   width: 60%;
   padding-top: 10px;
@@ -3263,11 +3303,12 @@ input[type="checkbox"]:checked::after {
   }
 
   .dropdown:hover .drop-down-menu-1 {
-    display: grid;
-    grid-gap: 3.2vw;
-    padding-left: 2%;
-    padding-right: 2%;
-    width: 96%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .dropdown:hover .drop-down-menu-3 {
@@ -4339,25 +4380,34 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (max-width: 767px) {
-  
-  #campus .ltuc-description p, #programs .ltuc-description p, #all-programs .ltuc-description p, .title-and-filter p{
+
+  #campus .ltuc-description p,
+  #programs .ltuc-description p,
+  #all-programs .ltuc-description p,
+  .title-and-filter p {
     width: 85%;
   }
-  .all-programs-content a span{
+
+  .all-programs-content a span {
     width: 6.3vw;
     height: 6.3vw;
   }
-  #programs .ltuc-description h1, #campus .ltuc-description h1{
+
+  #programs .ltuc-description h1,
+  #campus .ltuc-description h1 {
     width: 50%;
   }
+
   section {
     padding-top: 5.7vw;
     margin-bottom: 17.55vw;
   }
-  .carosel-img img{
+
+  .carosel-img img {
     width: 100%;
     height: 100%;
   }
+
   #contactForm {
     display: flex;
     flex-direction: column;
@@ -4507,7 +4557,7 @@ input[type="checkbox"]:checked::after {
     margin-left: 0;
     width: 87vw;
     left: 6.5%;
-    
+
   }
 
   .banner-img {
@@ -5135,9 +5185,11 @@ input[type="checkbox"]:checked::after {
     width: 50%;
     margin: auto;
   }
-  #detailed-programs h1::after{
+
+  #detailed-programs h1::after {
     width: 100%;
   }
+
   .filter-button,
   .search-form input {
     font-size: 3.72vw;
@@ -5566,20 +5618,24 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .all-programs-content a span{
+  .all-programs-content a span {
     width: 4.3vw;
     height: 4.3vw;
   }
-  #all-programs .ltuc-description{
+
+  #all-programs .ltuc-description {
     margin-left: 0;
   }
-  #latest-news{
+
+  #latest-news {
     width: 90%;
   }
-  .cardset.active{
+
+  .cardset.active {
     row-gap: 10px;
     column-gap: 0;
   }
+
   .prog-header {
     height: 15vw;
   }
