@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <path d="M0.710051 1.71L3.30005 4.3C3.69005 4.69 4.32005 4.69 4.71005 4.3L7.30005 1.71C7.93005 1.08 7.48005 0 6.59005 0H1.41005C0.520051 0 0.0800515 1.08 0.710051 1.71Z" />
     </svg>
     `
+    let body = document.querySelector('body')
     class Header {
         constructor() {
             this.header = document.querySelector("header");
@@ -112,8 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 }
             } else {
-                window.addEventListener("scroll", (e) => { this.mobileScrollEvent(e) });
-                window.addEventListener("scroll", (e) => { this.desktopScrollEvent(e) });
+                // window.addEventListener("scroll", (e) => { this.mobileScrollEvent(e) });
+                // window.addEventListener("scroll", (e) => { this.desktopScrollEvent(e) });
                 this.open_flag = false;
             }
             this.navbar.classList.toggle("hide-mobile-nav");
@@ -167,8 +168,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 this.addClass(this.header, "active");
             }
             window.addEventListener("resize", this.headerMove);
-            this.nav_close_btn.addEventListener("click", (e) => { this.navToggle(e) });
-            this.burger_menu_icon.addEventListener("click", (e) => { this.navToggle(e) });
+            this.nav_close_btn.addEventListener("click", (e) => { 
+                this.navToggle(e);
+                body.classList.remove('mobile-menu-open');
+
+             });
+            this.burger_menu_icon.addEventListener("click", (e) => { 
+                this.navToggle(e);
+                body.classList.add('mobile-menu-open');
+             });
         }
     }
 

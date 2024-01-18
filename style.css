@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
 .custom-alert {
   display: none;
   position: fixed;
@@ -3298,6 +3302,7 @@ input[type="checkbox"]:checked::after {
   .logo img {
     width: 145px;
     height: 22px;
+    object-fit: contain;
   }
 
   #navbar button {
@@ -3306,6 +3311,7 @@ input[type="checkbox"]:checked::after {
     margin-top: 16px;
     width: 65px;
     height: 25px;
+    font-size: 4vw;
   }
 
   .nav-item {
@@ -3338,9 +3344,9 @@ input[type="checkbox"]:checked::after {
   .dropdown,
   .language-code-inside {
     flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 60px;
-    width: 100%;
+    justify-content: flex-start;
+    width: 80%;
+    justify-content: space-between;
   }
 
   .programs-nav {
@@ -3351,8 +3357,10 @@ input[type="checkbox"]:checked::after {
   #navbar>ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 13vw;
+    width: 50%;
+    margin: auto;
   }
 
   .hide-on-desktop a {
@@ -3365,13 +3373,18 @@ input[type="checkbox"]:checked::after {
     display: block;
   }
 
+  .social-media svg path {
+    fill: black;
+  }
+
   .mobile-nav-socialM {
     display: flex;
-    gap: 3.7vw;
-    margin: 100px auto 0px auto;
-    justify-content: flex-end;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
     padding: 0px 30px;
-    width: 50%;
+    width: 60%;
   }
 
   .drop-down-menu {
@@ -3383,17 +3396,18 @@ input[type="checkbox"]:checked::after {
     margin: auto;
   }
 
-  .drop-div{
+  .drop-div {
     width: 100%;
     position: inherit;
     top: 40px;
   }
-  
+
   .dropdown:hover .drop-div {
     max-height: 0;
     height: 0;
   }
-  .dropdown.active .drop-div{
+
+  .dropdown.active .drop-div {
     max-height: 150px;
     height: 150px;
   }
@@ -4251,6 +4265,10 @@ input[type="checkbox"]:checked::after {
   #all-programs .ltuc-description p,
   .title-and-filter p {
     width: 85%;
+  }
+
+  .drop-span {
+    font-size: 3.2vw;
   }
 
   .all-programs-content a span {
