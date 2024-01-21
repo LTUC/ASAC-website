@@ -332,10 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 this.counter = this.start_counter + 6;
 
-                // // Update the counters
-                // news_start_counter -= 5;
-                // news_counter -= 5;
-
+           
                 if (this.start_counter <= this.num_rows) {
                     this.career_see_more.textContent = "See More ...";
                     this.career_see_more.setAttribute("see-more", "true");
@@ -527,39 +524,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     class NewsManager {
         constructor() {
-    //         this.category_button = document.querySelector(".category-button");
-    //         this.category_form = document.querySelector(".category-form");
-    //         this.category_checkboxes = null;
-    //         this.trendy_section = document.getElementById("trendy-news");
+
             this.latest_section = document.getElementById("latest-news");
-    //         this.global_category = "";
-    //         this.news_list_body = document.querySelector(".news-list-body");
-    //         this.category_see_more = document.querySelector("#category-see-more");
-    //         this.news_num_rows = 3;
-    //         this.news_counter = null;
-    //         this.news_start_counter = 3;
-    //         this.news_body = null;
-    //         this.news_rows = null;
-    //         this.filter_result = document.querySelector(".result");
-    //         this.filter_icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //          <path d="M11.0003 20C10.7169 20 10.4793 19.904 10.2873 19.712C10.0953 19.52 9.99959 19.2827 10.0003 19V13L4.20025 5.6C3.95025 5.26667 3.91259 4.91667 4.08725 4.55C4.26192 4.18333 4.56625 4 5.00025 4H19.0003C19.4336 4 19.7379 4.18333 19.9133 4.55C20.0886 4.91667 20.0509 5.26667 19.8003 5.6L14.0003 13V19C14.0003 19.2833 13.9043 19.521 13.7123 19.713C13.5203 19.905 13.2829 20.0007 13.0003 20H11.0003Z" />
-    //          </svg>
-    //        `;
-    //         this.search_input = null;
-    //         this.news_search = ''
-    //         this.search_form = document.querySelector(".search-form");
-
-
 
         }
-    //     setSearchInput() {
-    //         this.search_input = this.search_form.querySelector("input");
-    //     }
-    //     setCategoryCheckboxes() {
-    //         this.category_checkboxes = this.category_form.querySelectorAll(
-    //             'input[type="checkbox"]'
-    //         );
-    //     }
+
         async getNews(url) {
             const response = await fetch(url, {
                 method: "GET", // *GET, POST, PUT, DELETE, etc.
@@ -575,56 +544,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             return response.json();
         }
-    //     async getTrendyNews() {
-    //         let url;
-    //         if (page_obj.isArabic()) {
-    //             url = "/news/ar/trendy";
-    //         } else {
-    //             url = "/news/en/trendy";
-    //         }
-    //         let trendy_news = await this.getNews(url);
-    //         return trendy_news;
-    //     }
-
-    //     createTrendyNews(trendy_news) {
-    //         for (let i = 0; i < trendy_news.length; i++) {
-    //             let news_div = document.createElement("div");
-    //             let inner_news_div = document.createElement("div");
-    //             let news_div_link = document.createElement("a");
-
-    //             news_div_link.href = `${trendy_news[i].url}`;
-
-    //             news_div.style.background = `linear-gradient(134deg, #000 0%, rgba(0, 0, 0, 0.00) 100%), url(${trendy_news[i].news_banner_img.url}), lightgray 50% / cover no-repeat`;
-    //             news_div.style.backgroundRepeat = "no-repeat";
-    //             news_div.style.backgroundSize = "cover";
-
-    //             let news_category = document.createElement("span");
-    //             let news_title = document.createElement("h1");
-
-    //             news_category.innerHTML = `${trendy_news[i].category}`;
-    //             news_title.innerHTML = `${trendy_news[i].title}`;
-
-    //             inner_news_div.appendChild(news_category);
-    //             inner_news_div.appendChild(news_title);
-
-    //             news_div.appendChild(inner_news_div);
-    //             news_div_link.appendChild(news_div);
-    //             this.trendy_section.appendChild(news_div_link);
-    //         }
-    //     }
-    //     toggleFilterBoxAppearance(clickedIndex) {
-    //         this.category_button.addEventListener('click', (e) => {
-    //             if (page_obj.isMobile()) {
-    //                 this.category_form.classList.toggle("box-appear-flex");
-    //             }
-    //             this.category_form.classList.toggle("box-appear");
-
-    //         })
-    //     }
+  
         async getLatestNews() {
-            // let url = "http://api.mediastack.com/v1/news?access_key=${ur puplic key}&keywords=tech&countries=us";
-            // let latest_news = await this.getNews(url);
-            // return latest_news;
+         
             try{
                 let data = await fetch("./news.json")
                 data = await data.json()
@@ -678,11 +600,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             this.latest_section.appendChild(inner_latest_section);
             
-            let see_more_latest = document.createElement("button")
-            see_more_latest.innerHTML="See More"
-            see_more_latest.classList.add("latest-see-more")
+        
 
-            this.latest_section.appendChild(see_more_latest)
         }
 
     //     async getListNews() {
