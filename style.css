@@ -21,11 +21,11 @@ html {
 
 h2 {
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.2em !important;
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 1.5em !important;
   font-weight: 600;
   line-height: 130%;
 }
@@ -50,6 +50,7 @@ a {
 .col-lg-3{
   width: 24% !important;
 }
+
 .custom-alert {
   display: none;
   position: fixed;
@@ -164,6 +165,12 @@ header span {
 
 header span a {
   color: white;
+}
+.nav-link{
+  color: white !important;
+}
+header.active .nav-link{
+  color: black !important;
 }
 
 header svg path {
@@ -310,8 +317,8 @@ nav>ul {
 }
 
 .nav-item {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -596,7 +603,7 @@ header.active .down-arrow path {
   align-items: center;
   text-align: center;
   gap: 15px;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Exo 2', sans-serif !important;
 }
 
 .banner-content button {
@@ -615,7 +622,9 @@ header.active .down-arrow path {
   border: 1px solid white;
   background-color: transparent;
 }
-
+.about-div h2{
+  margin-bottom: 0 !important;
+}
 .banner-content p {
   font-size: 2em;
   line-height: 150%;
@@ -623,7 +632,7 @@ header.active .down-arrow path {
 }
 
 .banner-content h1 {
-  font-size: 3em;
+  font-size: 3em !important;
   font-weight: 700;
   line-height: 149%;
   width: 50%;
@@ -1161,7 +1170,7 @@ header.active .down-arrow path {
   color: #962f8a;
   transition: 300ms;
   font-family: poppins;
-  border-radius: 10px;
+  border-radius: 4px;
   text-decoration: none;
 }
 
