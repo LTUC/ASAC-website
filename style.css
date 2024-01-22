@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500;1,600&family=Roboto:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;400;500;600&display=swap');
 
 /* move colors to header.html in phase II */
 /* SECTIONS IN THIS CSS FILE */
@@ -21,15 +21,17 @@ html {
 
 h2 {
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 600;
   line-height: 130%;
 }
-
+p{
+  font-size: 0.8em;
+}
 
 body {
   font-family: "Poppins";
@@ -45,6 +47,9 @@ a {
   line-height: 150%;
 }
 
+.col-lg-3{
+  width: 24% !important;
+}
 .custom-alert {
   display: none;
   position: fixed;
@@ -154,6 +159,7 @@ footer {
 
 header span {
   color: white;
+  font-size: 0.85em;
 }
 
 header span a {
@@ -575,14 +581,13 @@ header.active .down-arrow path {
   bottom: 0;
   width: 100%;
   /* left: 9%; */
-
   display: flex;
   align-items: center;
-
   flex-direction: column;
   color: white;
   padding-bottom: 50px;
-  height: 50%;
+  height: 100%;
+  justify-content: center;
 }
 
 .banner-content-inner {
@@ -591,7 +596,7 @@ header.active .down-arrow path {
   align-items: center;
   text-align: center;
   gap: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .banner-content button {
@@ -633,7 +638,7 @@ header.active .down-arrow path {
   margin: auto;
   text-align: center;
   align-items: center;
-  margin-bottom: 68px;
+  margin-bottom: 30px;
 }
 
 .ltuc-description h1:not(#about .ltuc-description h1) {
@@ -669,7 +674,7 @@ header.active .down-arrow path {
 .about-div>div {
   display: flex;
   gap: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .about-div>div div:nth-child(2) {
@@ -1493,7 +1498,7 @@ header.active .down-arrow path {
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background: #ffffffcc;
+  background: #00000070;
   margin-top: 10px;
 }
 
@@ -1749,7 +1754,6 @@ header.active .down-arrow path {
 .row.footer-items {
   justify-content: space-between;
   padding-top: 100px;
-  width: 100%;
 }
 
 .footer-item h3 {
@@ -1841,6 +1845,7 @@ header.active .down-arrow path {
   gap: 30px;
   color: white;
   font-weight: 400;
+  align-items: center;
 }
 
 .copyrights a {
