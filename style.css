@@ -2425,10 +2425,6 @@ input[type="checkbox"]:checked::after {
   grid-row-start: 1;
 }
 
-#trendy-news>:nth-child(3) h1,
-#trendy-news>:nth-child(4) h1;
-}
-
 #trendy-news>:nth-child(5) {
   grid-column-start: 3;
   grid-column-end: 5;
@@ -2472,14 +2468,15 @@ input[type="checkbox"]:checked::after {
   padding: 1.8vw;
 }
 
-.latest-card a>div span;
+.latest-card a>div span{
 font-weight: 400;
 line-height: 150%;
 color: #2A2A2A;
 opacity: 0.8;
 }
 
-.latest-card a>div p font-weight: 500;
+.latest-card a>div p{
+   font-weight: 500;
 line-height: 150%;
 color: #2A2A2A;
 }
@@ -2552,14 +2549,14 @@ color: #2A2A2A;
   gap: 1.09vw;
 }
 
-.news-list-body div span;
+.news-list-body div span{
 font-weight: 400;
 line-height: 150%;
 color: #2a2a2a;
 opacity: 0.8;
 }
 
-.news-list-body div h2;
+.news-list-body div h2{
 font-weight: 500;
 line-height: 150%;
 color: #2a2a2a;
