@@ -558,7 +558,7 @@ header.active .down-arrow path {
 /*   BANNER       */
 /* -------------- */
 
-#banner {
+.banner {
   position: relative;
   height: 700px;
   width: 100%;
@@ -1768,6 +1768,7 @@ header.active .down-arrow path {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  padding-left: 0 !important;
 }
 
 .footer-item ul a {
@@ -1976,15 +1977,15 @@ header.active .down-arrow path {
   width: 16.6%;
 }
 
-.col-5 {
+.column-5 {
   width: 20%;
 }
 
-.col-4 {
+.column-4 {
   width: 25%;
 }
 
-.col-3 {
+.column-3 {
   width: 33.3%;
 }
 
@@ -3041,9 +3042,7 @@ text-transform: capitalize;
   /* -------------- */
   /*   BANNER       */
   /* -------------- */
-  /* #banner {
-    height: 70vh;
-  } */
+
 
   .banner-content h1 {
     width: 65%;
@@ -4308,7 +4307,9 @@ text-transform: capitalize;
   gap: 25px;
   background-size: cover;
 }
-
+.prog-header h1{
+  text-align: center;
+}
 .prog-header>div span {
   color: #ff8000;
 }

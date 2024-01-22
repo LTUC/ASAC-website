@@ -23,23 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
     class Header {
         constructor() {
             this.header = document.querySelector("header");
-            this.drop_down_language_a = document.querySelector(
-                ".drop-down-language a"
-            );
-            this.burger_menu_icon = document.querySelector(".burger-menu-icon");
-            this.dropdown = document.querySelectorAll(".dropdown");
-            this.nav_close_btn = document.querySelector(".nav-close-btn");
-            this.navbar = document.querySelector("#navbar");
-            this.drop_down_lang = document.querySelector(".drop-down-language");
-            this.drop_down_lang_inside = document.querySelector(
-                ".drop-down-lang-inside"
-            );
-            this.language_code = document.querySelector(".language-code");
-            this.language_code_inside = document.querySelector(
-                ".language-code-inside"
-            );
-            this.home_icon = document.querySelector(".home-icon");
-            this.header_icon_svg = null;
+            // this.drop_down_language_a = document.querySelector(
+            //     ".drop-down-language a"
+            // );
+            // // this.burger_menu_icon = document.querySelector(".burger-menu-icon");
+            // this.dropdown = document.querySelectorAll(".dropdown");
+            // // this.nav_close_btn = document.querySelector(".nav-close-btn");
+            // this.navbar = document.querySelector("#navbar");
+            // this.drop_down_lang = document.querySelector(".drop-down-language");
+            // this.drop_down_lang_inside = document.querySelector(
+            //     ".drop-down-lang-inside"
+            // );
+            // this.language_code = document.querySelector(".language-code");
+            // this.language_code_inside = document.querySelector(
+            //     ".language-code-inside"
+            // );
+            // this.home_icon = document.querySelector(".home-icon");
+            // this.header_icon_svg = null;
             this.header_is_colored = false;
             this.open_flag = false;
         }
@@ -54,20 +54,20 @@ document.addEventListener("DOMContentLoaded", () => {
             element.classList.remove(e_class);
         }
 
-        checkIcon(icon, header_is_colored) {
-            if (icon) {
-                let icon_paths = icon.querySelectorAll("path");
-                for (let i = 0; i < icon_paths.length; i++) {
-                    if (header_is_colored == false) {
-                        this.addClass(icon_paths[i], "black-color");
-                        this.removeClass(icon_paths[i], "white-color");
-                    } else {
-                        this.addClass(icon_paths[i], "white-color");
-                        this.removeClass(icon_paths[i], "black-color");
-                    }
-                }
-            }
-        }
+        // checkIcon(icon, header_is_colored) {
+        //     if (icon) {
+        //         let icon_paths = icon.querySelectorAll("path");
+        //         for (let i = 0; i < icon_paths.length; i++) {
+        //             if (header_is_colored == false) {
+        //                 this.addClass(icon_paths[i], "black-color");
+        //                 this.removeClass(icon_paths[i], "white-color");
+        //             } else {
+        //                 this.addClass(icon_paths[i], "white-color");
+        //                 this.removeClass(icon_paths[i], "black-color");
+        //             }
+        //         }
+        //     }
+        // }
 
         mainToggle() {
             let page = new Page();
@@ -90,12 +90,12 @@ document.addEventListener("DOMContentLoaded", () => {
         desktopScrollEvent(e) {
             if (window.scrollY > 30 && this.header_is_colored == false) {
                 this.mainToggle();
-                this.checkIcon(this.home_icon, this.header_is_colored);
+                // this.checkIcon(this.home_icon, this.header_is_colored);
                 this.header_is_colored = true;
             }
             if (window.scrollY <= 30 && this.header_is_colored == true) {
                 this.mainToggle();
-                this.checkIcon(this.home_icon, this.header_is_colored);
+                // this.checkIcon(this.home_icon, this.header_is_colored);
                 this.header_is_colored = false;
             }
         }
@@ -105,13 +105,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.removeEventListener("scroll", (e) => { this.mobileScrollEvent(e) });
                 this.open_flag = true;
 
-                if (this.home_icon) {
-                    let icon_paths = this.home_icon.querySelectorAll("path");
-                    for (let i = 0; i < icon_paths.length; i++) {
-                        this.addClass(icon_paths[i], "black-color");
-                        this.removeClass(icon_paths[i], "white-color");
-                    }
-                }
+                // if (this.home_icon) {
+                //     let icon_paths = this.home_icon.querySelectorAll("path");
+                //     for (let i = 0; i < icon_paths.length; i++) {
+                //         this.addClass(icon_paths[i], "black-color");
+                //         this.removeClass(icon_paths[i], "white-color");
+                //     }
+                // }
             } else {
                 // window.addEventListener("scroll", (e) => { this.mobileScrollEvent(e) });
                 // window.addEventListener("scroll", (e) => { this.desktopScrollEvent(e) });
@@ -120,26 +120,26 @@ document.addEventListener("DOMContentLoaded", () => {
             this.navbar.classList.toggle("hide-mobile-nav");
         }
 
-        openDropDownOnMobile() {
-            if (window.innerWidth <= 1023) {
-                for (let i = 0; i < this.dropdown.length; i++) {
-                    this.dropdown[i].addEventListener("click", () => {
-                        this.dropdown[i].classList.toggle("active");
-                    });
-                }
-            }
-        }
+        // openDropDownOnMobile() {
+        //     if (window.innerWidth <= 1023) {
+        //         for (let i = 0; i < this.dropdown.length; i++) {
+        //             this.dropdown[i].addEventListener("click", () => {
+        //                 this.dropdown[i].classList.toggle("active");
+        //             });
+        //         }
+        //     }
+        // }
 
-        showLanguageBox() {
-            this.language_code.addEventListener("click", () => {
-                this.toggleClass(this.drop_down_lang, "appear");
-            });
+        // showLanguageBox() {
+        //     this.language_code.addEventListener("click", () => {
+        //         this.toggleClass(this.drop_down_lang, "appear");
+        //     });
 
-            this.language_code_inside.addEventListener("click", () => {
-                this.toggleClass(this.drop_down_lang_inside, "hide");
-                this.toggleClass(this.drop_down_lang_inside, "show-flex");
-            });
-        }
+        //     this.language_code_inside.addEventListener("click", () => {
+        //         this.toggleClass(this.drop_down_lang_inside, "hide");
+        //         this.toggleClass(this.drop_down_lang_inside, "show-flex");
+        //     });
+        // }
 
         headerMove() {
             if (window.innerWidth <= 1023) {
@@ -158,25 +158,25 @@ document.addEventListener("DOMContentLoaded", () => {
             if (page_obj.isTabAndMob()) {
                 this.toggleClass(this.header, "mobile");
             }
-            if (this.language_code) {
-                this.showLanguageBox();
-            }
+            // if (this.language_code) {
+            //     this.showLanguageBox();
+            // }
             this.headerMove();
-            this.openDropDownOnMobile();
+            // this.openDropDownOnMobile();
 
             if (!page_obj.banner) {
                 this.addClass(this.header, "active");
             }
             window.addEventListener("resize", this.headerMove);
-            this.nav_close_btn.addEventListener("click", (e) => { 
-                this.navToggle(e);
-                body.classList.remove('mobile-menu-open');
+            // this.nav_close_btn.addEventListener("click", (e) => { 
+            //     this.navToggle(e);
+            //     body.classList.remove('mobile-menu-open');
 
-             });
-            this.burger_menu_icon.addEventListener("click", (e) => { 
-                this.navToggle(e);
-                body.classList.add('mobile-menu-open');
-             });
+            //  });
+            // this.burger_menu_icon.addEventListener("click", (e) => { 
+            //     this.navToggle(e);
+            //     body.classList.add('mobile-menu-open');
+            //  });
         }
     }
 
@@ -813,647 +813,652 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // class ProgramManager {
-    //     constructor() {
-    //         this.filter_form = document.querySelectorAll(".filter-form");
-    //         this.filter_buttons = document.querySelectorAll(".filter-button");
-    //         this.data = null;
-    //         this.keys = null;
-    //         this.detailed_program_section =
-    //             document.querySelector("#detailed-programs");
-    //         this.programs_table = document.querySelector(".program-table");
-    //         this.table_body = document.querySelector(".program-table tbody");
-    //         this.table_head_tds = document.querySelectorAll(
-    //             ".program-table thead th"
-    //         );
-    //         this.filter_icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //          <path d="M11.0003 20C10.7169 20 10.4793 19.904 10.2873 19.712C10.0953 19.52 9.99959 19.2827 10.0003 19V13L4.20025 5.6C3.95025 5.26667 3.91259 4.91667 4.08725 4.55C4.26192 4.18333 4.56625 4 5.00025 4H19.0003C19.4336 4 19.7379 4.18333 19.9133 4.55C20.0886 4.91667 20.0509 5.26667 19.8003 5.6L14.0003 13V19C14.0003 19.2833 13.9043 19.521 13.7123 19.713C13.5203 19.905 13.2829 20.0007 13.0003 20H11.0003Z" />
-    //          </svg>
-    //        `;
+    class ProgramManager {
+        constructor() {
+            this.filter_form = document.querySelectorAll(".filter-form");
+            this.filter_buttons = document.querySelectorAll(".filter-button");
+            this.data = null;
+            this.keys = null;
+            this.detailed_program_section =
+                document.querySelector("#detailed-programs");
+            this.programs_table = document.querySelector(".program-table");
+            this.table_body = document.querySelector(".program-table tbody");
+            this.table_head_tds = document.querySelectorAll(
+                ".program-table thead th"
+            );
+            this.filter_icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M11.0003 20C10.7169 20 10.4793 19.904 10.2873 19.712C10.0953 19.52 9.99959 19.2827 10.0003 19V13L4.20025 5.6C3.95025 5.26667 3.91259 4.91667 4.08725 4.55C4.26192 4.18333 4.56625 4 5.00025 4H19.0003C19.4336 4 19.7379 4.18333 19.9133 4.55C20.0886 4.91667 20.0509 5.26667 19.8003 5.6L14.0003 13V19C14.0003 19.2833 13.9043 19.521 13.7123 19.713C13.5203 19.905 13.2829 20.0007 13.0003 20H11.0003Z" />
+             </svg>
+           `;
 
-    //         this.filter_result = document.querySelector(".result");
-    //         this.search_form = document.querySelector(".search-form");
-    //         this.search_input = null;
-    //         this.guidance_plan_text = null;
-    //         this.apply_now_text = null;
-    //         this.global_filter = null;
-    //         this.global_keys = null;
-    //         this.global_arabic_filter = null;
-    //         this.table_for = null;
-    //         this.m_div = null;
-    //         this.filteration_section = document.querySelector(
-    //             ".filteration-section"
-    //         );
-    //         this.num_rows = 5;
-    //         this.start_counter = this.num_rows;
-    //         this.counter = null;
-    //         this.rows = null;
-    //         this.body = null;
-    //     }
-    //     setTableFor() {
-    //         this.table_for = document
-    //             .querySelector("table")
-    //             .getAttribute("tablefor")
-    //             .split(" ");
-    //     }
-    //     setGlobalFilter() {
-    //         this.global_filter = {
-    //             school: this.table_for[0] == "All_Schools" ? "" : this.table_for[0],
-    //             degree: this.table_for[1] == "All_Degrees" ? "" : this.table_for[1],
-    //             location:
-    //                 this.table_for[2] == "All_Campuses" ? "" : this.table_for[2],
-    //             timing: "",
+            this.filter_result = document.querySelector(".result");
+            this.search_form = document.querySelector(".search-form");
+            this.search_input = null;
+            this.guidance_plan_text = null;
+            this.apply_now_text = null;
+            this.global_filter = null;
+            this.global_keys = null;
+            this.global_arabic_filter = null;
+            this.table_for = null;
+            this.m_div = null;
+            this.filteration_section = document.querySelector(
+                ".filteration-section"
+            );
+            this.num_rows = 5;
+            this.start_counter = this.num_rows;
+            this.counter = null;
+            this.rows = null;
+            this.body = null;
+        }
+        setTableFor() {
+            this.table_for = document
+                .querySelector("table")
+                .getAttribute("tablefor")
+                .split(" ");
+        }
+        setGlobalFilter() {
+            this.global_filter = {
+                school: this.table_for[0] == "All_Schools" ? "" : this.table_for[0],
+                degree: this.table_for[1] == "All_Degrees" ? "" : this.table_for[1],
+                location:
+                    this.table_for[2] == "All_Campuses" ? "" : this.table_for[2],
+                timing: "",
 
-    //         };
-    //     }
-    //     setGlobalArabicFilter() {
-    //         this.global_arabic_filter = {
-    //             school: this.table_for[0] == "All_Schools" ? "" : this.table_for[0],
-    //             degree: this.table_for[1] == "All_Degrees" ? "" : this.table_for[1],
-    //             location:
-    //                 this.table_for[2] == "All_Campuses" ? "" : this.table_for[2],
-    //             timing: "",
-    //             search: "",
-    //         };
-    //     }
-    //     setGlobalKeys() {
-    //         this.global_keys = Object.keys(this.global_filter);
-    //     }
-    //     setGuidancePlanText() {
-    //         if (page_obj.isArabic()) {
-    //             this.guidance_plan_text = "الخطة الإسترشادية";
-    //         } else {
-    //             this.guidance_plan_text = "Guidance Plan";
-    //         }
-    //     }
-    //     setApplyNowText() {
-    //         if (page_obj.isArabic()) {
-    //             this.apply_now_text = "قدم الآن";
-    //         } else {
-    //             this.apply_now_text = "Apply Now";
-    //         }
-    //     }
-    //     setSearchInput() {
-    //         this.search_input = this.search_form.querySelector("input");
-    //     }
-    //     isTable() {
-    //         return Boolean(this.table_body);
-    //     }
+            };
+        }
+        setGlobalArabicFilter() {
+            this.global_arabic_filter = {
+                school: this.table_for[0] == "All_Schools" ? "" : this.table_for[0],
+                degree: this.table_for[1] == "All_Degrees" ? "" : this.table_for[1],
+                location:
+                    this.table_for[2] == "All_Campuses" ? "" : this.table_for[2],
+                timing: "",
+                search: "",
+            };
+        }
+        setGlobalKeys() {
+            this.global_keys = Object.keys(this.global_filter);
+        }
+        setGuidancePlanText() {
+            if (page_obj.isArabic()) {
+                this.guidance_plan_text = "الخطة الإسترشادية";
+            } else {
+                this.guidance_plan_text = "Guidance Plan";
+            }
+        }
+        setApplyNowText() {
+            if (page_obj.isArabic()) {
+                this.apply_now_text = "قدم الآن";
+            } else {
+                this.apply_now_text = "Apply Now";
+            }
+        }
+        setSearchInput() {
+            this.search_input = this.search_form.querySelector("input");
+        }
+        isTable() {
+            return Boolean(this.table_body);
+        }
 
-    //     updateResult(num, is_search = false) {
-    //         let filterd = false;
-    //         let key;
-    //         for (let fi = 0; fi < this.filter_form.length; fi++) {
-    //             key = this.filter_form[fi].classList[1].split("-")[0];
-    //             if (this.global_filter[key] != "") {
-    //                 filterd = true;
-    //             }
-    //         }
-    //         if (filterd || is_search) {
-    //             if ("/" + slug.pathname.split("/")[1] + "/" == "/ar/") {
-    //                 this.filter_result.innerHTML = `${num} نتيجة`;
-    //             } else {
-    //                 this.filter_result.innerHTML = `${num} result found`;
-    //             }
-    //         } else {
-    //             this.filter_result.innerHTML = "";
-    //         }
-    //     }
+        updateResult(num, is_search = false) {
+            let filterd = false;
+            let key;
+            for (let fi = 0; fi < this.filter_form.length; fi++) {
+                key = this.filter_form[fi].classList[1].split("-")[0];
+                if (this.global_filter[key] != "") {
+                    filterd = true;
+                }
+            }
+            if (filterd || is_search) {
+                if ("/" + slug.pathname.split("/")[1] + "/" == "/ar/") {
+                    this.filter_result.innerHTML = `${num} نتيجة`;
+                } else {
+                    this.filter_result.innerHTML = `${num} result found`;
+                }
+            } else {
+                this.filter_result.innerHTML = "";
+            }
+        }
 
-    //     mobileInterface() {
-    //         this.programs_table.remove();
-    //         this.m_div = document.createElement("div");
-    //         this.m_div.classList.add("mobile-programs");
-    //         this.detailed_program_section.appendChild(this.m_div);
-    //         this.detailed_program_section.insertBefore(
-    //             this.filteration_section,
-    //             this.m_div
-    //         );
-    //     }
-    //     seeMore() {
-    //         this.counter = this.num_rows + 5;
-    //         if (page_obj.isMobile()) {
-    //             this.body = this.m_div;
-    //             this.rows = this.m_div.querySelectorAll(".accordion-div");
-    //         } else {
-    //             this.body = this.table_body;
-    //             this.rows = this.table_body.querySelectorAll("tr");
-    //         }
-    //         for (let i = 0; i < this.num_rows; i++) {
-    //             this.rows[i].classList.add("displayed-tr");
-    //         }
-    //         for (let i = this.num_rows; i < this.rows.length; i++) {
-    //             this.rows[i].classList.add("hidden-tr");
-    //         }
-    //         let button = document.createElement("button");
-    //         button.textContent = "View More...";
-    //         button.setAttribute("id", "see-more-button");
-    //         this.body.appendChild(button);
-    //         button.addEventListener("click", (e) => {
-    //             this.seeMoreHandler(e, this.rows);
-    //         });
-    //     }
+        mobileInterface() {
+            this.programs_table.remove();
+            this.m_div = document.createElement("div");
+            this.m_div.classList.add("mobile-programs");
+            this.detailed_program_section.appendChild(this.m_div);
+            this.detailed_program_section.insertBefore(
+                this.filteration_section,
+                this.m_div
+            );
+        }
+        seeMore() {
+            this.counter = this.num_rows + 5;
+            if (page_obj.isMobile()) {
+                this.body = this.m_div;
+                this.rows = this.m_div.querySelectorAll(".accordion-div");
+            } else {
+                this.body = this.table_body;
+                this.rows = this.table_body.querySelectorAll("tr");
+            }
+            for (let i = 0; i < this.num_rows; i++) {
+                this.rows[i].classList.add("displayed-tr");
+            }
+            for (let i = this.num_rows; i < this.rows.length; i++) {
+                this.rows[i].classList.add("hidden-tr");
+            }
+            let button = document.createElement("button");
+            button.textContent = "View More...";
+            button.setAttribute("id", "see-more-button");
+            this.body.appendChild(button);
+            button.addEventListener("click", (e) => {
+                this.seeMoreHandler(e, this.rows);
+            });
+        }
 
-    //     seeMoreHandler(e, rows) {
-    //         if (e.target.textContent === "View More...") {
-    //             // Show the next 5 rows
+        seeMoreHandler(e, rows) {
+            if (e.target.textContent === "View More...") {
+                // Show the next 5 rows
 
-    //             for (let i = this.start_counter; i < this.counter; i++) {
-    //                 if (rows[i]) {
-    //                     rows[i].classList.remove("hidden-tr");
-    //                     rows[i].classList.add("displayed-tr");
-    //                 }
-    //             }
-    //             // Update the counters
-    //             this.start_counter += 5;
-    //             this.counter += 5;
+                for (let i = this.start_counter; i < this.counter; i++) {
+                    if (rows[i]) {
+                        rows[i].classList.remove("hidden-tr");
+                        rows[i].classList.add("displayed-tr");
+                    }
+                }
+                // Update the counters
+                this.start_counter += 5;
+                this.counter += 5;
 
-    //             if (this.start_counter >= this.rows.length) {
-    //                 e.target.textContent = "See Less";
-    //             }
-    //         } else {
-    //             //         // Hide the extra rows
-    //             for (let i = this.counter - 5; i >= this.start_counter - 5; i--) {
-    //                 if (this.rows[i]) {
-    //                     this.rows[i].classList.add("hidden-tr");
-    //                     this.rows[i].classList.remove("displayed-tr");
-    //                 }
-    //             }
+                if (this.start_counter >= this.rows.length) {
+                    e.target.textContent = "See Less";
+                }
+            } else {
+                //         // Hide the extra rows
+                for (let i = this.counter - 5; i >= this.start_counter - 5; i--) {
+                    if (this.rows[i]) {
+                        this.rows[i].classList.add("hidden-tr");
+                        this.rows[i].classList.remove("displayed-tr");
+                    }
+                }
 
-    //             //         // Update the counters
-    //             this.start_counter -= 5;
-    //             this.counter -= 5;
+                //         // Update the counters
+                this.start_counter -= 5;
+                this.counter -= 5;
 
-    //             if (this.start_counter <= this.num_rows) {
-    //                 e.target.textContent = "View More...";
-    //             }
-    //         }
-    //     }
-    //     mobileLeftRightDetection(clickedIndex) {
-    //         if (this.filter_buttons[clickedIndex].getBoundingClientRect().x < window.innerWidth * 0.5) {
-    //             this.filter_form[clickedIndex].style.left = 0
-    //         }
-    //         else {
-    //             this.filter_form[clickedIndex].style.right = 0
-    //         }
-    //     }
-    //     toggleFilterBoxAppearance(clickedIndex) {
-    //         for (let i = 0; i < this.filter_form.length; i++) {
-    //             if (i === clickedIndex) {
-    //                 if (page_obj.isMobile()) {
-    //                     this.mobileLeftRightDetection(clickedIndex)
-    //                     this.filter_form[i].classList.toggle("box-appear-flex");
-    //                 }
-    //                 else {
-    //                     console.log('filer');
-    //                     this.filter_form[i].classList.toggle("box-appear");
-    //                 }
-    //             } else {
-    //                 if (page_obj.isMobile()) {
-    //                     this.filter_form[i].classList.remove("box-appear-flex");
-    //                 }
-    //                 else {
-    //                     this.filter_form[i].classList.remove("box-appear");
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     attachFilterButtonListeners() {
-    //         for (let i = 0; i < this.filter_form.length; i++) {
-    //             this.filter_buttons[i].addEventListener("click", () => {
-    //                 this.toggleFilterBoxAppearance(i);
+                if (this.start_counter <= this.num_rows) {
+                    e.target.textContent = "View More...";
+                }
+            }
+        }
+        mobileLeftRightDetection(clickedIndex) {
+            if (this.filter_buttons[clickedIndex].getBoundingClientRect().x < window.innerWidth * 0.5) {
+                this.filter_form[clickedIndex].style.left = 0
+            }
+            else {
+                this.filter_form[clickedIndex].style.right = 0
+            }
+        }
+        toggleFilterBoxAppearance(clickedIndex) {
+            for (let i = 0; i < this.filter_form.length; i++) {
+                if (i === clickedIndex) {
+                    if (page_obj.isMobile()) {
+                        this.mobileLeftRightDetection(clickedIndex)
+                        this.filter_form[i].classList.toggle("box-appear-flex");
+                    }
+                    else {
+                        console.log('filer');
+                        this.filter_form[i].classList.toggle("box-appear");
+                    }
+                } else {
+                    if (page_obj.isMobile()) {
+                        this.filter_form[i].classList.remove("box-appear-flex");
+                    }
+                    else {
+                        this.filter_form[i].classList.remove("box-appear");
+                    }
+                }
+            }
+        }
+        attachFilterButtonListeners() {
+            for (let i = 0; i < this.filter_form.length; i++) {
+                this.filter_buttons[i].addEventListener("click", () => {
+                    this.toggleFilterBoxAppearance(i);
 
-    //             });
-    //         }
-    //     }
-    //     async getPrograms() {
-    //         let data = await fetch("./programs.json")
-    //         data = data.json()
-    //         return data
+                });
+            }
+        }
+        async getPrograms() {
+            try{
+                let data = await fetch("../programs.json")
+                data = data.json()
+                console.log(data);
+                return data
+            } catch(err){
+                console.log(err.message)
+            }
 
-    //     }
-    //     async getProgramData() {
+        }
+        async getProgramData() {
 
-    //         let data = await this.getPrograms()
-    //         // console.log("data :", data);
-    //         let result = data
-    //         for (let i = 0; i < this.global_keys.length; i++) {
-    //             result = result.filter(item => {
-    //                 if (this.global_filter[this.global_keys[i]] == '' || this.global_filter[this.global_keys[i]] == "All") {
-    //                     return true
-    //                 }
-    //                 return item[this.global_keys[i]] == this.global_filter[this.global_keys[i]]
-    //             })
-    //         }
+            let data = await this.getPrograms()
+            console.log("data :", data);
+            let result = data
+            for (let i = 0; i < this.global_keys.length; i++) {
+                result = result.filter(item => {
+                    if (this.global_filter[this.global_keys[i]] == '' || this.global_filter[this.global_keys[i]] == "All") {
+                        return true
+                    }
+                    return item[this.global_keys[i]] == this.global_filter[this.global_keys[i]]
+                })
+            }
 
-    //         return result
-    //     }
+            return result
+        }
 
-    //     async renderProgramsWithoutUpdateResult() {
-    //         const data = await this.getProgramData();
-    //         // console.log("result: ", data);
-    //         if (page_obj.isMobile()) {
-    //             this.UpdteMobileContent(data);
-    //         } else this.UpdateTable(data);
-    //         this.ActivateFilterButtons();
-    //         this.updateResult(data.length);
-    //     }
-    //     UpdateTable(data) {
-    //         this.table_body.innerHTML = "";
-    //         // loop over the data resulted from an api
-    //         let tr, td1, td, td5;
+        async renderProgramsWithoutUpdateResult() {
+            const data = await this.getProgramData();
+            // console.log("result: ", data);
+            if (page_obj.isMobile()) {
+                this.UpdteMobileContent(data);
+            } else this.UpdateTable(data);
+            this.ActivateFilterButtons();
+            this.updateResult(data.length);
+        }
+        UpdateTable(data) {
+            this.table_body.innerHTML = "";
+            // loop over the data resulted from an api
+            let tr, td1, td, td5;
 
-    //         for (let x = 0; x < data.length; x++) {
-    //             tr = document.createElement("tr");
-    //             // tr.setAttribute("id", `${data[x].hash_id}`);
-    //             tr.classList.add("displayed-tr");
-    //             // add program nam
-    //             td1 = document.createElement("td");
-    //             td1.classList.add(`col-${this.table_head_tds.length}`);
-    //             if (page_obj.isArabic()) {
-    //                 td1.innerHTML = `${data[x].program_name_arabic}`;
-    //             } else {
-    //                 td1.innerHTML = `${data[x].program_name}`;
-    //             }
-    //             tr.appendChild(td1);
+            for (let x = 0; x < data.length; x++) {
+                tr = document.createElement("tr");
+                // tr.setAttribute("id", `${data[x].hash_id}`);
+                tr.classList.add("displayed-tr");
+                // add program nam
+                td1 = document.createElement("td");
+                td1.classList.add(`column-${this.table_head_tds.length}`);
+                if (page_obj.isArabic()) {
+                    td1.innerHTML = `${data[x].program_name_arabic}`;
+                } else {
+                    td1.innerHTML = `${data[x].program_name}`;
+                }
+                tr.appendChild(td1);
 
-    //             // add selected displayed columns data
-    //             for (let y = 1; y < this.table_head_tds.length - 1; y++) {
-    //                 this.unique_key = this.table_head_tds[y]
-    //                     .getAttribute("value")
-    //                     .toLowerCase();
-    //                 td = document.createElement("td");
-    //                 td.classList.add(`col-${this.table_head_tds.length}`);
-    //                 if (this.unique_key == "degree" || this.unique_key == "school") {
-    //                     if ("/" + slug.pathname.split("/")[1] + "/" == "/ar/") {
-    //                         td.innerHTML = `${data[x][`${this.unique_key}_arabic`]
-    //                             .split("_")
-    //                             .join(" ")}`;
-    //                     } else {
-    //                         td.innerHTML = `${data[x][this.unique_key]
-    //                             .split("_")
-    //                             .join(" ")}`;
-    //                     }
-    //                 } else {
-    //                     if ("/" + slug.pathname.split("/")[1] + "/" == "/ar/") {
-    //                         td.innerHTML = `${data[x][`${this.unique_key}_arabic`]}`;
-    //                     } else {
-    //                         td.innerHTML = `${data[x][this.unique_key]}`;
-    //                     }
-    //                 }
+                // add selected displayed columns data
+                for (let y = 1; y < this.table_head_tds.length - 1; y++) {
+                    this.unique_key = this.table_head_tds[y]
+                        .getAttribute("value")
+                        .toLowerCase();
+                    td = document.createElement("td");
+                    td.classList.add(`column-${this.table_head_tds.length}`);
+                    if (this.unique_key == "degree" || this.unique_key == "school") {
+                        if ("/" + slug.pathname.split("/")[1] + "/" == "/ar/") {
+                            td.innerHTML = `${data[x][`${this.unique_key}_arabic`]
+                                .split("_")
+                                .join(" ")}`;
+                        } else {
+                            td.innerHTML = `${data[x][this.unique_key]
+                                .split("_")
+                                .join(" ")}`;
+                        }
+                    } else {
+                        if ("/" + slug.pathname.split("/")[1] + "/" == "/ar/") {
+                            td.innerHTML = `${data[x][`${this.unique_key}_arabic`]}`;
+                        } else {
+                            td.innerHTML = `${data[x][this.unique_key]}`;
+                        }
+                    }
 
-    //                 tr.appendChild(td);
-    //             }
+                    tr.appendChild(td);
+                }
 
-    //             // add the buttons column
-    //             td5 = document.createElement("td");
-    //             td5.classList.add(`col-${this.table_head_tds.length}`);
+                // add the buttons column
+                td5 = document.createElement("td");
+                td5.classList.add(`column-${this.table_head_tds.length}`);
 
-    //             if (data[x].guidence_plan) {
-    //                 td5.innerHTML = ` 
-    //                 <a href=${data[x].guidence_plan} class="guidance-plan" target="_blank">
-    //                 <button>
-    //                 <span>Guidance Plan</span>
-    //                 <span>${pdf_icon}</span>
-    //                 </button>
-    //                 </a>`;
-    //             }
-    //             tr.appendChild(td5);
+                if (data[x].guidence_plan) {
+                    td5.innerHTML = ` 
+                    <a href=${data[x].guidence_plan} class="guidance-plan" target="_blank">
+                    <button>
+                    <span>Guidance Plan</span>
+                    <span>${pdf_icon}</span>
+                    </button>
+                    </a>`;
+                }
+                tr.appendChild(td5);
 
-    //             this.table_body.appendChild(tr);
-    //         }
-    //         if (data.length > 5) {
-    //             this.seeMore();
-    //         }
-    //         let programs_acc = new Accordion();
-    //         programs_acc.activate_accordion();
-    //     }
+                this.table_body.appendChild(tr);
+            }
+            if (data.length > 5) {
+                this.seeMore();
+            }
+            let programs_acc = new Accordion();
+            programs_acc.activate_accordion();
+        }
 
-    //     UpdteMobileContent(data) {
-    //         this.m_div.innerHTML = "";
-    //         let accordion_div;
-    //         // loop over the data resulted from an api
-    //         for (let x = 0; x < data.length; x++) {
-    //             accordion_div = document.createElement("div");
-    //             accordion_div.classList.add("accordion-div");
-    //             accordion_div.classList.add("displayed-tr");
+        UpdteMobileContent(data) {
+            this.m_div.innerHTML = "";
+            let accordion_div;
+            // loop over the data resulted from an api
+            for (let x = 0; x < data.length; x++) {
+                accordion_div = document.createElement("div");
+                accordion_div.classList.add("accordion-div");
+                accordion_div.classList.add("displayed-tr");
 
-    //             let inner_button = document.createElement("button");
-    //             inner_button.classList.add("accordion");
-    //             // inner_button.setAttribute("id", `${data[x].hash_id}`);
-    //             inner_button.innerHTML = `
-    //             <span>${data[x].program_name}</span>
-    //             <span class='accordion-icon'>${accordion_downarrow}</span>`;
-    //             let inner_div = document.createElement("div");
-    //             inner_div.classList.add("panel");
+                let inner_button = document.createElement("button");
+                inner_button.classList.add("accordion");
+                // inner_button.setAttribute("id", `${data[x].hash_id}`);
+                inner_button.innerHTML = `
+                <span>${data[x].program_name}</span>
+                <span class='accordion-icon'>${accordion_downarrow}</span>`;
+                let inner_div = document.createElement("div");
+                inner_div.classList.add("panel");
 
-    //             accordion_div.appendChild(inner_button);
-    //             // add selected displayed columns data
-    //             for (let y = 1; y < this.table_head_tds.length - 1; y++) {
-    //                 let div_2_spans = document.createElement("div");
-    //                 this.unique_key = this.table_head_tds[y].getAttribute("value").toLowerCase();
+                accordion_div.appendChild(inner_button);
+                // add selected displayed columns data
+                for (let y = 1; y < this.table_head_tds.length - 1; y++) {
+                    let div_2_spans = document.createElement("div");
+                    this.unique_key = this.table_head_tds[y].getAttribute("value").toLowerCase();
 
-    //                 let span1 = document.createElement("span");
-    //                 span1.innerHTML = `${this.unique_key[0].toUpperCase() + this.unique_key.substring(1)
-    //                     }`;
-    //                 let span2 = document.createElement("span");
+                    let span1 = document.createElement("span");
+                    span1.innerHTML = `${this.unique_key[0].toUpperCase() + this.unique_key.substring(1)
+                        }`;
+                    let span2 = document.createElement("span");
 
-    //                 if (this.unique_key == "degree" || this.unique_key == "school") {
-    //                     if ("/" + slug.pathname.split("/")[1] + "/" == "/ar/") {
-    //                         span2.innerHTML = `${data[x][`${this.unique_key}_arabic`]
-    //                             .split("_")
-    //                             .join(" ")}`;
-    //                     } else {
-    //                         span2.innerHTML = `${data[x][`${this.unique_key}`]
-    //                             .split("_")
-    //                             .join(" ")}`;
-    //                     }
-    //                 } else {
-    //                     if ("/" + slug.pathname.split("/")[1] + "/" == "/ar/") {
-    //                         span2.innerHTML = `${data[x][`${this.unique_key}_arabic`]}`;
-    //                     } else {
-    //                         span2.innerHTML = `${data[x][`${this.unique_key}`]}`;
-    //                     }
-    //                 }
+                    if (this.unique_key == "degree" || this.unique_key == "school") {
+                        if ("/" + slug.pathname.split("/")[1] + "/" == "/ar/") {
+                            span2.innerHTML = `${data[x][`${this.unique_key}_arabic`]
+                                .split("_")
+                                .join(" ")}`;
+                        } else {
+                            span2.innerHTML = `${data[x][`${this.unique_key}`]
+                                .split("_")
+                                .join(" ")}`;
+                        }
+                    } else {
+                        if ("/" + slug.pathname.split("/")[1] + "/" == "/ar/") {
+                            span2.innerHTML = `${data[x][`${this.unique_key}_arabic`]}`;
+                        } else {
+                            span2.innerHTML = `${data[x][`${this.unique_key}`]}`;
+                        }
+                    }
 
-    //                 div_2_spans.appendChild(span1);
-    //                 div_2_spans.appendChild(span2);
-    //                 inner_div.appendChild(div_2_spans);
-    //             }
+                    div_2_spans.appendChild(span1);
+                    div_2_spans.appendChild(span2);
+                    inner_div.appendChild(div_2_spans);
+                }
 
-    //             // add the buttons column
-    //             let span3 = document.createElement("span");
+                // add the buttons column
+                let span3 = document.createElement("span");
 
-    //             span3.innerHTML = ` 
-    //             <a href="${data[x].guidence_plan}" class="guidance-plan" target="_blank">
-    //             <button>
-    //             <span>Guidance Plan</span>
-    //             <span>${pdf_icon}</span>
-    //             </button>
-    //             </a>`;
-    //             inner_div.appendChild(span3);
+                span3.innerHTML = ` 
+                <a href="${data[x].guidence_plan}" class="guidance-plan" target="_blank">
+                <button>
+                <span>Guidance Plan</span>
+                <span>${pdf_icon}</span>
+                </button>
+                </a>`;
+                inner_div.appendChild(span3);
 
-    //             accordion_div.appendChild(inner_div);
-    //             this.m_div.appendChild(accordion_div);
-    //         }
-    //         if (data.length > 5) {
-    //             this.seeMore();
-    //         }
-    //         let programs_acc = new Accordion();
-    //         programs_acc.activate_accordion();
-    //     }
+                accordion_div.appendChild(inner_div);
+                this.m_div.appendChild(accordion_div);
+            }
+            if (data.length > 5) {
+                this.seeMore();
+            }
+            let programs_acc = new Accordion();
+            programs_acc.activate_accordion();
+        }
 
-    //     uncheckAllTheCheckBoxes() {
-    //         for (let a = 0; a < this.filter_form.length; a++) {
-    //             let checkboxs = this.filter_form[a].querySelectorAll(
-    //                 'input[type="checkbox"]'
-    //             );
-    //             for (let i = 0; i < checkboxs.length; i++) {
-    //                 checkboxs[i].checked = false;
-    //             }
-    //         }
-    //     }
-    //     searchEvent(e) {
-    //         e.preventDefault();
-    //         this.setGlobalFilter();
-    //         this.uncheckAllTheCheckBoxes();
-    //         let search = e.target.search.value;
-    //         this.global_filter["search"] = search;
-    //         this.getDataAndUpdateTable(true);
-    //     }
+        uncheckAllTheCheckBoxes() {
+            for (let a = 0; a < this.filter_form.length; a++) {
+                let checkboxs = this.filter_form[a].querySelectorAll(
+                    'input[type="checkbox"]'
+                );
+                for (let i = 0; i < checkboxs.length; i++) {
+                    checkboxs[i].checked = false;
+                }
+            }
+        }
+        searchEvent(e) {
+            e.preventDefault();
+            this.setGlobalFilter();
+            this.uncheckAllTheCheckBoxes();
+            let search = e.target.search.value;
+            this.global_filter["search"] = search;
+            this.getDataAndUpdateTable(true);
+        }
 
-    //     FilterEvent(e, checkboxs, i, a) {
-    //         let filter_by, label;
-    //         if (checkboxs[i].checked) {
-    //             filter_by = e.target.value;
-    //             label = e.target.parentElement.textContent.trim();
+        FilterEvent(e, checkboxs, i, a) {
+            let filter_by, label;
+            if (checkboxs[i].checked) {
+                filter_by = e.target.value;
+                label = e.target.parentElement.textContent.trim();
 
-    //             if (filter_by == "all") {
-    //                 filter_by = "";
-    //             }
-    //         } else {
-    //             filter_by = "";
-    //         }
-    //         //remove search when filter
-    //         // this.global_filter["search"] = "";
-    //         // this.search_input.value = "";
+                if (filter_by == "all") {
+                    filter_by = "";
+                }
+            } else {
+                filter_by = "";
+            }
+            //remove search when filter
+            // this.global_filter["search"] = "";
+            // this.search_input.value = "";
 
-    //         for (let j = 0; j < checkboxs.length; j++) {
-    //             if (checkboxs[j] != checkboxs[i]) {
-    //                 checkboxs[j].checked = false;
-    //             }
-    //         }
-    //         if (this.filter_form[a].classList.contains("location-form")) {
-    //             this.global_filter["location"] = filter_by;
-    //             this.global_arabic_filter["location"] = label;
-    //             this.getDataAndUpdateTable();
-    //         } else if (this.filter_form[a].classList.contains("degree-form")) {
-    //             this.global_filter["degree"] = filter_by;
-    //             this.global_arabic_filter["degree"] = label;
-    //             this.getDataAndUpdateTable();
-    //         } else if (this.filter_form[a].classList.contains("timing-form")) {
-    //             this.global_filter["timing"] = filter_by;
-    //             this.global_arabic_filter["timing"] = label;
+            for (let j = 0; j < checkboxs.length; j++) {
+                if (checkboxs[j] != checkboxs[i]) {
+                    checkboxs[j].checked = false;
+                }
+            }
+            if (this.filter_form[a].classList.contains("location-form")) {
+                this.global_filter["location"] = filter_by;
+                this.global_arabic_filter["location"] = label;
+                this.getDataAndUpdateTable();
+            } else if (this.filter_form[a].classList.contains("degree-form")) {
+                this.global_filter["degree"] = filter_by;
+                this.global_arabic_filter["degree"] = label;
+                this.getDataAndUpdateTable();
+            } else if (this.filter_form[a].classList.contains("timing-form")) {
+                this.global_filter["timing"] = filter_by;
+                this.global_arabic_filter["timing"] = label;
 
-    //             this.getDataAndUpdateTable();
-    //         } else if (this.filter_form[a].classList.contains("school-form")) {
-    //             this.global_filter["school"] = filter_by;
-    //             this.global_arabic_filter["school"] = label;
+                this.getDataAndUpdateTable();
+            } else if (this.filter_form[a].classList.contains("school-form")) {
+                this.global_filter["school"] = filter_by;
+                this.global_arabic_filter["school"] = label;
 
-    //             this.getDataAndUpdateTable();
-    //         }
-    //         if (page_obj.isMobile()) {
-    //             this.filter_form[a].classList.remove("box-appear");
-    //         }
-    //     }
-    //     HideAllFilterForms() {
-    //         for (let i = 0; i < this.filter_form.length; i++) {
-    //             if (page_obj.isMobile()) {
-    //                 this.filter_form[i].classList.remove("box-appear-flex");
-    //             }
-    //             else {
-    //                 this.filter_form[i].classList.remove("box-appear");
-    //             }
-    //         }
-    //     }
-    //     FilterButtonsActivation() {
-    //         for (let a = 0; a < this.filter_form.length; a++) {
-    //             let checkboxs = this.filter_form[a].querySelectorAll(
-    //                 'input[type="checkbox"]'
-    //             );
-    //             for (let i = 0; i < checkboxs.length; i++) {
-    //                 checkboxs[i].addEventListener("click", (e) => {
-    //                     this.FilterEvent(e, checkboxs, i, a)
+                this.getDataAndUpdateTable();
+            }
+            if (page_obj.isMobile()) {
+                this.filter_form[a].classList.remove("box-appear");
+            }
+        }
+        HideAllFilterForms() {
+            for (let i = 0; i < this.filter_form.length; i++) {
+                if (page_obj.isMobile()) {
+                    this.filter_form[i].classList.remove("box-appear-flex");
+                }
+                else {
+                    this.filter_form[i].classList.remove("box-appear");
+                }
+            }
+        }
+        FilterButtonsActivation() {
+            for (let a = 0; a < this.filter_form.length; a++) {
+                let checkboxs = this.filter_form[a].querySelectorAll(
+                    'input[type="checkbox"]'
+                );
+                for (let i = 0; i < checkboxs.length; i++) {
+                    checkboxs[i].addEventListener("click", (e) => {
+                        this.FilterEvent(e, checkboxs, i, a)
 
-    //                     this.filter_form[a].style.animation = 'disappearAnimation linear 250ms'
+                        this.filter_form[a].style.animation = 'disappearAnimation linear 250ms'
 
-    //                     setTimeout(() => {
-    //                         this.HideAllFilterForms()
-    //                         this.filter_form[a].style.animation = 'appearAnimation linear 250ms'
-    //                     }, 250)
-    //                 }
-    //                 );
-    //             }
-    //         }
-    //     }
+                        setTimeout(() => {
+                            this.HideAllFilterForms()
+                            this.filter_form[a].style.animation = 'appearAnimation linear 250ms'
+                        }, 250)
+                    }
+                    );
+                }
+            }
+        }
 
-    //     ActivateFilterButtons() {
-    //         let key;
-    //         for (let fi = 0; fi < this.filter_form.length; fi++) {
-    //             key = this.filter_form[fi].classList[1].split("-")[0]; //eg : degree from degree-form
-    //             if (this.global_filter[key] != "") {
-    //                 if (page_obj.isArabic()) {
-    //                     this.filter_buttons[
-    //                         fi
-    //                     ].innerHTML = `${this.global_arabic_filter[key]}`;
-    //                 } else {
-    //                     this.filter_buttons[fi].innerHTML = `${this.global_filter[key]
-    //                         .split("_")
-    //                         .join(" ")} ${this.filter_icon}`;
-    //                 }
+        ActivateFilterButtons() {
+            let key;
+            for (let fi = 0; fi < this.filter_form.length; fi++) {
+                key = this.filter_form[fi].classList[1].split("-")[0]; //eg : degree from degree-form
+                if (this.global_filter[key] != "") {
+                    if (page_obj.isArabic()) {
+                        this.filter_buttons[
+                            fi
+                        ].innerHTML = `${this.global_arabic_filter[key]}`;
+                    } else {
+                        this.filter_buttons[fi].innerHTML = `${this.global_filter[key]
+                            .split("_")
+                            .join(" ")} ${this.filter_icon}`;
+                    }
 
-    //                 if (!this.filter_buttons[fi].classList.contains("active")) {
-    //                     this.filter_buttons[fi].classList.add("active");
-    //                 }
-    //             } else {
-    //                 if (this.filter_buttons[fi].classList.contains("active")) {
-    //                     if (
-    //                         this.filter_buttons[fi].classList.contains("location-button")
-    //                     ) {
-    //                         this.filter_buttons[
-    //                             fi
-    //                         ].innerHTML = `campus  ${this.filter_icon}`;
-    //                     } else {
-    //                         this.filter_buttons[fi].innerHTML = `${key.charAt(0).toUpperCase() + key.slice(1)
-    //                             }  ${this.filter_icon}`;
-    //                     }
+                    if (!this.filter_buttons[fi].classList.contains("active")) {
+                        this.filter_buttons[fi].classList.add("active");
+                    }
+                } else {
+                    if (this.filter_buttons[fi].classList.contains("active")) {
+                        if (
+                            this.filter_buttons[fi].classList.contains("location-button")
+                        ) {
+                            this.filter_buttons[
+                                fi
+                            ].innerHTML = `campus  ${this.filter_icon}`;
+                        } else {
+                            this.filter_buttons[fi].innerHTML = `${key.charAt(0).toUpperCase() + key.slice(1)
+                                }  ${this.filter_icon}`;
+                        }
 
-    //                     this.filter_buttons[fi].classList.remove("active");
-    //                 }
-    //             }
-    //         }
-    //     }
+                        this.filter_buttons[fi].classList.remove("active");
+                    }
+                }
+            }
+        }
 
-    //     getDataAndUpdateTable(is_search = false) {
-    //         this.getProgramData().then((data) => {
-    //             if (page_obj.isMobile()) {
-    //                 this.UpdteMobileContent(data);
-    //             } else {
-    //                 this.UpdateTable(data);
-    //             }
-    //             this.ActivateFilterButtons();
-    //             this.updateResult(data.length, is_search);
-    //         });
-    //     }
-    //     async getProgramSearch(user_input) {
-    //         let result = this.getPrograms(
-    //             `/api/programs?search=${user_input}&school=${global_filter["school"]}`
-    //         );
+        getDataAndUpdateTable(is_search = false) {
+            this.getProgramData().then((data) => {
+                if (page_obj.isMobile()) {
+                    this.UpdteMobileContent(data);
+                } else {
+                    this.UpdateTable(data);
+                }
+                this.ActivateFilterButtons();
+                this.updateResult(data.length, is_search);
+            });
+        }
+        async getProgramSearch(user_input) {
+            let result = this.getPrograms(
+                `/api/programs?search=${user_input}&school=${global_filter["school"]}`
+            );
 
-    //         return result;
-    //     }
-    //     TableHeadStyle() {
-    //         for (let ti = 0; ti < this.table_head_tds.length; ti++) {
-    //             this.table_head_tds[ti].classList.add(
-    //                 `col-${this.table_head_tds.length}`
-    //             );
-    //         }
-    //     }
-    //     activateSection() {
-    //         this.setGuidancePlanText();
-    //         this.setApplyNowText();
-    //         this.setTableFor();
-    //         this.setGlobalFilter();
-    //         this.setGlobalArabicFilter();
-    //         this.setGlobalKeys();
-    //         // this.setSearchInput();
-    //         if (page_obj.isMobile()) {
-    //             this.mobileInterface();
-    //         }
-    //         this.attachFilterButtonListeners();
-    //         this.renderProgramsWithoutUpdateResult();
-    //         this.TableHeadStyle();
-    //         this.search_form.addEventListener("submit", (e) => {
-    //             this.searchEvent(e);
-    //         });
-    //         this.FilterButtonsActivation();
-    //     }
-    // }
+            return result;
+        }
+        TableHeadStyle() {
+            for (let ti = 0; ti < this.table_head_tds.length; ti++) {
+                this.table_head_tds[ti].classList.add(
+                    `column-${this.table_head_tds.length}`
+                );
+            }
+        }
+        activateSection() {
+            this.setGuidancePlanText();
+            this.setApplyNowText();
+            this.setTableFor();
+            this.setGlobalFilter();
+            this.setGlobalArabicFilter();
+            this.setGlobalKeys();
+            // this.setSearchInput();
+            if (page_obj.isMobile()) {
+                this.mobileInterface();
+            }
+            this.attachFilterButtonListeners();
+            this.renderProgramsWithoutUpdateResult();
+            this.TableHeadStyle();
+            this.search_form.addEventListener("submit", (e) => {
+                this.searchEvent(e);
+            });
+            this.FilterButtonsActivation();
+        }
+    }
 
-    // class ColorSocialMedia {
-    //     constructor() {
-    //         this.footer_sm = document.querySelectorAll(".footer-social-media a");
-    //         this.footer_sm_icon = document.querySelectorAll(".footer-sm");
-    //         this.header_sm = document.querySelectorAll(".mobile-nav-socialM a");
-    //         this.header_sm_icon = document.querySelectorAll(".header-sm");
-    //     }
-    //     colorHeader() {
-    //         if (this.header_sm_icon.length === this.header_sm.length) {
-    //             for (let i = 0; i < this.header_sm_icon.length; i++) {
-    //                 // Create a closure to capture the current values of header_sm[i] and header_sm_icon[i]
-    //                 ((index) => {
-    //                     this.header_sm_icon[index].addEventListener("load", () => {
-    //                         this.colorSocialMedia(
-    //                             this.header_sm[index],
-    //                             "",
-    //                             this.header_sm_icon[index],
-    //                             "black"
-    //                         );
-    //                         this.header_sm[index].addEventListener("click", (e) => {
-    //                             this.colorSocialMedia(
-    //                                 this.header_sm[index],
-    //                                 "black-background",
-    //                                 this.header_sm_icon[index],
-    //                                 "white"
-    //                             );
-    //                         });
-    //                     });
-    //                 })(i);
-    //             }
-    //         }
+    class ColorSocialMedia {
+        constructor() {
+            this.footer_sm = document.querySelectorAll(".footer-social-media a");
+            this.footer_sm_icon = document.querySelectorAll(".footer-sm");
+            this.header_sm = document.querySelectorAll(".mobile-nav-socialM a");
+            this.header_sm_icon = document.querySelectorAll(".header-sm");
+        }
+        colorHeader() {
+            if (this.header_sm_icon.length === this.header_sm.length) {
+                for (let i = 0; i < this.header_sm_icon.length; i++) {
+                    // Create a closure to capture the current values of header_sm[i] and header_sm_icon[i]
+                    ((index) => {
+                        this.header_sm_icon[index].addEventListener("load", () => {
+                            this.colorSocialMedia(
+                                this.header_sm[index],
+                                "",
+                                this.header_sm_icon[index],
+                                "black"
+                            );
+                            this.header_sm[index].addEventListener("click", (e) => {
+                                this.colorSocialMedia(
+                                    this.header_sm[index],
+                                    "black-background",
+                                    this.header_sm_icon[index],
+                                    "white"
+                                );
+                            });
+                        });
+                    })(i);
+                }
+            }
 
-    //     }
+        }
 
-    //     colorFooter() {
-    //         if (this.footer_sm_icon) {
-    //             for (let i = 0; i < this.footer_sm_icon.length; i++) {
-    //                 this.footer_sm_icon[i].addEventListener("load", (e) => {
-    //                     this.footer_sm[i].addEventListener("mouseover", (e) => {
-    //                         this.colorSocialMedia(
-    //                             this.footer_sm[i],
-    //                             "white-background",
-    //                             this.footer_sm_icon[i],
-    //                             "black"
-    //                         );
-    //                     });
-    //                     this.footer_sm[i].addEventListener("mouseout", () => {
-    //                         this.colorSocialMedia(
-    //                             this.footer_sm[i],
-    //                             "white-background",
-    //                             this.footer_sm_icon[i],
-    //                             "white"
-    //                         );
-    //                     });
-    //                 });
-    //             }
-    //         }
+        colorFooter() {
+            if (this.footer_sm_icon) {
+                for (let i = 0; i < this.footer_sm_icon.length; i++) {
+                    this.footer_sm_icon[i].addEventListener("load", (e) => {
+                        this.footer_sm[i].addEventListener("mouseover", (e) => {
+                            this.colorSocialMedia(
+                                this.footer_sm[i],
+                                "white-background",
+                                this.footer_sm_icon[i],
+                                "black"
+                            );
+                        });
+                        this.footer_sm[i].addEventListener("mouseout", () => {
+                            this.colorSocialMedia(
+                                this.footer_sm[i],
+                                "white-background",
+                                this.footer_sm_icon[i],
+                                "white"
+                            );
+                        });
+                    });
+                }
+            }
 
-    //     }
+        }
 
-    //     colorSocialMedia(a_tag, a_color, icon, icon_color) {
-    //         if (a_color !== "") {
-    //             a_tag.classList.toggle(a_color);
-    //         }
-    //         var icon_doc = icon.contentDocument;
-    //         if (icon_doc) {
-    //             let icon_paths = icon_doc.querySelectorAll("path");
-    //             for (let i = 0; i < icon_paths.length; i++) {
-    //                 icon_paths[i].style.fill = icon_color;
-    //             }
-    //         }
-    //     }
+        colorSocialMedia(a_tag, a_color, icon, icon_color) {
+            if (a_color !== "") {
+                a_tag.classList.toggle(a_color);
+            }
+            var icon_doc = icon.contentDocument;
+            if (icon_doc) {
+                let icon_paths = icon_doc.querySelectorAll("path");
+                for (let i = 0; i < icon_paths.length; i++) {
+                    icon_paths[i].style.fill = icon_color;
+                }
+            }
+        }
 
-    // }
+    }
 
     class Slider {
         constructor() {
@@ -1652,15 +1657,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // news and events
     let news_section = new NewsManager();
-    // if (news_section.category_form) {
+    if (news_section.latest_section) {
         news_section.activateNewsSection();
-    // }
-
-    // career 
-    let career_section = new CareerManager()
-    if (career_section.career_list_body) {
-        career_section.activatecareersSection();
     }
+
 
     // slider start
     let slider_obj = new Slider()

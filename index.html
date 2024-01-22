@@ -82,19 +82,9 @@
     </header>
 
     <main>
-        <div id="customAlert" class="custom-alert">
-            <div class="close-button" id="closeButton">&times;</div>
 
-            <div id="alertContent"></div>
-
-            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
-                viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-                <path opacity="1" fill="#1E3050"
-                    d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z" />
-            </svg>
-        </div>
         <!-- ************ BANNER ************ -->
-        <section id="banner">
+        <section id="banner" class="banner">
             <div class="banner-img">
                 <img src='https://www.luminuseducation.com/wp-content/uploads/2018/04/Homepage-1.jpg&quot'
                     loading="lazy" alt="ltuc-banner">
@@ -361,7 +351,7 @@
                         <p class="card-text">Tarek Al Atoum is one of our outstanding graduates of the British
                             Diploma
                             Program (BTEC) in
-                            Software Engineering and today he works at Avertra... <span style="color: gray;">see more</span></p>
+                            Software Engineering and today he works at Avertra... <span style="color: #ff8d40;">see more</span></p>
                     </div>
                 </a>
                 <a class="card px-0 text-decoration-none"
@@ -373,7 +363,7 @@
                         <p class="card-text">Nizar today works as a DevOps Engineer at SociumTech after completing
                             an
                             advanced course in
-                            Python ... <span style="color: gray;">see more</span></p>
+                            Python... <span style="color: #ff8d40;">see more</span></p>
                     </div>
                 </a>
 
@@ -385,7 +375,7 @@
                         <p class="card-text">Adham is working today as a Full Stack software engineer in a
                             prestigious
                             company in Jordan
-                            - Aspire ... <span style="color: gray;">see more</span></p>
+                            - Aspire... <span style="color: #ff8d40;">see more</span></p>
                     </div>
                 </a>
 
@@ -408,7 +398,10 @@
 
                 </div>
             </div>
+            <div class="news-cards">
 
+            </div>
+            <!-- <button type="button" class=" latest-see-more">See More</button> -->
         </section>
 
 
@@ -548,61 +541,6 @@
 
     <script src="app.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('xxDw9z6jLyR9nWP_4');
-        })();
-        let templateParams = {
-            to_name: 'James',
-            firstname: 'Check this out!',
-            lastname: "",
-            message: '',
-            phone: '',
-            mail: ''
-        };
-        let contactForm = document.getElementById('contactForm')
-        var customAlert = document.getElementById("customAlert");
-        let closeButton = document.getElementById("closeButton");
-        let alertContent = document.getElementById('alertContent')
-        contactForm.addEventListener('submit', sendContact)
-        function sendContact(e) {
-            e.preventDefault()
-            templateParams = {
-                to_name: 'Ms. Haya',
-                firstname: e.target.firstName.value,
-                lastname: e.target.lastName.value,
-                message: e.target.message.value,
-                phone: e.target.phoneNumber.value,
-                mail: e.target.email.value
-            }
-            function showCustomAlert(message, type) {
-                var alertClass = type === "success" ? "custom-alert-success" : "custom-alert-error";
-                alertContent.innerHTML = `${message}`;
-
-
-                customAlert.classList.add(alertClass, "show");
-            }
-            emailjs.send('service_7xuh934', 'template_rylwlvj', templateParams)
-                .then(function (response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    showCustomAlert('Your email send Successfully', 'success')
-                }, function (error) {
-                    console.log('FAILED...', error);
-                });
-            e.target.firstName.value = ''
-            e.target.lastName.value = ""
-            e.target.message.value = ''
-            e.target.phoneNumber.value = ''
-            e.target.email.value = ''
-
-
-        }
-        closeButton.addEventListener("click", function () {
-            customAlert.classList.remove("show");
-        });
-
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
