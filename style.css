@@ -53,9 +53,16 @@ a {
   background-color: #962F8A !important;
 }
 
-
+/* 
 .col-lg-3{
   width: 24% !important;
+} */
+@media (min-width: 992px){
+  .col-lg-3 {
+      flex: 0 0 auto;
+      width: 24% !important;
+      /* width: 300px !important; */
+  }
 }
 
 .custom-alert {

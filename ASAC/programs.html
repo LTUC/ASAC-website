@@ -142,20 +142,20 @@
             --bs-btn-bg: #962F8A;
             --bs-btn-border-color: #962F8A;
             --bs-btn-hover-color: #fff;
-            --bs-btn-hover-bg: #df2eca;
-            --bs-btn-hover-border-color: #df2eca;
+            --bs-btn-hover-bg: rgb(130, 31, 118);
+            --bs-btn-hover-border-color: rgb(130, 31, 118);
             --bs-btn-focus-shadow-rgb: 49, 132, 253;
             --bs-btn-active-color: #fff;
-            --bs-btn-active-bg: #df2eca;
-            --bs-btn-active-border-color: #df2eca;
+            --bs-btn-active-bg: rgb(130, 31, 118);
+            --bs-btn-active-border-color: rgb(130, 31, 118);
             --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
             --bs-btn-disabled-color: #fff;
             --bs-btn-disabled-bg: #962F8A;
             --bs-btn-disabled-border-color: #962F8A;
         }
 
-        @media (min-width: 992px){
-            .col-lg-3 {
+        @media (min-width: 992px) {
+            .col-lg-4 {
                 flex: 0 0 auto;
                 width: 30% !important;
                 /* width: 300px !important; */
@@ -181,7 +181,7 @@
     <header>
         <nav class="navbar navbar-expand-lg p-0">
             <div class="container-fluid">
-                <a class="navbar-brand logo" href="index.html">
+                <a class="navbar-brand logo" href="../index.html">
                     <img src="../assets/images/asac-logo.png" width="200" alt="Logo" loading="lazy">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -235,7 +235,7 @@
     <main>
 
         <!-- banner -->
-        <section id="banner" class="prog-header" style="height: 200px;">
+        <section id="banner" class="prog-header" style="height: 250px; background-image: linear-gradient(to top, rgb(22 21 21 / 60%), rgb(22 21 21 / 60%)),url('../assets/images/academic.jpg');">
             <h1 class="fs-1 ">
                 Programs
             </h1>
@@ -375,7 +375,7 @@
                             <h5 class="card-title">Cloud Computing</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">Bachelore</h6>
                             <p class="card-text">Morning/Evening <br><br> Amman/Irbid</p>
-                            <a class="btn btn-primary" href="../all_plans/BA/cloud.pdf" role="button">Link</a>
+                            <a class="btn btn-primary" href="../all_plans/BA/cloud.pdf" role="button">Guidance Plan</a>
                         </div>
 
                     </div>
@@ -390,7 +390,7 @@
                             <h5 class="card-title">Artificial Intelligence and Data Science</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">Bachelore</h6>
                             <p class="card-text">Morning/Evening <br><br> Amman/Irbid</p>
-                            <a class="btn btn-primary" href="../all_plans/BA/AI.pdf" role="button">Link</a>
+                            <a class="btn btn-primary" href="../all_plans/BA/AI.pdf" role="button">Guidance Plan</a>
                         </div>
                     </div>
                 </div>
@@ -560,7 +560,7 @@
             </div>
             <div class="container mt-4 programGrid justify-content-center" style="display: none;">
                 <div class=" row justify-content-evenly ">
-                    <div class="card col-10 col-md-5 col-lg-3 mx-auto mb-3">
+                    <div class="card col-10 col-md-5 col-lg-4 mx-auto mb-3">
                         <div class="card-body text-center">
                             <svg class="w-25 mx-auto mb-2" style="height: 50px;" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -571,10 +571,10 @@
                             <h5 class="card-title">Artificial Intelligence and Data Science</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">International Diploma</h6>
                             <p class="card-text">Morning/Evening <br><br> Amman/Irbid</p>
-                            <a class="btn btn-primary" href="../all_plans/diploma/AI.pdf" role="button">Link</a>
+                            <a class="btn btn-primary" href="../all_plans/diploma/AI.pdf" role="button">Guidance Plan</a>
                         </div>
                     </div>
-                    <div class="card col-10 col-md-5 col-lg-3 mx-auto mb-3">
+                    <div class="card col-10 col-md-5 col-lg-4 mx-auto mb-3">
 
                         <div class="card-body text-center">
                             <svg class="w-25 mx-auto mb-2" style="height: 50px;" xmlns="http://www.w3.org/2000/svg"
@@ -586,7 +586,7 @@
                             <h5 class="card-title">Cyber Security</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">International Diploma</h6>
                             <p class="card-text">Morning/Evening <br><br> Amman/Irbid</p>
-                            <a class="btn btn-primary" href="../all_plans/diploma/cyber.pdf" role="button">Link</a>
+                            <a class="btn btn-primary" href="../all_plans/diploma/cyber.pdf" role="button">Guidance Plan</a>
 
                         </div>
 
@@ -602,7 +602,7 @@
                             <h5 class="card-title">Software Engineering</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">International Diploma</h6>
                             <p class="card-text">Morning/Evening <br><br> Amman/Irbid</p>
-                            <a class="btn btn-primary" href="../all_plans/diploma/software.pdf" role="button">Link</a>
+                            <a class="btn btn-primary" href="../all_plans/diploma/software.pdf" role="button">Guidance Plan</a>
 
                         </div>
 
@@ -787,7 +787,7 @@
         <div class="footer-lower">
 
             <a href="index.html">
-                <img src="./assets/images/LTUCLogo.png" class="logo footer" loading="lazy">
+                <img src="../assets/images/LTUCLogo.png" class="logo footer" loading="lazy">
             </a>
 
             <div class="copyrights">
@@ -856,22 +856,31 @@
             function showTableView(i) {
                 tableElement[i].style.display = "block";
                 gridElement[i].style.display = "none";
+                gridViewBtn[i].classList.remove('active');
+                tableViewBtn[i].classList.add('active');
+
             }
 
             // Function to switch to grid view
             function showGridView(i) {
                 tableElement[i].style.display = "none";
                 gridElement[i].style.display = "flex"; // or "block" depending on your grid view structure
+                gridViewBtn[i].classList.add('active');
+                tableViewBtn[i].classList.remove('active');
             }
 
             // Add click event listeners to the toggle buttons
             for (let i = 0; i < tableElement.length; i++) {
                 tableViewBtn[i].addEventListener("click", (e) => showTableView(i));
                 gridViewBtn[i].addEventListener("click", (e) => showGridView(i));
+            
+
             }
 
             // Initial view (you can set table or grid as per your preference)
-            showTableView(0); // or showGridView();
+            showGridView(0); // or showGridView();
+            showGridView(1); // or showGridView();
+
         });
     </script>
 
