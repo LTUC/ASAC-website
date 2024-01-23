@@ -154,6 +154,14 @@
             --bs-btn-disabled-border-color: #962F8A;
         }
 
+        .text-primary {
+            color: #962F8A !important;
+        }
+
+        .text-secondary {
+            color: gray !important;
+        }
+
         @media (min-width: 992px) {
             .col-lg-4 {
                 flex: 0 0 auto;
@@ -205,6 +213,9 @@
                                 Programs
                             </a>
                             <ul class="dropdown-menu">
+
+                                <li><a class="dropdown-item" href="programs.html">All Programs</a></li>
+
                                 <li><a class="dropdown-item" href="#bachelors">Bachelors</a></li>
                                 <li><a class="dropdown-item" href="#diploma">International Diploma</a></li>
                                 <li><a class="dropdown-item" href="#short-course">Short Courses</a></li>
@@ -235,7 +246,8 @@
     <main>
 
         <!-- banner -->
-        <section id="banner" class="prog-header" style="height: 250px; background-image: linear-gradient(to top, rgb(22 21 21 / 60%), rgb(22 21 21 / 60%)),url('../assets/images/academic.jpg');">
+        <section id="banner" class="prog-header"
+            style="height: 250px; background-image: linear-gradient(to top, rgb(22 21 21 / 60%), rgb(22 21 21 / 60%)),url('../assets/images/academic.jpg');">
             <h1 class="fs-1 ">
                 Programs
             </h1>
@@ -269,11 +281,10 @@
                 </button>
             </div>
             <div class="table-responsive programTable">
-                <table>
+                <!-- <table>
                     <thead>
                         <tr class="displayed-tr">
                             <th class="column-3">Program name</th>
-                            <!-- <th class='column-5' value="degree"> Degree </th> -->
                             <th class='column-3' value="location"> Location </th>
                             <th class='column-3' value="timing"> Timing </th>
                             <th class='column-3' value="timing"> </th>
@@ -359,13 +370,42 @@
 
                         </tr>
                     </tbody>
+                </table> -->
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Program name</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Timing</th>
+                            <th scope="col">Guidance Plan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="">Cloud Computing</th>
+                            <td>Amman/Irbid</td>
+                            <td>Morning/Evening</td>
+                            <td> <a class="btn " href="../all_plans/BA/cloud.pdf" role="button"><i class="fa-solid fa-download"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row">Artificial Intelligence and Data Science</th>
+                            <td>Amman/Irbid</td>
+                            <td>Morning/Evening</td>
+                            <td> <a class="btn " href="../all_plans/BA/AI.pdf" role="button"><i class="fa-solid fa-download"></i></a>
+                            </td>
+                        </tr>
+                     
+                    </tbody>
                 </table>
             </div>
             <div class="container mt-4 programGrid justify-content-center" style="display: none;">
                 <div class=" row  justify-content-evenly ">
                     <div class="card col-10 col-md-5 col-lg-5 mx-auto mb-3">
 
-                        <div class="card-body text-center">
+                        <div class="card-body ">
+
                             <svg class="w-25 mx-auto mb-2" style="height: 50px;" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                 <path
@@ -374,13 +414,16 @@
                             </svg>
                             <h5 class="card-title">Cloud Computing</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">Bachelore</h6>
-                            <p class="card-text">Morning/Evening <br><br> Amman/Irbid</p>
+                            <p class="card-text"><span class="d-block mb-2"><i
+                                        class="fa-solid fa-clock text-secondary"></i> Morning/Evening</span><span><i
+                                        class="fa-solid fa-location-dot text-secondary"></i> Amman/Irbid</span></span>
+                            </p>
                             <a class="btn btn-primary" href="../all_plans/BA/cloud.pdf" role="button">Guidance Plan</a>
                         </div>
 
                     </div>
                     <div class="card col-10 col-md-5 col-lg-5 mx-auto mb-3">
-                        <div class="card-body text-center">
+                        <div class="card-body ">
                             <svg class="w-25 mx-auto mb-2" style="height: 50px;" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                 <path
@@ -389,7 +432,10 @@
                             </svg>
                             <h5 class="card-title">Artificial Intelligence and Data Science</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">Bachelore</h6>
-                            <p class="card-text">Morning/Evening <br><br> Amman/Irbid</p>
+                            <p class="card-text"><span class="d-block mb-2"><i
+                                        class="fa-solid fa-clock text-secondary"></i> Morning/Evening</span><span><i
+                                        class="fa-solid fa-location-dot text-secondary"></i> Amman/Irbid</span></span>
+                            </p>
                             <a class="btn btn-primary" href="../all_plans/BA/AI.pdf" role="button">Guidance Plan</a>
                         </div>
                     </div>
@@ -426,7 +472,7 @@
                 </button>
             </div>
             <div class="table-responsive programTable">
-                <table>
+                <!-- <table>
                     <thead>
                         <tr class="displayed-tr">
                             <th class="column-3">Program name</th>
@@ -555,13 +601,49 @@
 
                         </tr>
                     </tbody>
+                </table> -->
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Program name</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Timing</th>
+                            <th scope="col">Guidance Plan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">Artificial Intelligence and Data Science</th>
+                            <td>Amman/Irbid</td>
+                            <td>Morning/Evening</td>
+                            <td> <a class="btn " href="../all_plans/diploma/AI.pdf" role="button"><i class="fa-solid fa-download"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="">Cyber Security</th>
+                            <td>Amman/Irbid</td>
+                            <td>Morning/Evening</td>
+                            <td> <a class="btn " href="../all_plans/diploma/cyber.pdf" role="button"><i class="fa-solid fa-download"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="">Software Engineering</th>
+                            <td>Amman/Irbid</td>
+                            <td>Morning/Evening</td>
+                            <td> <a class="btn " href="../all_plans/diploma/software.pdf" role="button"><i class="fa-solid fa-download"></i></a>
+                            </td>
+                        </tr>
+                     
+                     
+                    </tbody>
                 </table>
 
             </div>
             <div class="container mt-4 programGrid justify-content-center" style="display: none;">
                 <div class=" row justify-content-evenly ">
                     <div class="card col-10 col-md-5 col-lg-4 mx-auto mb-3">
-                        <div class="card-body text-center">
+                        <div class="card-body ">
                             <svg class="w-25 mx-auto mb-2" style="height: 50px;" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                 <path
@@ -570,13 +652,17 @@
                             </svg>
                             <h5 class="card-title">Artificial Intelligence and Data Science</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">International Diploma</h6>
-                            <p class="card-text">Morning/Evening <br><br> Amman/Irbid</p>
-                            <a class="btn btn-primary" href="../all_plans/diploma/AI.pdf" role="button">Guidance Plan</a>
+                            <p class="card-text"><span class="d-block mb-2"><i
+                                        class="fa-solid fa-clock text-secondary"></i> Morning/Evening</span><span><i
+                                        class="fa-solid fa-location-dot text-secondary"></i> Amman/Irbid</span></span>
+                            </p>
+                            <a class="btn btn-primary" href="../all_plans/diploma/AI.pdf" role="button">Guidance
+                                Plan</a>
                         </div>
                     </div>
                     <div class="card col-10 col-md-5 col-lg-4 mx-auto mb-3">
 
-                        <div class="card-body text-center">
+                        <div class="card-body ">
                             <svg class="w-25 mx-auto mb-2" style="height: 50px;" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                 <path
@@ -585,15 +671,19 @@
                             </svg>
                             <h5 class="card-title">Cyber Security</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">International Diploma</h6>
-                            <p class="card-text">Morning/Evening <br><br> Amman/Irbid</p>
-                            <a class="btn btn-primary" href="../all_plans/diploma/cyber.pdf" role="button">Guidance Plan</a>
+                            <p class="card-text"><span class="d-block mb-2"><i
+                                        class="fa-solid fa-clock text-secondary"></i> Morning/Evening</span><span><i
+                                        class="fa-solid fa-location-dot text-secondary"></i> Amman/Irbid</span></span>
+                            </p>
+                            <a class="btn btn-primary" href="../all_plans/diploma/cyber.pdf" role="button">Guidance
+                                Plan</a>
 
                         </div>
 
                     </div>
-                    <div class="card col-10 col-md-5 col-lg-3 mx-auto mb-3">
+                    <div class="card col-10 col-md-5 col-lg-4 mx-auto mb-3">
 
-                        <div class="card-body text-center">
+                        <div class="card-body ">
                             <svg class="w-25 mx-auto mb-2" style="height: 50px;" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                                 <path fill="#962f8a"
@@ -601,8 +691,12 @@
                             </svg>
                             <h5 class="card-title">Software Engineering</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">International Diploma</h6>
-                            <p class="card-text">Morning/Evening <br><br> Amman/Irbid</p>
-                            <a class="btn btn-primary" href="../all_plans/diploma/software.pdf" role="button">Guidance Plan</a>
+                            <p class="card-text"><span class="d-block mb-2"><i
+                                        class="fa-solid fa-clock text-secondary"></i> Morning/Evening</span><span><i
+                                        class="fa-solid fa-location-dot text-secondary"></i> Amman/Irbid</span></span>
+                            </p>
+                            <a class="btn btn-primary" href="../all_plans/diploma/software.pdf" role="button">Guidance
+                                Plan</a>
 
                         </div>
 
@@ -873,7 +967,7 @@
             for (let i = 0; i < tableElement.length; i++) {
                 tableViewBtn[i].addEventListener("click", (e) => showTableView(i));
                 gridViewBtn[i].addEventListener("click", (e) => showGridView(i));
-            
+
 
             }
 

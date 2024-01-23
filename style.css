@@ -33,7 +33,7 @@ h3{
   font-size: 1em !important;
 }
 p{
-  font-size: 0.8em !important;
+  font-size: 0.9em !important;
 }
 
 body {
@@ -53,6 +53,9 @@ a {
   background-color: #962F8A !important;
 }
 
+.text-primary {
+  color: #962F8A !important;
+}
 /* 
 .col-lg-3{
   width: 24% !important;
@@ -1961,17 +1964,17 @@ header.active .down-arrow path {
   margin: auto;
 }
 
-.detailed-programs table tr th {
+/* .detailed-programs table tr th {
   font-weight: 600;
   color: #2a2a2a;
-}
+} */
 
-.detailed-programs table tr td {
+/* .detailed-programs table tr td {
   font-weight: 500;
   color: #962f8a;
-}
+} */
 
-.detailed-programs table tr th,
+/* .detailed-programs table tr th,
 .detailed-programs table tr td {
   line-height: 150%;
   padding-top: 6%;
@@ -1982,7 +1985,7 @@ header.active .down-arrow path {
   gap: 2%;
   justify-content: center;
   text-align: center;
-}
+} */
 
 .col-6 {
   width: 16.6%;
