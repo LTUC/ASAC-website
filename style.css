@@ -49,6 +49,10 @@ a {
   color: black;
   line-height: 150%;
 }
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #962F8A !important;
+}
+
 
 .col-lg-3{
   width: 24% !important;
@@ -629,7 +633,7 @@ header.active .down-arrow path {
   margin-bottom: 0 !important;
 }
 .banner-content p {
-  font-size: 2em;
+  font-size: 1.5em !important;
   line-height: 150%;
   width: 58.5%;
 }
@@ -1425,12 +1429,12 @@ header.active .down-arrow path {
   padding: 17px 70px;
 }
 
-.panel-content #detailed-programs {
+.panel-content .detailed-programs {
   margin-top: 50px;
   transform: translateX(-70px)
 }
 
-.panel ul li:not(#detailed-programs li) {
+.panel ul li:not(.detailed-programs li) {
   margin-bottom: 1.85vw;
   list-style: disc;
 }
@@ -1902,11 +1906,11 @@ header.active .down-arrow path {
   position: relative;
 }
 
-#detailed-programs table tr a button:hover {
+.detailed-programs table tr a button:hover {
   background-color: #962F8A;
 }
 
-#detailed-programs table tr a button:hover span {
+.detailed-programs table tr a button:hover span {
   color: white;
 
 }
@@ -1937,7 +1941,7 @@ header.active .down-arrow path {
   line-height: 150%;
 }
 
-#detailed-programs h1,
+.detailed-programs h1,
 #career-list h1,
 #news-list h1 {
   font-weight: 600;
@@ -1945,23 +1949,23 @@ header.active .down-arrow path {
   text-align: center;
 }
 
-#detailed-programs table {
+.detailed-programs table {
   width: 85.7%;
   margin: auto;
 }
 
-#detailed-programs table tr th {
+.detailed-programs table tr th {
   font-weight: 600;
   color: #2a2a2a;
 }
 
-#detailed-programs table tr td {
+.detailed-programs table tr td {
   font-weight: 500;
   color: #962f8a;
 }
 
-#detailed-programs table tr th,
-#detailed-programs table tr td {
+.detailed-programs table tr th,
+.detailed-programs table tr td {
   line-height: 150%;
   padding-top: 6%;
   padding-bottom: 6%;
@@ -1989,7 +1993,7 @@ header.active .down-arrow path {
   width: 33.3%;
 }
 
-#detailed-programs table tr a button span {
+.detailed-programs table tr a button span {
   line-height: 150%;
   display: flex;
   align-items: center;
@@ -1998,7 +2002,7 @@ header.active .down-arrow path {
   color: #a3238e;
 }
 
-#detailed-programs table tr a button {
+.detailed-programs table tr a button {
   font-weight: 600;
   line-height: 150%;
   border: 1px solid #a3238e;
@@ -2010,11 +2014,11 @@ header.active .down-arrow path {
   text-align: center;
 }
 
-#detailed-programs table tr a button:hover {
+.detailed-programs table tr a button:hover {
   cursor: pointer;
 }
 
-#detailed-programs table tr a {
+.detailed-programs table tr a {
   text-decoration: none;
 }
 
@@ -2029,7 +2033,7 @@ header.active .down-arrow path {
   background: #a3238e;
 }
 
-#detailed-programs table tbody tr:nth-child(odd) {
+.detailed-programs table tbody tr:nth-child(odd) {
   background: #fafafa;
 }
 
@@ -3453,7 +3457,7 @@ text-transform: capitalize;
   /* Detailed Programs */
   /* -------------- */
 
-  #detailed-programs h1 {
+  .detailed-programs h1 {
     margin-left: 0;
   }
 
@@ -3466,12 +3470,12 @@ text-transform: capitalize;
     justify-content: flex-end;
   }
 
-  #detailed-programs table {
+  .detailed-programs table {
     width: 90%;
   }
 
-  #detailed-programs table tr th,
-  #detailed-programs table tr td {
+  .detailed-programs table tr th,
+  .detailed-programs table tr td {
     flex-wrap: wrap;
     height: 15vw;
   }
@@ -3480,7 +3484,7 @@ text-transform: capitalize;
   /* Detailed Programs  END*/
   /* -------------- */
 
-  .panel-content #detailed-programs {
+  .panel-content .detailed-programs {
     transform: translateX(-5%);
   }
 
@@ -3998,14 +4002,14 @@ text-transform: capitalize;
   /* Detailed Programs */
   /* -------------- */
 
-  #detailed-programs h1 {
+  .detailed-programs h1 {
     line-height: 150%;
     font-weight: 700;
     width: 50%;
     margin: auto;
   }
 
-  #detailed-programs h1::after {
+  .detailed-programs h1::after {
     width: 100%;
   }
 
