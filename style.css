@@ -211,7 +211,7 @@ header {
   z-index: 100;
   top: 0;
 }
-.show,
+/* .show, */
 .mobile{
   background-color: white;
 } 
