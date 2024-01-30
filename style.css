@@ -1463,12 +1463,14 @@ header.active .logo {
   flex-wrap: wrap;
 }
 
-.footer-upper {
+.footer-up {
   justify-content: space-between;
   margin: auto;
-  margin-left: 7%;
-  margin-right: 7%;
-}
+
+  width: 80% !important;
+  }
+
+
 
 .row.footer-items {
   justify-content: space-between;
@@ -2670,11 +2672,10 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   /*    HEADER      */
   /* -------------- */
+
   .lang-div {
     display: none;
   }
-
-
 
   #navbar>ul {
     display: flex;
@@ -3129,19 +3130,8 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   /*    footer     */
   /* -------------- */
-  .row.footer-items {
-    display: grid;
-    justify-content: space-between;
-  }
 
-  .footer-item {
-    width: auto;
-  }
 
-  .footer-btns {
-    grid-row-start: 1;
-    grid-column-start: 3;
-  }
 
   /* -------------- */
   /*    footer END    */
@@ -3228,7 +3218,7 @@ input[type="checkbox"]:checked::after {
   html {
     font-size: 12px;
   }
-
+  
   #campus .ltuc-description p,
   #programs .ltuc-description p,
   #all-programs .ltuc-description p,
@@ -3951,7 +3941,17 @@ input[type="checkbox"]:checked::after {
   /*    News Article END   */
   /* -------------- */
 
-
+  .footer-upper{
+    margin: auto;
+  }
+  .row{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-lower{
+    justify-content: center;
+  }
 }
 
 
