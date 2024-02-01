@@ -60,6 +60,10 @@ a {
 .text-primary {
   color: #962F8A !important;
 }
+.fill-primary {
+  fill: #962F8A !important;
+
+}
 
 .custom-alert {
   display: none;
@@ -297,9 +301,7 @@ header.active .logo {
   width: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(202.85deg,
-      #000000 -28.91%,
-      rgba(0, 0, 0, 0) 332.38%);
+  background: linear-gradient(202.85deg, #000000 -30.91%, rgba(0, 0, 0, 0.5) 290.38%)
 }
 
 .banner-content {
@@ -1474,7 +1476,7 @@ header.active .logo {
 
 .row.footer-items {
   justify-content: space-between;
-  padding-top: 100px;
+  padding-top: calc( 50px + 1rem );
 }
 
 .footer-item h3 {
@@ -1553,7 +1555,7 @@ header.active .logo {
 }
 
 .footer-lower {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 30px 30px;
   border-top: 1px solid rgba(252, 252, 252, 0.5);
   display: flex;
