@@ -54,26 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
             element.classList.remove(e_class);
         }
 
-        // checkIcon(icon, header_is_colored) {
-        //     if (icon) {
-        //         let icon_paths = icon.querySelectorAll("path");
-        //         for (let i = 0; i < icon_paths.length; i++) {
-        //             if (header_is_colored == false) {
-        //                 this.addClass(icon_paths[i], "black-color");
-        //                 this.removeClass(icon_paths[i], "white-color");
-        //             } else {
-        //                 this.addClass(icon_paths[i], "white-color");
-        //                 this.removeClass(icon_paths[i], "black-color");
-        //             }
-        //         }
-        //     }
-        // }
 
         mainToggle() {
             let page = new Page();
-            if (page.banner) {
-                this.toggleClass(this.header, "active");
-            }
+            this.toggleClass(this.header, "active");
+            
         }
 
         mobileScrollEvent(e) {
