@@ -159,8 +159,8 @@ table {
 
 /* HEADER */
 section {
-  margin-bottom: 2.89vw;
-  padding-top: 5.7vw;
+  margin-bottom: 2.89vw !important;
+  padding-top: 5.7vw !important;
 }
 
 footer {
@@ -2675,6 +2675,7 @@ input[type="checkbox"]:checked::after {
   /*    HEADER      */
   /* -------------- */
 
+
   .lang-div {
     display: none;
   }
@@ -3082,12 +3083,8 @@ input[type="checkbox"]:checked::after {
   /*    card with image title text */
   /* -------------- */
 
-  .staff-campus .ltuc-description p {
-    width: 100%;
-  }
-
-  .staff-campus .c-card {
-    width: 43.5vw;
+  .ltuc-description p {
+    width: 90%;
   }
 
 
@@ -3221,12 +3218,7 @@ input[type="checkbox"]:checked::after {
     font-size: 12px;
   }
   
-  #campus .ltuc-description p,
-  #programs .ltuc-description p,
-  #all-programs .ltuc-description p,
-  .title-and-filter p {
-    width: 85%;
-  }
+ 
 
 
 
@@ -3241,8 +3233,8 @@ input[type="checkbox"]:checked::after {
   }
 
   section {
-    padding-top: 5.7vw;
-    margin-bottom: 17.55vw;
+    padding-top: 3.7vw !important;
+    margin-bottom: 16.55vw !important;
   }
 
   .carosel-img img {
@@ -3611,7 +3603,7 @@ input[type="checkbox"]:checked::after {
   }
 
   .ltuc-description p {
-    width: 100%;
+    width: 90%;
     line-height: 180%;
   }
 
