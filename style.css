@@ -37,9 +37,11 @@ h3 {
 p {
   font-size: 0.9em !important;
 }
+
 ul {
   list-style: none;
 }
+
 body {
   font-family: "Poppins";
 }
@@ -62,9 +64,11 @@ a {
 .text-primary {
   color: #962f8a !important;
 }
+
 .fill-primary {
   fill: #962f8a !important;
 }
+
 #navbar {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
@@ -119,6 +123,14 @@ a {
   color: white;
   width: 100%;
   transition: 0ms;
+}
+
+.card-title {
+  font-size: 1em !important;
+}
+
+.card-text:last-child, .btn-primary {
+  font-size: 0.8em !important;
 }
 
 .custom-alert.show {
@@ -186,8 +198,18 @@ header span a {
   color: white;
 }
 
+.copyrights span {
+  font-size: 0.85em;
+}
+
 .nav-link {
   color: white !important;
+}
+
+.show a,
+.nav-link {
+
+  font-size: 0.85em !important;
 }
 
 header.active .nav-link {
@@ -215,6 +237,7 @@ header {
   z-index: 100;
   top: 0;
 }
+
 /* .show, */
 .mobile {
   background-color: white;
@@ -297,11 +320,9 @@ header.active .logo {
   width: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    202.85deg,
-    #000000 -30.91%,
-    rgba(0, 0, 0, 0.5) 290.38%
-  );
+  background: linear-gradient(202.85deg,
+      #000000 -30.91%,
+      rgba(0, 0, 0, 0.5) 290.38%);
 }
 
 .banner-content {
@@ -389,11 +410,11 @@ header.active .logo {
   margin-right: auto;
 }
 
-#about > div:nth-child(1) {
+#about>div:nth-child(1) {
   width: 60%;
 }
 
-#about > div:nth-child(1) h1 {
+#about>div:nth-child(1) h1 {
   margin-bottom: 30px;
 }
 
@@ -401,17 +422,17 @@ header.active .logo {
   line-height: 150%;
 }
 
-.about-div > div {
+.about-div>div {
   display: flex;
   gap: 30px;
   margin-bottom: 10px;
 }
 
-.about-div > div div:nth-child(2) {
+.about-div>div div:nth-child(2) {
   padding-top: 10px;
 }
 
-.about-div > div div:nth-child(2) p {
+.about-div>div div:nth-child(2) p {
   padding-top: 15px;
 }
 
@@ -428,7 +449,7 @@ header.active .logo {
   background: #490341;
 }
 
-#faculty-section > div {
+#faculty-section>div {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -492,7 +513,7 @@ header.active .logo {
   width: 35%;
 }
 
-.faculty-card > div {
+.faculty-card>div {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -522,7 +543,7 @@ header.active .logo {
   order: 2;
 }
 
-.faculty-card:nth-child(even) > div {
+.faculty-card:nth-child(even)>div {
   order: 1;
 }
 
@@ -1079,7 +1100,7 @@ header.active .logo {
   line-height: 150%;
 }
 
-.accordion > h3 span:nth-of-type(1) {
+.accordion>h3 span:nth-of-type(1) {
   max-width: 100%;
 }
 
@@ -1211,12 +1232,10 @@ header.active .logo {
 }
 
 .linear-bg {
-  background: linear-gradient(
-      180deg,
+  background: linear-gradient(180deg,
       rgba(0, 0, 0, 0.7) 0%,
       rgb(0 0 0 / 74%) 81.18%,
-      rgb(0 0 0 / 85%) 100%
-    ),
+      rgb(0 0 0 / 85%) 100%),
     url(./assets/images/luminus-cover.jpg), black 50% / cover no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1287,7 +1306,7 @@ header.active .logo {
   padding-bottom: 20px;
 }
 
-.staff-campus .c-card-body > div {
+.staff-campus .c-card-body>div {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -2071,14 +2090,14 @@ input[type="checkbox"]:checked::after {
   margin: auto;
 }
 
-#trendy-news a > div {
+#trendy-news a>div {
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: center;
 }
 
-#trendy-news a > div div {
+#trendy-news a>div div {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -2089,42 +2108,42 @@ input[type="checkbox"]:checked::after {
   gap: 0.5vw;
 }
 
-#trendy-news a > div div span {
+#trendy-news a>div div span {
   font-weight: 400;
   opacity: 0.8;
   line-height: 150%;
   text-transform: capitalize;
 }
 
-#trendy-news a > div div h1 {
+#trendy-news a>div div h1 {
   font-weight: 600;
   line-height: 150%;
 }
 
-#trendy-news > :nth-child(1) {
+#trendy-news> :nth-child(1) {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
 }
 
-#trendy-news > :nth-child(2) {
+#trendy-news> :nth-child(2) {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 3;
 }
 
-#trendy-news > :nth-child(3) {
+#trendy-news> :nth-child(3) {
   grid-column-start: 3;
   grid-row-start: 1;
 }
 
-#trendy-news > :nth-child(4) {
+#trendy-news> :nth-child(4) {
   grid-column-start: 4;
   grid-row-start: 1;
 }
 
-#trendy-news > :nth-child(5) {
+#trendy-news> :nth-child(5) {
   grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 2;
@@ -2137,7 +2156,7 @@ input[type="checkbox"]:checked::after {
   margin-bottom: 2.89vw;
 }
 
-#latest-news > div {
+#latest-news>div {
   display: flex;
   justify-content: space-between;
   margin-left: 0;
@@ -2160,21 +2179,21 @@ input[type="checkbox"]:checked::after {
   height: 17.8vw;
 }
 
-.latest-card a > div {
+.latest-card a>div {
   display: flex;
   flex-direction: column;
   gap: 0.92vw;
   padding: 1.8vw;
 }
 
-.latest-card a > div span {
+.latest-card a>div span {
   font-weight: 400;
   line-height: 150%;
   color: #2a2a2a;
   opacity: 0.8;
 }
 
-.latest-card a > div p {
+.latest-card a>div p {
   font-weight: 500;
   line-height: 150%;
   color: #2a2a2a;
@@ -2216,7 +2235,7 @@ input[type="checkbox"]:checked::after {
   gap: 50px;
 }
 
-.news-list-body > a {
+.news-list-body>a {
   display: none;
 }
 
@@ -2224,7 +2243,7 @@ input[type="checkbox"]:checked::after {
   display: inline !important;
 }
 
-.news-list-body a > div {
+.news-list-body a>div {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -2235,7 +2254,7 @@ input[type="checkbox"]:checked::after {
   padding-bottom: 3.125vw;
 }
 
-.news-list-body a > div img {
+.news-list-body a>div img {
   width: 26.6vw;
   height: 17.9vw;
 }
@@ -2347,11 +2366,11 @@ input[type="checkbox"]:checked::after {
   /*    HEADER      */
   /* -------------- */
 
-  .programs-nav-3 > li {
+  .programs-nav-3>li {
     width: 20.25vw;
   }
 
-  .programs-nav-3 > li {
+  .programs-nav-3>li {
     width: 20.25vw;
   }
 
@@ -2373,6 +2392,7 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (max-width: 1023px) {
+
   /* -------------- */
   /*    HEADER      */
   /* -------------- */
@@ -2383,6 +2403,7 @@ input[type="checkbox"]:checked::after {
   .drop-span {
     color: black;
   }
+
   .mission h2 {
     display: flex;
     flex-direction: column;
@@ -2402,7 +2423,7 @@ input[type="checkbox"]:checked::after {
     overflow-y: scroll;
   }
 
-  #latest-news > div {
+  #latest-news>div {
     gap: 25px;
   }
 
@@ -2469,7 +2490,7 @@ input[type="checkbox"]:checked::after {
     flex-direction: column;
   }
 
-  #navbar > ul {
+  #navbar>ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -2544,7 +2565,7 @@ input[type="checkbox"]:checked::after {
 
   /* ABOUT */
 
-  #about > div:nth-child(1) {
+  #about>div:nth-child(1) {
     width: 100%;
     text-align: center;
   }
@@ -2553,7 +2574,7 @@ input[type="checkbox"]:checked::after {
     flex-direction: column;
   }
 
-  .about-div > div {
+  .about-div>div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2631,7 +2652,7 @@ input[type="checkbox"]:checked::after {
     display: none;
   }
 
-  #navbar > ul {
+  #navbar>ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2649,7 +2670,7 @@ input[type="checkbox"]:checked::after {
     height: 100%;
   }
 
-  #navbar > ul {
+  #navbar>ul {
     gap: 100px;
   }
 
@@ -2673,7 +2694,7 @@ input[type="checkbox"]:checked::after {
   }
 
   .programs-nav-3,
-  .drop-down-menu-1 > li .programs-nav-1 {
+  .drop-down-menu-1>li .programs-nav-1 {
     gap: 6.5vw;
     margin-top: 50px;
   }
@@ -2741,7 +2762,7 @@ input[type="checkbox"]:checked::after {
     width: 25.9vw;
   }
 
-  .faculty-card > div {
+  .faculty-card>div {
     padding: 3.5vw 1.9vw;
   }
 
@@ -3132,6 +3153,7 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (max-width: 767px) {
+
   .code-sign::before,
   .code-sign::after {
     width: 100px;
@@ -3209,7 +3231,7 @@ input[type="checkbox"]:checked::after {
     width: 100%;
   }
 
-  .side_gates a > div {
+  .side_gates a>div {
     height: 50px;
   }
 
@@ -3241,7 +3263,7 @@ input[type="checkbox"]:checked::after {
     color: rgba(51, 51, 51, 0.7);
   }
 
-  header > div:not(.overlay) {
+  header>div:not(.overlay) {
     margin-right: 30px;
   }
 
@@ -3316,7 +3338,7 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   /*   FACITITES    */
   /* -------------- */
-  #faculty-section > div {
+  #faculty-section>div {
     gap: 13vw;
   }
 
@@ -3324,11 +3346,11 @@ input[type="checkbox"]:checked::after {
     order: 1;
   }
 
-  .faculty-card:nth-child(even) > div {
+  .faculty-card:nth-child(even)>div {
     order: 2;
   }
 
-  .faculty-card > div {
+  .faculty-card>div {
     padding: 8.4vw 4.8vw;
     width: auto;
   }
@@ -3629,7 +3651,7 @@ input[type="checkbox"]:checked::after {
     gap: 20px;
   }
 
-  .accordion-div .panel > span {
+  .accordion-div .panel>span {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -3662,7 +3684,7 @@ input[type="checkbox"]:checked::after {
     width: 90%;
   }
 
-  .mobile-programs .displayed-tr .panel > div span:nth-of-type(2) {
+  .mobile-programs .displayed-tr .panel>div span:nth-of-type(2) {
     color: #962f8a;
   }
 
@@ -3792,7 +3814,7 @@ input[type="checkbox"]:checked::after {
     margin-bottom: 17.55vw;
   }
 
-  #trendy-news > a {
+  #trendy-news>a {
     height: 48.8vw;
   }
 
@@ -3800,7 +3822,7 @@ input[type="checkbox"]:checked::after {
     margin-bottom: 17.55vw;
   }
 
-  #latest-news > div {
+  #latest-news>div {
     flex-direction: column;
   }
 
@@ -3815,22 +3837,22 @@ input[type="checkbox"]:checked::after {
   .footer-upper {
     margin: auto;
   }
+
   .row {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   .footer-lower {
     justify-content: center;
   }
 }
 
 .prog-header {
-  background-image: linear-gradient(
-      to top,
+  background-image: linear-gradient(to top,
       rgb(22 21 21 / 60%),
-      rgb(22 21 21 / 60%)
-    ),
+      rgb(22 21 21 / 60%)),
     url(./assets/images/Acadimec-publication.jpg);
   background-repeat: no-repeat;
   background-position: right center;
@@ -3850,7 +3872,7 @@ input[type="checkbox"]:checked::after {
   text-align: center;
 }
 
-.prog-header > div span {
+.prog-header>div span {
   color: #ff8000;
 }
 
@@ -4005,7 +4027,7 @@ input[type="checkbox"]:checked::after {
     row-gap: 36px;
   }
 
-  .accordion > h3 span:nth-of-type(1) {
+  .accordion>h3 span:nth-of-type(1) {
     max-width: 55%;
   }
 

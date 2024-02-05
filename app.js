@@ -20,26 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
     </svg>
     `
     let body = document.querySelector('body')
+    let white_space = document.getElementById('loom-companion-mv3')
+    if (white_space) {
+        white_space.remove()
+    }
     class Header {
         constructor() {
             this.header = document.querySelector("header");
-            // this.drop_down_language_a = document.querySelector(
-            //     ".drop-down-language a"
-            // );
-            // // this.burger_menu_icon = document.querySelector(".burger-menu-icon");
-            // this.dropdown = document.querySelectorAll(".dropdown");
-            // // this.nav_close_btn = document.querySelector(".nav-close-btn");
-            // this.navbar = document.querySelector("#navbar");
-            // this.drop_down_lang = document.querySelector(".drop-down-language");
-            // this.drop_down_lang_inside = document.querySelector(
-            //     ".drop-down-lang-inside"
-            // );
-            // this.language_code = document.querySelector(".language-code");
-            // this.language_code_inside = document.querySelector(
-            //     ".language-code-inside"
-            // );
-            // this.home_icon = document.querySelector(".home-icon");
-            // this.header_icon_svg = null;
             this.header_is_colored = false;
             this.open_flag = false;
         }
@@ -58,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mainToggle() {
             let page = new Page();
             this.toggleClass(this.header, "active");
-            
+
         }
 
         mobileScrollEvent(e) {
@@ -140,12 +127,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         activateHeader(page_obj) {
-            console.log(window.innerWidth)
             if (page_obj.isTabAndMob()) {
                 this.addClass(this.header, "mobile");
             }
-            else{
-                this.removeClass(this.header,"mobile")
+            else {
+                this.removeClass(this.header, "mobile")
             }
             // if (this.language_code) {
             //     this.showLanguageBox();
@@ -205,311 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // class CareerManager {
-    //     constructor() {
-    //         this.career_detail_page = document.querySelector(".career");
-    //         this.global_location_career = "";
-    //         this.url = null;
-    //         this.career_list_body = document.querySelector(".career-list-body");
-    //         this.career_see_more = document.querySelector("#career-see-more");
-    //         this.location_button = document.querySelector(".location-button");
-    //         this.location_form = document.querySelector(".location-form");
-
-    //         this.location_checkboxes = null;
-    //         this.career_cards = null;
-    //         this.num_rows = 6;
-    //         this.counter = null;
-    //         this.start_counter = 6;
-    //         this.filter_icon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //          <path d="M11.0003 20C10.7169 20 10.4793 19.904 10.2873 19.712C10.0953 19.52 9.99959 19.2827 10.0003 19V13L4.20025 5.6C3.95025 5.26667 3.91259 4.91667 4.08725 4.55C4.26192 4.18333 4.56625 4 5.00025 4H19.0003C19.4336 4 19.7379 4.18333 19.9133 4.55C20.0886 4.91667 20.0509 5.26667 19.8003 5.6L14.0003 13V19C14.0003 19.2833 13.9043 19.521 13.7123 19.713C13.5203 19.905 13.2829 20.0007 13.0003 20H11.0003Z" />
-    //          </svg>
-    //        `;
-    //         this.filter_result = document.querySelector(".result");
-    //         this.search_form = document.querySelector(".search-form");
-    //         this.career_search = ''
-
-    //     }
-    //     setLocationCheckboxes() {
-    //         this.location_checkboxes = this.location_form.querySelectorAll(
-    //             'input[type="checkbox"]'
-    //         );
-    //     }
-    //     uncheckAllTheCheckBoxes() {
-
-    //         for (let i = 0; i < this.location_checkboxes.length; i++) {
-    //             this.location_checkboxes[i].checked = false;
-    //         }
-    //     }
-    //     setSearchInput() {
-    //         this.search_input = this.search_form.querySelector("input");
-    //     }
-    //     searchEvent(e) {
-    //         e.preventDefault();
-    //         this.uncheckAllTheCheckBoxes();
-    //         let search = e.target.search.value;
-    //         this.career_search = search;
-    //         this.renderCareerLocation(true);
-    //     }
-    //     updateResult(num, is_search) {
-    //         let filterd = false;
-    //         if (this.global_location_career != "") {
-    //             filterd = true;
-    //         }
-
-    //         if (filterd || is_search) {
-    //             if (page_obj.isArabic()) {
-    //                 this.filter_result.innerHTML = `${num} نتيجة`;
-    //             } else {
-    //                 this.filter_result.innerHTML = `${num} result found`;
-    //             }
-    //         } else {
-    //             this.filter_result.innerHTML = "";
-    //         }
-    //     }
-    //     async getMethod(url) {
-    //         const response = await fetch(url, {
-    //             method: "GET", // *GET, POST, PUT, DELETE, etc.
-    //             mode: "cors", // no-cors, *cors, same-origin
-    //             cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    //             credentials: "same-origin", // include, *same-origin, omit
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //                 // 'Content-Type': 'application/x-www-form-urlencoded',
-    //             },
-    //             redirect: "follow", // manual, *follow, error
-    //             referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    //         });
-    //         return response.json();
-    //     }
-    //     async getListCareer() {
-    //         let url;
-    //         if (page_obj.isArabic()) {
-    //             url = `/careers/ar?location=${this.global_location_career}&search=${this.career_search}`;
-    //         } else {
-    //             url = `/careers/en?location=${this.global_location_career}&search=${this.career_search}`;
-    //         }
-    //         let data = await this.getMethod(url);
-    //         return data;
-    //     }
-
-    //     seeMoreEventHandler() {
-    //         if (this.career_see_more.getAttribute("see-more") === "true") {
-    //             for (let i = this.start_counter; i < this.counter; i++) {
-    //                 if (this.career_cards[i]) {
-    //                     this.career_cards[i].classList.remove("hidden-tr");
-    //                     this.career_cards[i].classList.add("displayed-career-card");
-    //                 }
-    //             }
-    //             // Update the counters
-    //             this.start_counter += 6;
-    //             this.counter += 6;
-
-    //             if (this.start_counter >= this.career_cards.length) {
-    //                 this.career_see_more.textContent = "See Less";
-    //                 this.career_see_more.setAttribute("see-more", "false");
-    //             }
-    //         } else {
-    //             // Hide the extra rows
-    //             this.start_counter = 6;
-    //             this.counter = this.career_cards.length;
-    //             for (let i = this.start_counter; i <= this.counter; i++) {
-    //                 if (this.career_cards[i]) {
-    //                     this.career_cards[i].classList.add("hidden-tr");
-    //                     this.career_cards[i].classList.remove("displayed-career-card");
-    //                 }
-    //             }
-    //             this.counter = this.start_counter + 6;
-
-           
-    //             if (this.start_counter <= this.num_rows) {
-    //                 this.career_see_more.textContent = "See More ...";
-    //                 this.career_see_more.setAttribute("see-more", "true");
-    //             }
-    //         }
-    //     }
-
-    //     async renderCareerLocationWithoutUpdate() {
-    //         const data = await this.getListCareer();
-    //         this.updateCareerList(data);
-    //         this.ActivateLocationButton();
-    //     }
-    //     async renderCareerLocation(is_search = false) {
-
-    //         const data = await this.getListCareer();
-    //         this.updateCareerList(data);
-    //         this.updateResult(data.length, is_search);
-    //         this.ActivateLocationButton();
-
-    //     }
-    //     careerSeeMore() {
-    //         this.counter = this.num_rows + 5;
-
-    //         this.career_cards = this.career_list_body.querySelectorAll(".career-card");
-    //         for (let i = 0; i < this.num_rows; i++) {
-    //             this.career_cards[i].classList.add("displayed-career-card");
-    //             this.career_cards[i].classList.remove("hidden-tr");
-    //         }
-    //         for (let i = this.num_rows; i < this.career_cards.length; i++) {
-    //             this.career_cards[i].classList.add("hidden-tr");
-    //             this.career_cards[i].classList.remove("displayed-career-card");
-    //         }
-    //     }
-
-    //     seeMoreActivation() {
-    //         if (this.career_see_more) {
-    //             this.career_see_more.addEventListener("click", (e) => {
-    //                 this.seeMoreEventHandler();
-    //             });
-    //         }
-    //     }
-    //     updateCareerList(data) {
-    //         this.career_list_body.innerHTML = "";
-    //         for (let i = 0; i < data.length; i++) {
-    //             let career_list_card = document.createElement("div");
-    //             career_list_card.classList.add("career-card");
-    //             let career_card_title = document.createElement("h2");
-    //             let career_card_info = document.createElement("div");
-    //             let career_location = document.createElement("span");
-    //             let career_type = document.createElement("span");
-    //             let career_p = document.createElement("p");
-    //             let career_button_a = document.createElement("a");
-    //             let career_button = document.createElement("button");
-    //             let career_button_text = document.createElement("span");
-    //             let career_button_icon = document.createElement("span");
-
-    //             career_card_title.innerHTML = `${data[i].title}`;
-    //             career_location.innerHTML = `${data[i].job_location}`;
-    //             career_type.innerHTML = `${data[i].job_type}`;
-    //             career_p.innerHTML = `${data[i].job_introduction}`;
-    //             career_button_a.href = `${data[i].url}`;
-    //             career_button_text.innerHTML = "Read More";
-    //             career_button_icon.innerHTML = ">";
-
-    //             career_button.appendChild(career_button_text);
-    //             career_button.appendChild(career_button_icon);
-    //             career_button_a.appendChild(career_button);
-
-    //             career_card_info.appendChild(career_location);
-    //             career_card_info.appendChild(career_type);
-
-    //             career_list_card.appendChild(career_card_title);
-    //             career_list_card.appendChild(career_card_info);
-    //             career_list_card.appendChild(career_p);
-    //             career_list_card.appendChild(career_button_a);
-
-    //             this.career_list_body.appendChild(career_list_card);
-    //         }
-    //         if (data.length > 6) {
-    //             this.career_see_more.style.display = 'flex'
-
-    //             this.careerSeeMore();
-    //         }
-    //         else {
-
-    //             this.career_see_more.style.display = 'none'
-    //         }
-    //     }
-
-
-    //     updateCareerResult(num, is_search = false) {
-    //         let filterd = false;
-    //         if (this.global_location_career != "") {
-    //             filterd = true;
-    //         }
-
-    //         if (filterd || is_search) {
-    //             if (page_obj.isArabic()) {
-    //                 this.filter_result.innerHTML = `${num} نتيجة`;
-    //             } else {
-    //                 this.filter_result.innerHTML = `${num} result found`;
-    //             }
-    //         } else {
-    //             this.filter_result.innerHTML = "";
-    //         }
-    //     }
-
-    //     toggleFilterBoxAppearance(clickedIndex) {
-    //         this.location_button.addEventListener('click', (e) => {
-    //             if (page_obj.isMobile()) {
-    //                 this.location_form.classList.toggle("box-appear-flex");
-    //             }
-    //             else {
-    //                 this.location_form.classList.toggle("box-appear");
-
-    //             }
-
-    //         })
-    //     }
-    //     ActivateLocationButton() {
-    //         if (this.global_location_career == "") {
-    //             this.location_button.innerHTML = `Location ${this.filter_icon}`;
-    //             this.location_button.classList.remove("active");
-    //         } else {
-    //             this.location_button.classList.add("active");
-    //             this.location_button.innerHTML = `${this.global_location_career.charAt(0).toUpperCase() + this.global_location_career.slice(1)
-    //                 } ${this.filter_icon}`;
-    //         }
-    //     }
-    //     updateGlobalLocationAndRender() {
-
-    //         for (let i = 0; i < this.location_checkboxes.length; i++) {
-    //             this.location_checkboxes[i].addEventListener("click", (e) => {
-    //                 if (this.location_checkboxes[i].checked) {
-    //                     this.global_location_career = e.target.value;
-    //                     if (this.location_checkboxes[i].value == "all") {
-    //                         this.global_location_career = "";
-    //                     }
-    //                 } else {
-    //                     this.global_location_career = "";
-    //                 }
-    //                 for (let j = 0; j < this.location_checkboxes.length; j++) {
-    //                     if (this.location_checkboxes[j] != this.location_checkboxes[i]) {
-    //                         this.location_checkboxes[j].checked = false;
-    //                     }
-    //                 }
-    //                 this.renderCareerLocation();
-    //             });
-    //         }
-    //     }
-
-    //     hiring_message() {
-    //         if (this.career_list_body || this.career_detail_page) {
-    //             this.create_hiring_message();
-    //         }
-    //     }
-    //     create_hiring_message() {
-    //         let body = document.querySelector("body");
-    //         let hiring_message = document.createElement("span");
-    //         hiring_message.classList.add("hiring-message");
-    //         hiring_message.innerHTML = "We are hiring";
-    //         body.prepend(hiring_message);
-
-    //         // Set a timeout to fade out and remove the message after a certain time (e.g., 3000 milliseconds = 3 seconds)
-    //         setTimeout(function () {
-    //             hiring_message.classList.add("hide");
-    //             setTimeout(function () {
-    //                 hiring_message.remove();
-    //             }, 500); // Time for fade-out animation (half of the transition duration)
-    //         }, 3000); // Adjust the time as needed
-    //     }
-    //     async activatecareersSection() {
-    //         this.setLocationCheckboxes();
-    //         this.updateGlobalLocationAndRender()
-
-    //         this.seeMoreActivation();
-    //         this.toggleFilterBoxAppearance()
-
-    //         this.renderCareerLocationWithoutUpdate();
-    //         this.hiring_message()
-    //         this.search_form.addEventListener("submit", (e) => {
-    //             this.searchEvent(e);
-    //         });
-    //     }
-
-
-
-    // }
-
     class NewsManager {
         constructor() {
 
@@ -532,20 +213,19 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             return response.json();
         }
-  
+
         async getLatestNews() {
-         
-            try{
+
+            try {
                 let data = await fetch("./news.json")
                 data = await data.json()
-                return data.data.slice(0,3)
-            } catch(err){
+                return data.data.slice(0, 3)
+            } catch (err) {
                 console.log(err.message);
             }
         }
 
-        createLatestNews(latest_news){
-            // this.latest_section.classList.add("s-cards");
+        createLatestNews(latest_news) {
 
             let inner_latest_section = document.createElement("div");
 
@@ -557,10 +237,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 news_div_link.href = `${latest_news[i].url}`;
 
                 let news_image = document.createElement("img");
-                if (latest_news[i].image ){
+                if (latest_news[i].image) {
                     news_image.src = `${latest_news[i].image}`;
                 }
-                else{
+                else {
                     news_image.src = `./assets/images/OIG.jpg`;
                 }
 
@@ -574,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 inner_latest_title.innerHTML = `${latest_news[i].title}`;
 
-                
+
 
                 inner_latest_news.appendChild(inner_latest_date);
                 inner_latest_news.appendChild(inner_latest_title);
@@ -587,217 +267,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 inner_latest_section.appendChild(news_div);
             }
             this.latest_section.appendChild(inner_latest_section);
-            
-        
+
+
 
         }
 
-    //     async getListNews() {
-    //         let url;
-    //         if (page_obj.isArabic()) {
-    //             url = `/news/ar?category=${this.global_category}&search=${this.news_search}`;
-    //         } else {
-    //             url = `/news/en?category=${this.global_category}&search=${this.news_search}`;
-    //         }
-    //         let latest_news = await this.getNews(url);
-    //         return latest_news;
-    //     }
-
-    //     seeMoreEventHandler() {
-    //         if (this.category_see_more.getAttribute("see-more") === "true") {
-    //             // Show the next 5 rows
-    //             for (let i = this.news_start_counter; i < this.news_counter; i++) {
-    //                 if (this.news_rows[i]) {
-    //                     this.news_rows[i].classList.remove("hidden-tr");
-    //                     this.news_rows[i].classList.add("displayed-news-a");
-    //                 }
-    //             }
-    //             // Update the counters
-    //             this.news_start_counter += 5;
-    //             this.news_counter += 5;
-
-    //             if (this.news_start_counter >= this.news_rows.length) {
-    //                 this.category_see_more.textContent = "See Less";
-    //                 this.category_see_more.setAttribute("see-more", "false");
-    //             }
-    //         } else {
-    //             // Hide the extra rows
-    //             this.news_start_counter = 3;
-    //             this.news_counter = this.news_rows.length;
-    //             for (let i = this.news_start_counter; i <= this.news_counter; i++) {
-    //                 if (this.news_rows[i]) {
-    //                     this.news_rows[i].classList.add("hidden-tr");
-    //                     this.news_rows[i].classList.remove("displayed-news-a");
-    //                 }
-    //             }
-    //             this.news_counter = this.news_start_counter + 5;
-
-    //             // // Update the counters
-    //             // news_start_counter -= 5;
-    //             // news_counter -= 5;
-
-    //             if (this.news_start_counter <= this.news_num_rows) {
-    //                 this.category_see_more.textContent = "See More ...";
-    //                 this.category_see_more.setAttribute("see-more", "true");
-    //             }
-    //         }
-    //     }
-
-    //     uncheckAllTheCheckBoxes() {
-
-    //         let checkboxs = this.category_form.querySelectorAll(
-    //             'input[type="checkbox"]'
-    //         );
-    //         for (let i = 0; i < checkboxs.length; i++) {
-    //             checkboxs[i].checked = false;
-    //         }
-    //     }
-    //     searchEvent(e) {
-    //         e.preventDefault();
-    //         this.uncheckAllTheCheckBoxes();
-    //         let search = e.target.search.value;
-    //         this.news_search = search;
-    //         this.renderNewsCategory(true);
-    //     }
-
-
-    //     async renderNewsCategoryWithoutUpdate() {
-    //         const data = await this.getListNews();
-    //         this.updateNewsList(data);
-    //         this.ActivateCategoryButton();
-    //     }
-    //     async renderNewsCategory(is_searsh = false) {
-
-    //         const data = await this.getListNews();
-    //         this.updateNewsList(data);
-    //         this.updateCategoryResult(data.length, is_searsh);
-    //         this.ActivateCategoryButton();
-
-    //     }
-    //     news_see_more() {
-    //         this.news_counter = this.news_num_rows + 5;
-
-    //         this.news_rows = this.news_list_body.querySelectorAll("a");
-    //         for (let i = 0; i < this.news_num_rows; i++) {
-    //             this.news_rows[i].classList.add("displayed-news-a");
-    //             this.news_rows[i].classList.remove("hidden-tr");
-    //         }
-    //         for (let i = this.news_num_rows; i < this.news_rows.length; i++) {
-    //             this.news_rows[i].classList.add("hidden-tr");
-    //             this.news_rows[i].classList.remove("displayed-news-a");
-    //         }
-    //     }
-
-    //     seeMoreActivation() {
-    //         if (this.category_see_more) {
-    //             this.category_see_more.addEventListener("click", (e) => {
-    //                 this.seeMoreEventHandler();
-    //             });
-    //         }
-    //     }
-    //     updateNewsList(data) {
-    //         this.news_list_body.innerHTML = "";
-    //         for (let i = 0; i < data.length; i++) {
-    //             let news_list_card = document.createElement("a");
-    //             news_list_card.classList.add("displayed-news-a");
-    //             let news_list_card_inner = document.createElement("div");
-    //             let news_list_card_inner_inner = document.createElement("div");
-    //             let news_list_span = document.createElement("span");
-    //             let news_list_title = document.createElement("h2");
-    //             news_list_span.innerHTML = `${data[i].publish_date}`;
-    //             news_list_title.innerHTML = `${data[i].title}`;
-
-    //             let news_list_image = document.createElement("img");
-    //             news_list_image.src = `${data[i].news_banner_img.url}`;
-
-    //             news_list_card.href = `${data[i].url}`;
-
-    //             news_list_card_inner_inner.appendChild(news_list_span);
-    //             news_list_card_inner_inner.appendChild(news_list_title);
-    //             news_list_card_inner.appendChild(news_list_card_inner_inner);
-    //             news_list_card_inner.appendChild(news_list_image);
-    //             news_list_card.appendChild(news_list_card_inner);
-    //             this.news_list_body.appendChild(news_list_card);
-    //         }
-    //         if (data.length > 5) {
-    //             this.category_see_more.style.display = 'flex'
-
-    //             this.news_see_more();
-    //         }
-    //         else {
-
-    //             this.category_see_more.style.display = 'none'
-    //         }
-    //     }
-
-    //     updateCategoryResult(num, is_search = false) {
-    //         let filterd = false;
-    //         if (this.global_category != "") {
-    //             filterd = true;
-    //         }
-
-    //         if (filterd || is_search) {
-    //             if (page_obj.isArabic()) {
-    //                 this.filter_result.innerHTML = `${num} نتيجة`;
-    //             } else {
-    //                 this.filter_result.innerHTML = `${num} result found`;
-    //             }
-    //         } else {
-    //             this.filter_result.innerHTML = "";
-    //         }
-    //     }
-
-    //     ActivateCategoryButton() {
-    //         if (this.global_category == "") {
-    //             this.category_button.innerHTML = `Category ${this.filter_icon}`;
-    //             this.category_button.classList.remove("active");
-    //         } else {
-    //             this.category_button.classList.add("active");
-    //             this.category_button.innerHTML = `${this.global_category.charAt(0).toUpperCase() + this.global_category.slice(1)
-    //                 } ${this.filter_icon}`;
-    //         }
-    //     }
-    //     updateGlobalCategoryAndRender() {
-
-    //         for (let i = 0; i < this.category_checkboxes.length; i++) {
-    //             this.category_checkboxes[i].addEventListener("click", (e) => {
-    //                 if (this.category_checkboxes[i].checked) {
-    //                     this.global_category = e.target.value;
-    //                     if (this.category_checkboxes[i].value == "all") {
-    //                         this.global_category = "";
-    //                     }
-    //                 } else {
-    //                     this.global_category = "";
-    //                 }
-    //                 for (let j = 0; j < this.category_checkboxes.length; j++) {
-    //                     if (this.category_checkboxes[j] != this.category_checkboxes[i]) {
-    //                         this.category_checkboxes[j].checked = false;
-    //                     }
-    //                 }
-    //                 this.renderNewsCategory();
-    //             });
-    //         }
-    //     }
         async activateNewsSection() {
-    //         this.setCategoryCheckboxes();
-    //         this.updateGlobalCategoryAndRender()
-    //         this.seeMoreActivation();
-    //         this.setSearchInput()
-    //         this.toggleFilterBoxAppearance()
-
-    //         let trendy_news = await this.getTrendyNews();
-    //         this.createTrendyNews(trendy_news);
-
-            // let latest_news = await this.getLatestNews();
-
             let latest_news = await this.getLatestNews();
 
             this.createLatestNews(latest_news);
 
-    //         this.renderNewsCategoryWithoutUpdate();
-    //         this.search_form.addEventListener("submit", (e) => {
-    //             this.searchEvent(e);
-    //         });
         }
     }
 
@@ -1015,12 +494,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
         async getPrograms() {
-            try{
+            try {
                 let data = await fetch("../programs.json")
                 data = data.json()
-                console.log(data);
                 return data
-            } catch(err){
+            } catch (err) {
                 console.log(err.message)
             }
 
@@ -1044,7 +522,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         async renderProgramsWithoutUpdateResult() {
             const data = await this.getProgramData();
-            // console.log("result: ", data);
             if (page_obj.isMobile()) {
                 this.UpdteMobileContent(data);
             } else this.UpdateTable(data);
@@ -1227,10 +704,6 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 filter_by = "";
             }
-            //remove search when filter
-            // this.global_filter["search"] = "";
-            // this.search_input.value = "";
-
             for (let j = 0; j < checkboxs.length; j++) {
                 if (checkboxs[j] != checkboxs[i]) {
                     checkboxs[j].checked = false;
@@ -1359,7 +832,6 @@ document.addEventListener("DOMContentLoaded", () => {
             this.setGlobalFilter();
             this.setGlobalArabicFilter();
             this.setGlobalKeys();
-            // this.setSearchInput();
             if (page_obj.isMobile()) {
                 this.mobileInterface();
             }
@@ -1578,7 +1050,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         handelProgramSlider(program) {
-            // console.log(program);
             // remove the "active" class from all
             this.target = program.getAttribute("data-target");
             this.carosel_active = document.querySelector(`#${this.target}`);
@@ -1632,8 +1103,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let page_obj = new Page();
     header_obj.activateHeader(page_obj)
     window.addEventListener("resize",
-     ()=>{header_obj.activateHeader(page_obj)}
-     );
+        () => { header_obj.activateHeader(page_obj) }
+    );
 
 
     // color social media in footer and header
@@ -1690,19 +1161,4 @@ document.addEventListener("DOMContentLoaded", () => {
     if (main_acc.acc && !program_section.table_body) {
         main_acc.activate_accordion();
     }
-    // try {
-    //   window.addEventListener("click", (e) => {
-    //     for (let i = 0; i < filter_form.length; i++) {
-    //       detectBoxEdges(e, filter_form[i], filter_buttons[i])
-    //     }
-    //     if (category_form) {
-    //       detectBoxEdges(e, category_form, category_button)
-    //     }
-    //     if (location_form) {
-    //       detectBoxEdges(e, location_form, location_button)
-    //     }
-    //   });
-    // } catch (e) {
-    //   //
-    // }
 });
