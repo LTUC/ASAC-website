@@ -54,26 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
             element.classList.remove(e_class);
         }
 
-        // checkIcon(icon, header_is_colored) {
-        //     if (icon) {
-        //         let icon_paths = icon.querySelectorAll("path");
-        //         for (let i = 0; i < icon_paths.length; i++) {
-        //             if (header_is_colored == false) {
-        //                 this.addClass(icon_paths[i], "black-color");
-        //                 this.removeClass(icon_paths[i], "white-color");
-        //             } else {
-        //                 this.addClass(icon_paths[i], "white-color");
-        //                 this.removeClass(icon_paths[i], "black-color");
-        //             }
-        //         }
-        //     }
-        // }
 
         mainToggle() {
             let page = new Page();
-            if (page.banner) {
-                this.toggleClass(this.header, "active");
-            }
+            this.toggleClass(this.header, "active");
+            
         }
 
         mobileScrollEvent(e) {
@@ -155,8 +140,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         activateHeader(page_obj) {
+            console.log(window.innerWidth)
             if (page_obj.isTabAndMob()) {
-                this.toggleClass(this.header, "mobile");
+                this.addClass(this.header, "mobile");
+            }
+            else{
+                this.removeClass(this.header,"mobile")
             }
             // if (this.language_code) {
             //     this.showLanguageBox();
@@ -167,7 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!page_obj.banner) {
                 this.addClass(this.header, "active");
             }
-            window.addEventListener("resize", this.headerMove);
             // this.nav_close_btn.addEventListener("click", (e) => { 
             //     this.navToggle(e);
             //     body.classList.remove('mobile-menu-open');
@@ -188,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return window.innerWidth < 768;
         }
         isTabAndMob() {
-            return window.innerWidth < 1023;
+            return window.innerWidth < 1024;
         }
         isEnglish() {
             return true
@@ -1642,7 +1630,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // header
     let header_obj = new Header();
     let page_obj = new Page();
-    header_obj.activateHeader(page_obj);
+    header_obj.activateHeader(page_obj)
+    window.addEventListener("resize",
+     ()=>{header_obj.activateHeader(page_obj)}
+     );
+
 
     // color social media in footer and header
     let social_media_obj = new ColorSocialMedia()

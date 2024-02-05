@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jua&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500;1,600&family=Roboto:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500;1,600&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;400;500;600&display=swap");
 
 /* move colors to header.html in phase II */
 /* SECTIONS IN THIS CSS FILE */
@@ -37,7 +37,9 @@ h3 {
 p {
   font-size: 0.9em !important;
 }
-
+ul {
+  list-style: none;
+}
 body {
   font-family: "Poppins";
 }
@@ -54,11 +56,18 @@ a {
 
 .dropdown-item.active,
 .dropdown-item:active {
-  background-color: #962F8A !important;
+  background-color: #962f8a !important;
 }
 
 .text-primary {
-  color: #962F8A !important;
+  color: #962f8a !important;
+}
+.fill-primary {
+  fill: #962f8a !important;
+}
+#navbar {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
 }
 
 .custom-alert {
@@ -68,7 +77,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -94,7 +103,7 @@ a {
   display: inline-block;
   content: "";
   width: 150px;
-  background-color: #9B1881;
+  background-color: #9b1881;
   height: 2px;
 }
 
@@ -102,7 +111,7 @@ a {
   display: inline-block;
   content: "";
   width: 150px;
-  background-color: #9B1881;
+  background-color: #9b1881;
   height: 2px;
 }
 
@@ -112,13 +121,12 @@ a {
   transition: 0ms;
 }
 
-
 .custom-alert.show {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .custom-alert svg {
@@ -143,8 +151,6 @@ a {
   font-family: auto;
 }
 
-
-
 table {
   border: 1px dashed #5b5b5b59;
 }
@@ -155,15 +161,13 @@ table {
 
 /* HEADER */
 section {
-  margin-bottom: 2.89vw;
-  padding-top: 5.7vw;
+  margin-bottom: 2.89vw !important;
+  padding-top: 5.7vw !important;
 }
 
 footer {
   margin-top: 5.7vw;
 }
-
-
 
 /* -------------- */
 /*    HEADER      */
@@ -212,9 +216,9 @@ header {
   top: 0;
 }
 /* .show, */
-.mobile{
+.mobile {
   background-color: white;
-} 
+}
 
 header.active {
   position: sticky;
@@ -247,10 +251,6 @@ header.active .logo {
 .show a {
   color: #000 !important;
 }
-
-
-
-
 
 .black-color {
   color: #2a2a2a;
@@ -297,9 +297,11 @@ header.active .logo {
   width: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(202.85deg,
-      #000000 -28.91%,
-      rgba(0, 0, 0, 0) 332.38%);
+  background: linear-gradient(
+    202.85deg,
+    #000000 -30.91%,
+    rgba(0, 0, 0, 0.5) 290.38%
+  );
 }
 
 .banner-content {
@@ -322,7 +324,7 @@ header.active .logo {
   align-items: center;
   text-align: center;
   gap: 15px;
-  font-family: 'Exo 2', sans-serif !important;
+  font-family: "Exo 2", sans-serif !important;
 }
 
 .banner-content button {
@@ -375,7 +377,6 @@ header.active .logo {
   margin-bottom: 0;
 }
 
-
 /* -------------- */
 /*   ABOUT   */
 /* -------------- */
@@ -388,37 +389,35 @@ header.active .logo {
   margin-right: auto;
 }
 
-#about>div:nth-child(1) {
+#about > div:nth-child(1) {
   width: 60%;
 }
 
-#about>div:nth-child(1) h1 {
+#about > div:nth-child(1) h1 {
   margin-bottom: 30px;
 }
 
 .about-div {
   line-height: 150%;
-
 }
 
-.about-div>div {
+.about-div > div {
   display: flex;
   gap: 30px;
   margin-bottom: 10px;
 }
 
-.about-div>div div:nth-child(2) {
+.about-div > div div:nth-child(2) {
   padding-top: 10px;
 }
 
-.about-div>div div:nth-child(2) p {
+.about-div > div div:nth-child(2) p {
   padding-top: 15px;
 }
 
 /* -------------- */
 /*   ABOUT END   */
 /* -------------- */
-
 
 /* -------------- */
 /*   FACITITES    */
@@ -429,7 +428,7 @@ header.active .logo {
   background: #490341;
 }
 
-#faculty-section>div {
+#faculty-section > div {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -493,7 +492,7 @@ header.active .logo {
   width: 35%;
 }
 
-.faculty-card>div {
+.faculty-card > div {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -523,7 +522,7 @@ header.active .logo {
   order: 2;
 }
 
-.faculty-card:nth-child(even)>div {
+.faculty-card:nth-child(even) > div {
   order: 1;
 }
 
@@ -544,7 +543,6 @@ header.active .logo {
   transition: ease 300ms;
   gap: 10px;
 }
-
 
 #faculty-section div a svg {
   padding-left: 15px;
@@ -611,7 +609,6 @@ header.active .logo {
   width: 100%;
 }
 
-
 .carosel::-webkit-scrollbar {
   display: none;
 }
@@ -675,7 +672,6 @@ header.active .logo {
 
 .carosel-img {
   position: relative;
-
 }
 
 .carosel-img img {
@@ -721,7 +717,6 @@ header.active .logo {
 }
 
 .program-cards {
-
   width: 90%;
   margin: auto;
 }
@@ -773,7 +768,6 @@ header.active .logo {
   transition: 300ms ease-in-out;
 }
 
-
 .cardset.active div img {
   position: absolute;
   bottom: 5%;
@@ -789,7 +783,6 @@ header.active .logo {
   width: 75px;
   height: 75px;
   transition: 500ms ease-in-out;
-
 }
 
 .cardset.active div:hover .course-logo path,
@@ -818,7 +811,6 @@ header.active .logo {
   color: white;
   border: 2px solid #864496;
 }
-
 
 .cardset.active div:hover span {
   border: 1px solid white;
@@ -874,7 +866,6 @@ header.active .logo {
 /* SLIDER CAROSEL INTERACTIVE END */
 /* -------------- */
 
-
 /* -------------- */
 /* NEWS SECTION BLOCK */
 /* -------------- */
@@ -898,7 +889,6 @@ header.active .logo {
 .latest-see-more:hover {
   background-color: #490341;
   color: white;
-
 }
 
 #news .slider-conterol-btn {
@@ -971,12 +961,9 @@ header.active .logo {
 /* STAFF SECTION BLOCK */
 /* -------------- */
 
-
 .staff-slider {
   position: relative;
 }
-
-
 
 .staff-slider .scroll-img {
   display: inline-flex;
@@ -1044,20 +1031,11 @@ header.active .logo {
   margin-top: 15px;
 } */
 
-
-
-
-
-
-
-
 .ltuc-description {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
-
-
 
 .ltuc-description h1 {
   margin-bottom: 36px;
@@ -1067,23 +1045,15 @@ header.active .logo {
   text-transform: capitalize;
 }
 
-
-
 .ltuc-description p {
   width: 60%;
   padding-top: 10px;
 }
 
-
-
-
-
-
 .ltuc-description h3 {
   margin-bottom: 30px;
   font-weight: 600;
 }
-
 
 .ltuc-description-img {
   width: 50%;
@@ -1100,7 +1070,6 @@ header.active .logo {
   line-height: 150%;
 }
 
-
 .accordion {
   color: #333333;
   cursor: pointer;
@@ -1110,7 +1079,7 @@ header.active .logo {
   line-height: 150%;
 }
 
-.accordion>h3 span:nth-of-type(1) {
+.accordion > h3 span:nth-of-type(1) {
   max-width: 100%;
 }
 
@@ -1145,7 +1114,7 @@ header.active .logo {
 
 .panel-content .detailed-programs {
   margin-top: 50px;
-  transform: translateX(-70px)
+  transform: translateX(-70px);
 }
 
 .panel ul li:not(.detailed-programs li) {
@@ -1171,14 +1140,9 @@ header.active .logo {
   align-items: center;
 }
 
-
-
-
-
 /* -------------- */
 /*    card with image title text */
 /* -------------- */
-
 
 .staff-campus .contact-form {
   display: flex;
@@ -1237,9 +1201,8 @@ header.active .logo {
 }
 
 .staff-campus .contact-form button:hover {
-  background-color: #962F8A;
+  background-color: #962f8a;
 }
-
 
 #contactForm {
   display: flex;
@@ -1248,13 +1211,18 @@ header.active .logo {
 }
 
 .linear-bg {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.70) 0%, rgb(0 0 0 / 74%) 81.18%, rgb(0 0 0 / 85%) 100%), url(./assets/images/luminus-cover.jpg), black 50% / cover no-repeat;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgb(0 0 0 / 74%) 81.18%,
+      rgb(0 0 0 / 85%) 100%
+    ),
+    url(./assets/images/luminus-cover.jpg), black 50% / cover no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 100px;
   color: white;
 }
-
 
 .staff-campus .c-cards {
   display: flex;
@@ -1319,7 +1287,7 @@ header.active .logo {
   padding-bottom: 20px;
 }
 
-.staff-campus .c-card-body>div {
+.staff-campus .c-card-body > div {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1338,7 +1306,6 @@ header.active .logo {
   letter-spacing: -0.02em;
   color: #2a3342;
 }
-
 
 .staff-campus .s-card-body p {
   font-weight: 500;
@@ -1378,7 +1345,6 @@ header.active .logo {
 }
 
 #news-article hr {
-
   width: 13.9vw;
   height: 1.7vw;
   background-color: #a3238e;
@@ -1450,8 +1416,6 @@ header.active .logo {
 /*     News Article End    */
 /* -------------- */
 
-
-
 /* -------------- */
 /*    footer    */
 /* -------------- */
@@ -1471,13 +1435,11 @@ header.active .logo {
   margin: auto;
 
   width: 90% !important;
-  }
-
-
+}
 
 .row.footer-items {
   justify-content: space-between;
-  padding-top: 100px;
+  padding-top: calc(50px + 1rem);
 }
 
 .footer-item h3 {
@@ -1556,7 +1518,7 @@ header.active .logo {
 }
 
 .footer-lower {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 30px 30px;
   border-top: 1px solid rgba(252, 252, 252, 0.5);
   display: flex;
@@ -1594,7 +1556,7 @@ header.active .logo {
 }
 
 .footer-social-media a:hover svg path {
-  fill: black
+  fill: black;
 }
 
 .footer-social-media svg path {
@@ -1626,12 +1588,11 @@ header.active .logo {
 }
 
 .detailed-programs table tr a button:hover {
-  background-color: #962F8A;
+  background-color: #962f8a;
 }
 
 .detailed-programs table tr a button:hover span {
   color: white;
-
 }
 
 .guidance-plan .title-and-filter {
@@ -1862,7 +1823,7 @@ input[type="checkbox"]:checked::after {
   background-color: #a3238e;
   height: 10px;
   top: 5px;
-  left: 5px
+  left: 5px;
 }
 
 .filteration-section {
@@ -1872,7 +1833,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .filteration-section {
-  z-index: 60
+  z-index: 60;
 }
 
 /* Style the checkbox label text */
@@ -1941,7 +1902,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .box-appear-flex {
-  display: flex
+  display: flex;
 }
 
 .highlightted-tr {
@@ -1967,14 +1928,13 @@ input[type="checkbox"]:checked::after {
 /*    Detailed Programs END    */
 /* -------------- */
 
-
 /* -------------- */
 /*    all campuses    */
 /* -------------- */
 .all-programs-form {
   display: flex;
   justify-content: center;
-  background-color: #2A2A2A;
+  background-color: #2a2a2a;
   color: white;
   height: fit-content;
   padding: 100px;
@@ -2011,7 +1971,7 @@ input[type="checkbox"]:checked::after {
   line-height: 150%;
   display: flex;
   align-items: center;
-  color: #FFFFFF;
+  color: #ffffff;
   position: absolute;
   bottom: 28px;
   left: 19px;
@@ -2028,7 +1988,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .all-programs-content a {
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   position: relative;
 }
 
@@ -2060,7 +2020,7 @@ input[type="checkbox"]:checked::after {
   padding: 5px;
   width: 30px;
   height: 30px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 50%;
   position: absolute;
   right: 50px;
@@ -2111,15 +2071,14 @@ input[type="checkbox"]:checked::after {
   margin: auto;
 }
 
-#trendy-news a>div {
+#trendy-news a > div {
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: center;
-
 }
 
-#trendy-news a>div div {
+#trendy-news a > div div {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -2130,43 +2089,42 @@ input[type="checkbox"]:checked::after {
   gap: 0.5vw;
 }
 
-#trendy-news a>div div span {
+#trendy-news a > div div span {
   font-weight: 400;
   opacity: 0.8;
   line-height: 150%;
   text-transform: capitalize;
 }
 
-#trendy-news a>div div h1 {
-
+#trendy-news a > div div h1 {
   font-weight: 600;
   line-height: 150%;
 }
 
-#trendy-news>:nth-child(1) {
+#trendy-news > :nth-child(1) {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
 }
 
-#trendy-news>:nth-child(2) {
+#trendy-news > :nth-child(2) {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 3;
 }
 
-#trendy-news>:nth-child(3) {
+#trendy-news > :nth-child(3) {
   grid-column-start: 3;
   grid-row-start: 1;
 }
 
-#trendy-news>:nth-child(4) {
+#trendy-news > :nth-child(4) {
   grid-column-start: 4;
   grid-row-start: 1;
 }
 
-#trendy-news>:nth-child(5) {
+#trendy-news > :nth-child(5) {
   grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 2;
@@ -2179,7 +2137,7 @@ input[type="checkbox"]:checked::after {
   margin-bottom: 2.89vw;
 }
 
-#latest-news>div {
+#latest-news > div {
   display: flex;
   justify-content: space-between;
   margin-left: 0;
@@ -2202,24 +2160,24 @@ input[type="checkbox"]:checked::after {
   height: 17.8vw;
 }
 
-.latest-card a>div {
+.latest-card a > div {
   display: flex;
   flex-direction: column;
   gap: 0.92vw;
   padding: 1.8vw;
 }
 
-.latest-card a>div span {
+.latest-card a > div span {
   font-weight: 400;
   line-height: 150%;
-  color: #2A2A2A;
+  color: #2a2a2a;
   opacity: 0.8;
 }
 
-.latest-card a>div p {
+.latest-card a > div p {
   font-weight: 500;
   line-height: 150%;
-  color: #2A2A2A;
+  color: #2a2a2a;
 }
 
 .latest-card a,
@@ -2255,10 +2213,10 @@ input[type="checkbox"]:checked::after {
 .news-list-body {
   display: flex;
   flex-direction: column;
-  gap: 50px
+  gap: 50px;
 }
 
-.news-list-body>a {
+.news-list-body > a {
   display: none;
 }
 
@@ -2266,9 +2224,7 @@ input[type="checkbox"]:checked::after {
   display: inline !important;
 }
 
-
-
-.news-list-body a>div {
+.news-list-body a > div {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -2279,7 +2235,7 @@ input[type="checkbox"]:checked::after {
   padding-bottom: 3.125vw;
 }
 
-.news-list-body a>div img {
+.news-list-body a > div img {
   width: 26.6vw;
   height: 17.9vw;
 }
@@ -2309,7 +2265,7 @@ input[type="checkbox"]:checked::after {
 /* -------------- */
 
 .career .banner-content .banner-content-inner h1 {
-  width: 100%
+  width: 100%;
 }
 
 .career .banner-content {
@@ -2324,7 +2280,7 @@ input[type="checkbox"]:checked::after {
   position: fixed;
   color: white;
   z-index: 150;
-  background-color: #A3238E;
+  background-color: #a3238e;
   top: 60px;
   left: 235px;
   width: 175px;
@@ -2349,7 +2305,6 @@ input[type="checkbox"]:checked::after {
   /* Use the exitAnimation */
 }
 
-
 /* -------------- */
 /*    Link Preview      */
 /* -------------- */
@@ -2359,7 +2314,6 @@ input[type="checkbox"]:checked::after {
   width: 80%;
   margin: auto;
 }
-
 
 /* -------------- */
 /*    Link Preview End      */
@@ -2388,20 +2342,16 @@ input[type="checkbox"]:checked::after {
   }
 }
 
-
-
 @media (min-width: 1024px) {
-
   /* -------------- */
   /*    HEADER      */
   /* -------------- */
 
-
-  .programs-nav-3>li {
+  .programs-nav-3 > li {
     width: 20.25vw;
   }
 
-  .programs-nav-3>li {
+  .programs-nav-3 > li {
     width: 20.25vw;
   }
 
@@ -2423,7 +2373,6 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (max-width: 1023px) {
-
   /* -------------- */
   /*    HEADER      */
   /* -------------- */
@@ -2433,6 +2382,12 @@ input[type="checkbox"]:checked::after {
 
   .drop-span {
     color: black;
+  }
+  .mission h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   #navbar {
@@ -2447,7 +2402,7 @@ input[type="checkbox"]:checked::after {
     overflow-y: scroll;
   }
 
-  #latest-news>div {
+  #latest-news > div {
     gap: 25px;
   }
 
@@ -2475,8 +2430,7 @@ input[type="checkbox"]:checked::after {
   }
 
   .logo img {
-    width: 145px;
-    height: 22px;
+    width: 200px;
     object-fit: contain;
   }
 
@@ -2510,13 +2464,12 @@ input[type="checkbox"]:checked::after {
     display: none;
   }
 
-
   .programs-nav {
     display: flex;
     flex-direction: column;
   }
 
-  #navbar>ul {
+  #navbar > ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -2589,10 +2542,9 @@ input[type="checkbox"]:checked::after {
     width: auto;
   }
 
-
   /* ABOUT */
 
-  #about>div:nth-child(1) {
+  #about > div:nth-child(1) {
     width: 100%;
     text-align: center;
   }
@@ -2601,7 +2553,7 @@ input[type="checkbox"]:checked::after {
     flex-direction: column;
   }
 
-  .about-div>div {
+  .about-div > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2671,7 +2623,6 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-
   /* -------------- */
   /*    HEADER      */
   /* -------------- */
@@ -2680,7 +2631,7 @@ input[type="checkbox"]:checked::after {
     display: none;
   }
 
-  #navbar>ul {
+  #navbar > ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2698,10 +2649,9 @@ input[type="checkbox"]:checked::after {
     height: 100%;
   }
 
-  #navbar>ul {
+  #navbar > ul {
     gap: 100px;
   }
-
 
   .drop-down-lang-inside {
     margin-top: 15px;
@@ -2722,9 +2672,8 @@ input[type="checkbox"]:checked::after {
     line-height: 150%;
   }
 
-
   .programs-nav-3,
-  .drop-down-menu-1>li .programs-nav-1 {
+  .drop-down-menu-1 > li .programs-nav-1 {
     gap: 6.5vw;
     margin-top: 50px;
   }
@@ -2746,12 +2695,9 @@ input[type="checkbox"]:checked::after {
   /*   BANNER       */
   /* -------------- */
 
-
   .banner-content h1 {
     width: 65%;
   }
-
-
 
   .banner-content button {
     width: 22.36vw;
@@ -2770,7 +2716,6 @@ input[type="checkbox"]:checked::after {
   /*   FACITITES    */
   /* -------------- */
 
-
   .faculty-header {
     margin-left: 6.5%;
   }
@@ -2787,18 +2732,16 @@ input[type="checkbox"]:checked::after {
     width: 45.6vw;
   }
 
-
   .faculty-card div h1 {
     width: 100%;
   }
-
 
   #faculty-section div a {
     padding: 10px 8px;
     width: 25.9vw;
   }
 
-  .faculty-card>div {
+  .faculty-card > div {
     padding: 3.5vw 1.9vw;
   }
 
@@ -2828,7 +2771,6 @@ input[type="checkbox"]:checked::after {
     width: 100%;
     gap: 9.7vw;
   }
-
 
   .fact-text {
     text-align: center;
@@ -2939,8 +2881,6 @@ input[type="checkbox"]:checked::after {
     height: 26.85vw;
   }
 
-
-
   /* -------------- */
   /* CARDS CARD  END */
   /* -------------- */
@@ -2958,8 +2898,6 @@ input[type="checkbox"]:checked::after {
     width: 12.6vw;
     height: 3.61vw;
   }
-
-
 
   #news .slider-conterol-btn {
     height: 33.7vw;
@@ -2981,7 +2919,6 @@ input[type="checkbox"]:checked::after {
   /* -------------- */
   /* STAFF SECTION BLOCK */
   /* -------------- */
-
 
   /* -------------- */
   /* STAFF SECTION BLOCK END*/
@@ -3037,7 +2974,6 @@ input[type="checkbox"]:checked::after {
     grid-template-columns: 25% auto;
   }
 
-
   .sub-navs {
     column-gap: 15px;
     row-gap: 15px;
@@ -3063,7 +2999,6 @@ input[type="checkbox"]:checked::after {
     margin-left: 5%;
   }
 
-
   /* -------------- */
   /*    title text image END    */
   /* -------------- */
@@ -3083,14 +3018,9 @@ input[type="checkbox"]:checked::after {
   /*    card with image title text */
   /* -------------- */
 
-  .staff-campus .ltuc-description p {
-    width: 100%;
+  .ltuc-description p {
+    width: 90%;
   }
-
-  .staff-campus .c-card {
-    width: 43.5vw;
-  }
-
 
   .staff-campus .c-card-body {
     gap: 15px;
@@ -3112,7 +3042,6 @@ input[type="checkbox"]:checked::after {
   /*    card with image title text END    */
   /* -------------- */
 
-
   /* -------------- */
   /*    News Article    */
   /* -------------- */
@@ -3121,11 +3050,9 @@ input[type="checkbox"]:checked::after {
     width: 90%;
   }
 
-
   #news-article .news-img p {
     width: 100%;
   }
-
 
   /* -------------- */
   /*    News Article END    */
@@ -3134,12 +3061,9 @@ input[type="checkbox"]:checked::after {
   /*    footer     */
   /* -------------- */
 
-
-
   /* -------------- */
   /*    footer END    */
   /* -------------- */
-
 
   /* -------------- */
   /* Detailed Programs */
@@ -3208,7 +3132,6 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (max-width: 767px) {
-
   .code-sign::before,
   .code-sign::after {
     width: 100px;
@@ -3221,15 +3144,6 @@ input[type="checkbox"]:checked::after {
   html {
     font-size: 12px;
   }
-  
-  #campus .ltuc-description p,
-  #programs .ltuc-description p,
-  #all-programs .ltuc-description p,
-  .title-and-filter p {
-    width: 85%;
-  }
-
-
 
   .all-programs-content a span {
     width: 6.3vw;
@@ -3242,8 +3156,8 @@ input[type="checkbox"]:checked::after {
   }
 
   section {
-    padding-top: 5.7vw;
-    margin-bottom: 17.55vw;
+    padding-top: 3.7vw !important;
+    margin-bottom: 16.55vw !important;
   }
 
   .carosel-img img {
@@ -3260,8 +3174,6 @@ input[type="checkbox"]:checked::after {
   .staff-campus .contact-form div {
     width: 100%;
   }
-
-
 
   /* -------------- */
   /*    GATES      */
@@ -3297,17 +3209,13 @@ input[type="checkbox"]:checked::after {
     width: 100%;
   }
 
-  .side_gates a>div {
+  .side_gates a > div {
     height: 50px;
-
   }
 
   .gate-title {
     height: 50px;
   }
-
-
-
 
   /* -------------- */
   /*    GATES END      */
@@ -3333,7 +3241,7 @@ input[type="checkbox"]:checked::after {
     color: rgba(51, 51, 51, 0.7);
   }
 
-  header>div:not(.overlay) {
+  header > div:not(.overlay) {
     margin-right: 30px;
   }
 
@@ -3378,7 +3286,6 @@ input[type="checkbox"]:checked::after {
     margin-left: 0;
     width: 87vw;
     left: 6.5%;
-
   }
 
   .banner-img {
@@ -3406,11 +3313,10 @@ input[type="checkbox"]:checked::after {
   /*   BANNER END   */
   /* -------------- */
 
-
   /* -------------- */
   /*   FACITITES    */
   /* -------------- */
-  #faculty-section>div {
+  #faculty-section > div {
     gap: 13vw;
   }
 
@@ -3418,11 +3324,11 @@ input[type="checkbox"]:checked::after {
     order: 1;
   }
 
-  .faculty-card:nth-child(even)>div {
+  .faculty-card:nth-child(even) > div {
     order: 2;
   }
 
-  .faculty-card>div {
+  .faculty-card > div {
     padding: 8.4vw 4.8vw;
     width: auto;
   }
@@ -3439,7 +3345,6 @@ input[type="checkbox"]:checked::after {
     width: 100%;
   }
 
-
   .cards-wrapper {
     width: 87%;
     margin: auto;
@@ -3454,7 +3359,6 @@ input[type="checkbox"]:checked::after {
   .faculty-card img {
     height: 50vh;
   }
-
 
   .faculty-card div h1 {
     width: 100%;
@@ -3477,8 +3381,6 @@ input[type="checkbox"]:checked::after {
   /*   END FACITITES    */
   /* -------------- */
 
-
-
   /* -------------- */
   /* SLIDER CAROSEL INTERACTIVE */
   /* -------------- */
@@ -3486,8 +3388,6 @@ input[type="checkbox"]:checked::after {
     width: 86.9vw;
     height: 53.2vw;
   }
-
-
 
   .cardset.active div span,
   .newscard-side-arrow {
@@ -3508,7 +3408,6 @@ input[type="checkbox"]:checked::after {
     height: 53.2vw;
   }
 
-
   .scroll-img {
     padding-left: 6.5%;
     padding-right: 6.5%;
@@ -3520,13 +3419,10 @@ input[type="checkbox"]:checked::after {
     padding-left: 0px;
   }
 
-
   .cardset.active div {
     width: 86.9vw;
     height: 53.2vw;
   }
-
-
 
   .cardset.active div span,
   .newscard-side-arrow {
@@ -3572,7 +3468,6 @@ input[type="checkbox"]:checked::after {
   /* SLIDER CAROSEL INTERACTIVE END*/
   /* -------------- */
 
-
   /* -------------- */
   /* NEWS SECTION BLOCK */
   /* -------------- */
@@ -3595,8 +3490,6 @@ input[type="checkbox"]:checked::after {
   /* NEWS SECTION BLOCK END*/
   /* -------------- */
 
-
-
   .ltuc-description {
     width: 87vw;
   }
@@ -3612,10 +3505,9 @@ input[type="checkbox"]:checked::after {
   }
 
   .ltuc-description p {
-    width: 100%;
+    width: 90%;
     line-height: 180%;
   }
-
 
   .accordion h3 {
     gap: 0;
@@ -3629,9 +3521,6 @@ input[type="checkbox"]:checked::after {
     width: 100%;
   }
 
-
-
-
   .staff-campus .c-cards {
     flex-direction: column;
     gap: 30px;
@@ -3642,7 +3531,6 @@ input[type="checkbox"]:checked::after {
   .staff-campus .c-cards .c-card {
     width: 100%;
     gap: 10px;
-
   }
 
   .staff-campus .c-card-img {
@@ -3679,12 +3567,9 @@ input[type="checkbox"]:checked::after {
     display: none;
   }
 
-
-
   /* -------------- */
   /*    footer END    */
   /* -------------- */
-
 
   /* -------------- */
   /* Detailed Programs */
@@ -3704,9 +3589,7 @@ input[type="checkbox"]:checked::after {
   .filter-button,
   .search-form input {
     padding-left: 0px;
-
   }
-
 
   .filteration-section {
     flex-wrap: wrap;
@@ -3714,7 +3597,6 @@ input[type="checkbox"]:checked::after {
     margin-bottom: 20px;
     width: 75%;
     margin-left: 30.76px;
-
   }
 
   #news-list .title-and-filter .filteration-section {
@@ -3745,10 +3627,9 @@ input[type="checkbox"]:checked::after {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
   }
 
-  .accordion-div .panel>span {
+  .accordion-div .panel > span {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -3762,7 +3643,7 @@ input[type="checkbox"]:checked::after {
   }
 
   .mobile-programs .displayed-tr:nth-child(odd) {
-    background-color: #FAFAFA;
+    background-color: #fafafa;
   }
 
   .mobile-programs .displayed-tr .accordion {
@@ -3781,8 +3662,8 @@ input[type="checkbox"]:checked::after {
     width: 90%;
   }
 
-  .mobile-programs .displayed-tr .panel>div span:nth-of-type(2) {
-    color: #962F8A;
+  .mobile-programs .displayed-tr .panel > div span:nth-of-type(2) {
+    color: #962f8a;
   }
 
   .mobile-programs .panel {
@@ -3821,9 +3702,7 @@ input[type="checkbox"]:checked::after {
     background: #a3238e;
     text-decoration: none;
     margin-bottom: 20px;
-
   }
-
 
   .mobile-programs .guidance-plan button,
   .mobile-programs .apply button {
@@ -3841,11 +3720,9 @@ input[type="checkbox"]:checked::after {
     margin-bottom: 20px;
   }
 
-
   /* -------------- */
   /* Detailed Programs END */
   /* -------------- */
-
 
   /* -------------- */
   /*    all campuses    */
@@ -3891,7 +3768,6 @@ input[type="checkbox"]:checked::after {
   .all-programs-form form div input,
   .all-programs-form form div select {
     width: 100%;
-
   }
 
   #all-programs {
@@ -3899,7 +3775,6 @@ input[type="checkbox"]:checked::after {
 
     margin-left: auto;
     margin-right: auto;
-
   }
 
   /* -------------- */
@@ -3917,85 +3792,46 @@ input[type="checkbox"]:checked::after {
     margin-bottom: 17.55vw;
   }
 
-  #trendy-news>a {
+  #trendy-news > a {
     height: 48.8vw;
-
   }
-
 
   #latest-news {
     margin-bottom: 17.55vw;
   }
 
-  #latest-news>div {
+  #latest-news > div {
     flex-direction: column;
   }
 
   .latest-card-img {
-
     height: 48.8vw;
   }
-
-
-
-
 
   /* -------------- */
   /*    News Article END   */
   /* -------------- */
 
-  .footer-upper{
+  .footer-upper {
     margin: auto;
   }
-  .row{
+  .row {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .footer-lower{
+  .footer-lower {
     justify-content: center;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .prog-header {
-  background-image: linear-gradient(to top, rgb(22 21 21 / 60%), rgb(22 21 21 / 60%)), url(./assets/images/Acadimec-publication.jpg);
-  ;
+  background-image: linear-gradient(
+      to top,
+      rgb(22 21 21 / 60%),
+      rgb(22 21 21 / 60%)
+    ),
+    url(./assets/images/Acadimec-publication.jpg);
   background-repeat: no-repeat;
   background-position: right center;
   color: white;
@@ -4014,7 +3850,7 @@ input[type="checkbox"]:checked::after {
   text-align: center;
 }
 
-.prog-header>div span {
+.prog-header > div span {
   color: #ff8000;
 }
 
@@ -4054,7 +3890,7 @@ input[type="checkbox"]:checked::after {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 10PX;
+  gap: 10px;
 }
 
 .apply-btn {
@@ -4092,10 +3928,6 @@ input[type="checkbox"]:checked::after {
   width: 100px;
 }
 
-
-
-
-
 @media (min-width: 768px) and (max-width: 1024px) {
   .all-programs-content a span {
     width: 4.3vw;
@@ -4123,11 +3955,9 @@ input[type="checkbox"]:checked::after {
     margin-left: 0;
   }
 
-
   .apply-btn {
     width: 24vw;
   }
-
 
   .all-programs-content {
     display: flex;
@@ -4175,7 +4005,7 @@ input[type="checkbox"]:checked::after {
     row-gap: 36px;
   }
 
-  .accordion>h3 span:nth-of-type(1) {
+  .accordion > h3 span:nth-of-type(1) {
     max-width: 55%;
   }
 
@@ -4204,7 +4034,6 @@ input[type="checkbox"]:checked::after {
   .text-image .container div:first-child::after {
     border-radius: 0px;
   }
-
 
   .text-image .ltuc-description p {
     width: 100%;
