@@ -1308,6 +1308,7 @@ header.active .logo {
   flex-direction: column;
   gap: 20px;
   padding-left: 20px;
+  font-size: 0.9em;
 }
 
 .staff-campus .c-card-body h2 {
