@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `
     let body = document.querySelector('body')
     let white_space = document.getElementById('loom-companion-mv3')
+    console.log(white_space)
     if (white_space) {
         white_space.remove()
     }
