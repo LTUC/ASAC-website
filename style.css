@@ -129,7 +129,8 @@ a {
   font-size: 1em !important;
 }
 
-.card-text:last-child, .btn-primary {
+.card-text:last-child,
+.btn-primary {
   font-size: 0.8em !important;
 }
 
@@ -1232,11 +1233,7 @@ header.active .logo {
 }
 
 .linear-bg {
-  background: linear-gradient(180deg,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgb(0 0 0 / 74%) 81.18%,
-      rgb(0 0 0 / 85%) 100%),
-    url(./assets/images/luminus-cover.jpg), black 50% / cover no-repeat;
+  background: linear-gradient(180deg, rgb(0 0 0 / 87%) 0%, rgb(0 0 0 / 74%) 81.18%, rgb(0 0 0 / 85%) 100%), url(./assets/images/luminus-cover.jpg), black 50% / cover no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 100px;
@@ -3879,7 +3876,6 @@ input[type="checkbox"]:checked::after {
 .prog-outline {
   padding: 0;
   margin-left: 6vw;
-  /* background-image: linear-gradient(to top, rgb(255 255 255 / 90%), rgb(255 255 255 / 60%)), url(./assets/icon/icons8-python.svg); */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
