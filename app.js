@@ -239,10 +239,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 let news_image = document.createElement("img");
                 if (latest_news[i].image) {
-                    news_image.src = `${latest_news[i].image}`;
+                    news_image.src = `https://placehold.co/800?text=placeholder`;
                 }
                 else {
-                    news_image.src = `./assets/images/OIG.jpg`;
+                    news_image.src = `https://placehold.co/800?text=placeholder`;
                 }
 
                 news_image.classList.add("latest-card-img");
