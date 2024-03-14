@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Cloud Computing",
+        "degree": "Bachelor",
+        "timing": "Morning",
+        "location": "Amman/Irbid",
+        "link": "../all_plans/BA/cloud.pdf",
+        "icon": "../assets/icon/cloud.svg"
+    },
+    {
+        "title": "Atificial Intelligence and Data Science",
+        "degree": "Bachelor",
+        "timing": "Morning/Evening",
+        "location": "Amman",
+        "link": "../all_plans/BA/AI.pdf",
+        "icon": "../assets/icon/AI.svg"
+    },
+    {
+        "title": "Atificial Intelligence and Data Science",
+        "degree": "Diploma",
+        "timing": "Evening",
+        "location": "Amman/Irbid",
+        "link": "../all_plans/diploma/AI.pdf",
+        "icon": "../assets/icon/AI.svg"
+    },
+    {
+        "title": "Cyber Security",
+        "degree": "Diploma",
+        "timing": "Morning",
+        "location": "Irbid",
+        "link": "../all_plans/diploma/cyber.pdf",
+        "icon": "../assets/icon/cyber.svg"
+    },
+    {
+        "title": "Software Engineering",
+        "degree": "Diploma",
+        "timing": "Morning/Evening",
+        "location": "Amman",
+        "link": "../all_plans/diploma/software.pdf",
+        "icon": "../assets/icon/softwareE.svg"
+    }
+]
