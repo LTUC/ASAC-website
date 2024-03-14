@@ -17,15 +17,11 @@
     <link href="reset_default.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1f66153deb.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="style.css" rel="stylesheet">
 
 </head>
-
-<!-- ************** CODE FELLOWS PROGRAMS *************** -->
-
-
-
 <!-- ************** CONTACT *************** -->
 
 <body>
@@ -45,22 +41,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="ASAC/programs.html" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Programs
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="ASAC/programs.html">All Programs</a></li>
-                                <li><a class="dropdown-item" href="ASAC/programs.html#bachelors">Bachelors</a></li>
-                                <li><a class="dropdown-item" href="ASAC/programs.html#diploma">International Diploma</a>
-                                </li>
-                                <li><a class="dropdown-item" href="ASAC/programs.html#short-course">Short Courses</a>
-                                </li>
-                            </ul>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="ASAC/about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ASAC/programs.html"> Programs </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contactUs.html">Contact Us</a>
@@ -77,7 +62,7 @@
     <main>
 
         <section id="banner" class="prog-header"
-            style="height: 250px;background-image: linear-gradient(to top, rgb(22 21 21 / 60%), rgb(22 21 21 / 60%)),url('assets/images/purple-laptop.webp');">
+            style="height: 250px;background-image: linear-gradient(to top, rgb(22 21 21 / 60%), rgb(22 21 21 / 60%)),url('https://placehold.co/800?text=placeholder');">
             <h1 class="fs-1">
                 Contact Us
             </h1>
@@ -113,7 +98,7 @@
                             <div>
                                 <!-- phone -->
                                 <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg"  height="16" width="16"
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
                                         viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
                                         <path opacity="1" fill="purple"
                                             d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
@@ -212,6 +197,13 @@
             <div class="contact-form">
                 <form id="contactForm">
                     <div>
+                        <label for="q-category">Choose a Query category:</label>
+                        <select id="q-category" name="q-category" form="contactForm">
+                            <option value="admission">Admission</option>
+                            <option value="employment">Employment</option>
+                        </select>
+                    </div>
+                    <div>
                         <label for="firstName">First Name:</label>
                         <input type="text" id="firstName" name="firstName" required>
                     </div>
@@ -240,7 +232,7 @@
         <div class="footer-up container">
 
             <div class="footer-items row justify-content-between">
-                <div class="col-10 col-md-5 col-lg-4 footer-item" >
+                <div class="col-10 col-md-5 col-lg-4 footer-item">
 
                     <h3>About</h3>
                     <ul>
@@ -262,7 +254,7 @@
                     </ul>
 
                 </div>
-                <div class="col-10 col-md-5 col-lg-4 footer-item" >
+                <div class="col-10 col-md-5 col-lg-4 footer-item">
 
                     <h3>Education</h3>
                     <ul>
@@ -285,7 +277,7 @@
                     </ul>
 
                 </div>
-                <div class="col-10 col-md-5 col-lg-4 footer-item" >
+                <div class="col-10 col-md-5 col-lg-4 footer-item">
 
                     <h3>Quick links</h3>
                     <ul>
@@ -377,9 +369,18 @@
     </div>
     <!-- contact form js -->
     <script type="text/javascript">
+        let contactForm = document.getElementById('contactForm')
+        var customAlert = document.getElementById("customAlert");
+        let closeButton = document.getElementById("closeButton");
+        let alertContent = document.getElementById('alertContent');
+        let category = document.getElementById('q-category').value;
+        let recipientEmail = getRecipientEmail(category);
+        console.log('***** recipientEmail', recipientEmail);
+
         (function () {
             // https://dashboard.emailjs.com/admin/account
-            emailjs.init('xxDw9z6jLyR9nWP_4');
+            console.log('publicKey', recipientEmail.publicKey);
+            emailjs.init(recipientEmail.publicKey);
         })();
         let templateParams = {
             to_name: 'James',
@@ -389,17 +390,16 @@
             phone: '',
             mail: ''
         };
-        let contactForm = document.getElementById('contactForm')
-        var customAlert = document.getElementById("customAlert");
-        let closeButton = document.getElementById("closeButton");
-        let alertContent = document.getElementById('alertContent')
+
         contactForm.addEventListener('submit', sendContact)
         function sendContact(e) {
             e.preventDefault()
+
             templateParams = {
-                to_name: 'Ms. Haya',
+                to_name: category,
                 firstname: e.target.firstName.value,
                 lastname: e.target.lastName.value,
+                from_name: `${e.target.firstName.value} ${e.target.lastName.value}`,
                 message: e.target.message.value,
                 phone: e.target.phoneNumber.value,
                 mail: e.target.email.value
@@ -407,11 +407,12 @@
             function showCustomAlert(message, type) {
                 var alertClass = type === "success" ? "custom-alert-success" : "custom-alert-error";
                 alertContent.innerHTML = `${message}`;
-
-
                 customAlert.classList.add(alertClass, "show");
             }
-            emailjs.send('service_7xuh934', 'template_rylwlvj', templateParams)
+            console.log('serviceID', recipientEmail.serviceID);
+            console.log('templateID', recipientEmail.templateID);
+
+            emailjs.send(recipientEmail.serviceID, recipientEmail.templateID, templateParams)
                 .then(function (response) {
                     console.log('SUCCESS!', response.status, response.text);
                     showCustomAlert('Your email send Successfully', 'success')
@@ -423,18 +424,29 @@
             e.target.message.value = ''
             e.target.phoneNumber.value = ''
             e.target.email.value = ''
-
-
         }
         closeButton.addEventListener("click", function () {
             customAlert.classList.remove("show");
         });
 
-    </script>   
+        function getRecipientEmail(category) {
+            let query_categories = {
+                'admission': {
+                    email: 'admissions.asac@ltuc.com',
+                    serviceID: 'service_39y7nsc',
+                    templateID: 'template_7kv3m3t',
+                    publicKey: 'fjjm4jfjrRHgjJeYs'
+                },
+                'employment': {
+                    email: 'employment.asac@ltuc.com',
+                    serviceID: '',
+                    templateID: '',
+                    publicKey: ''
+                },
+            };
+            return query_categories[category];
+        }
+    </script>
 </body>
-
-
-
-
 
 </html>
