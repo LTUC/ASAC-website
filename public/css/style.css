@@ -42,13 +42,14 @@ ul {
   list-style: none;
 }
 
-.hidden {
-  display: none;
-}
-
-label {
-  margin-bottom: 10px;
-  display: block;
+#btn-login, #btn-logout{
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 7px;
+  font-size: 0.85em !important;
+  border-radius: 4px;
+  transition: 300ms ease;
 }
 
 body {
@@ -248,10 +249,19 @@ header span a {
 
   font-size: 0.85em !important;
 }
+header.active #btn-login:hover, header.active #btn-logout:hover{
+  background-color: #962F8A;
+  color: white !important;
+  border: 1px solid #962F8A;
 
-header.active .nav-link {
+}
+header.active .nav-link, header.active #btn-login, header.active #btn-logout {
   color: black !important;
 }
+header.active #btn-login, header.active #btn-logout{
+  border: 1px solid black;
+}
+
 
 header svg path {
   fill: white;
@@ -264,6 +274,9 @@ header.active svg path {
 
 header svg path:hover {
   fill: #a3238e;
+}
+header.active .nav-link:hover, .nav-link:hover{
+  color: #962F8A !important;
 }
 
 header {
@@ -357,12 +370,13 @@ header.active .logo {
   width: 35%;
 }
 .banner-btns a{
+  border-radius: 4px;
   color: white;
   border: 1px solid white;
   padding: 2%;
   transition: 300ms ease;
 }
-.banner-btns a:hover{
+.banner-btns a:hover, #btn-login:hover, #btn-logout:hover{
   background-color: white;
   color: black;
 }

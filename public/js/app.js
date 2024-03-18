@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 cardsContainer.innerHTML = "";
                 programs.forEach(program => {
                     const cardHtml = `
-                        <div class="card col-10 col-md-5 col-lg-5 mb-3">
+                        <div class="card col-10 col-md-4 col-lg-3 mb-3">
                             <div class="card-body">
                                 <!-- Your card content here -->
                                 <img src="${program.icon}" alt='icon' class="prog-icon mb-2"/>
@@ -393,6 +393,96 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    class Auth0Login {
+        // this class is a enhanced version from Auth0 single page website tutorial
+        constructor() {
+            this.auth0Client = null;
+            this.fetchAuthConfig = () => fetch("../auth_config.json");
+            this.logout_btn = document.getElementById("btn-logout");
+            this.login_btn = document.getElementById("btn-login");
+            this.auth_content = document.getElementById("auth-content")
+        }
+
+        configureClient = async () => {
+            const response = await this.fetchAuthConfig();
+            const config = await response.json();
+
+            this.auth0Client = await auth0.createAuth0Client({
+                domain: config.domain,
+                clientId: config.clientId
+            });
+
+        };
+
+        updateUI = async () => {
+            this.login_btn.addEventListener('click', this.login)
+            this.logout_btn.addEventListener('click', this.logout)
+            const isAuthenticated = await this.auth0Client.isAuthenticated();
+
+            if (isAuthenticated) {
+                this.login_btn.classList.add('hide')
+                if(this.auth_content){
+                    this.auth_content.classList.add("hide");
+                    // here when the job portal is ready you can add another link in the navbar to 
+                    // direct the user to the job portal if the user is authenticated
+                }
+                this.logout_btn.classList.remove('hide')
+
+            } else {
+                this.login_btn.classList.remove('hide')
+                this.logout_btn.classList.add('hide')
+                if(this.auth_content){
+                    this.auth_content.classList.remove("hide");
+                    this.auth_content.addEventListener('click', this.login)
+                }
+                
+            }
+        };
+
+        login = async () => {
+            await this.auth0Client.loginWithRedirect({
+                authorizationParams: {
+                    redirect_uri: window.location.origin
+                }
+            });
+            this.updateUI();
+
+        };
+
+        logout = () => {
+            this.auth0Client.logout({
+                logoutParams: {
+                    returnTo: window.location.origin
+                }
+            });
+        };
+
+        authHandler = () => {
+            window.onload = async () => {
+                await this.configureClient();
+                this.updateUI();
+                const isAuthenticated = await this.auth0Client.isAuthenticated();
+
+                if (isAuthenticated) {
+                    return;
+                }
+
+                // NEW - check for the code and state parameters
+                const query = window.location.search;
+                if (query.includes("code=") && query.includes("state=")) {
+
+                    // Process the login state
+                    await this.auth0Client.handleRedirectCallback();
+
+                    this.updateUI();
+
+                    // Use replaceState to redirect the user away and remove the querystring parameters
+                    window.history.replaceState({}, document.title, "/");
+                }
+            }
+        }
+    }
+
     // CALLING IS HERE vvvvvvv
     // header
     let header_obj = new Header();
@@ -438,9 +528,15 @@ document.addEventListener("DOMContentLoaded", () => {
         // pass
     }
 
+    let auth = new Auth0Login()
+    try{
+        auth.authHandler()
+
+    }catch(err){
+        //
+    }
 
 
 
 
-    
 });
