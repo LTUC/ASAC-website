@@ -30,3 +30,4 @@ the second version have a login/lougout approach using [Auth0](https://auth0.com
 - all the content is a dump data, because no data provided.
 - this project is an open project so you can add your touch if you want.
 - there is no backend or databases connection, it is only a basic and static content.
+
