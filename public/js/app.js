@@ -338,40 +338,50 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         renderPrograms(programs) {
-            const cardsContainer = document.getElementById("programCards");
-            cardsContainer.innerHTML = "";
-            programs.forEach(program => {
-                const cardHtml = `
-                    <div class="card col-10 col-md-5 col-lg-5 mb-3">
-                        <div class="card-body">
-                            <!-- Your card content here -->
-                            <img src="${program.icon}" alt='icon' class="prog-icon mb-2"/>
-                            
-                            <h5 class="card-title mb-4">${program.title}</h5>
-                            <h6 class="card-subtitle mb-2"><i class="fa-solid fa-award me-1 gray-color"></i>${program.degree === "bachelor" ? "Bachelor" : "International Diploma"}</h6>
-                            <p class="card-text"><span class="d-block mb-2"><i
-                                            class="fa-solid fa-clock gray-color"></i> ${program.timing.charAt(0).toUpperCase() + program.timing.slice(1)}</span><span><i
-                                            class="fa-solid fa-location-dot gray-color"></i>
-                                            ${program.location.charAt(0).toUpperCase() + program.location.slice(1)}</span></span>
-                            </p>
-                            <a class="btn btn-primary" href="${program.link}" role="button">Guidance Plan</a>
+            try {
+
+                const cardsContainer = document.getElementById("programCards");
+                cardsContainer.innerHTML = "";
+                programs.forEach(program => {
+                    const cardHtml = `
+                        <div class="card col-10 col-md-5 col-lg-5 mb-3">
+                            <div class="card-body">
+                                <!-- Your card content here -->
+                                <img src="${program.icon}" alt='icon' class="prog-icon mb-2"/>
+                                
+                                <h5 class="card-title mb-4">${program.title}</h5>
+                                <h6 class="card-subtitle mb-2"><i class="fa-solid fa-award me-1 gray-color"></i>${program.degree === "Bachelor" ? "Bachelor" : "International Diploma"}</h6>
+                                <p class="card-text"><span class="d-block mb-2"><i
+                                                class="fa-solid fa-clock gray-color"></i> ${program.timing.charAt(0).toUpperCase() + program.timing.slice(1)}</span><span><i
+                                                class="fa-solid fa-location-dot gray-color"></i>
+                                                ${program.location.charAt(0).toUpperCase() + program.location.slice(1)}</span></span>
+                                </p>
+                                <a class="btn btn-primary" href="${program.link}" role="button">Guidance Plan</a>
+                            </div>
                         </div>
-                    </div>
-                `;
-                cardsContainer.innerHTML += cardHtml;
-            });
+                    `;
+                    cardsContainer.innerHTML += cardHtml;
+                });
+            } catch (err) {
+                //
+            }
         }
 
         triggerchange() {
-            document.getElementById("degreeFilter").addEventListener("change", () => {
-                this.filterPrograms();
-            });
-            document.getElementById("timingFilter").addEventListener("change", () => {
-                this.filterPrograms();
-            });
-            document.getElementById("locationFilter").addEventListener("change", () => {
-                this.filterPrograms();
-            });
+            try {
+                document.getElementById("degreeFilter").addEventListener("change", () => {
+                    this.filterPrograms();
+                });
+                document.getElementById("timingFilter").addEventListener("change", () => {
+                    this.filterPrograms();
+                });
+                document.getElementById("locationFilter").addEventListener("change", () => {
+                    this.filterPrograms();
+                });
+
+            } catch (err) {
+                //
+            }
         }
 
         async activatePrograms() {
@@ -422,9 +432,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // programs
     let programs = new Programs()
-    try{
+    try {
         programs.activatePrograms()
-    } catch(err){
+    } catch (err) {
         // pass
     }
+
+
+
+
+
+    
 });

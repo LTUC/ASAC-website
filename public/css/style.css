@@ -42,6 +42,15 @@ ul {
   list-style: none;
 }
 
+.hidden {
+  display: none;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
 body {
   font-family: "Poppins";
 }
