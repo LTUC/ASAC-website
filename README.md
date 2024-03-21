@@ -4,7 +4,7 @@ this is a simple page for asac department. it has highlight information about as
 
 it is a simple and basic website using vanilla javascript, HTML and CSS.
 
-the content that inside the pages is a dump content till Wednesday 27th of March.
+the content that inside the pages is a dump content till Wednesday 27th of March 2024.
 
 ## project Tree
 
