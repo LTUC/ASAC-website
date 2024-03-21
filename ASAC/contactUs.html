@@ -198,7 +198,8 @@
                 <form id="contactForm">
                     <div>
                         <label for="q-category">Choose a Query category:</label>
-                        <select id="q-category" name="q-category" form="contactForm">
+                        <select id="q-category" name="q-category" form="contactForm" required>
+                            <option value="">Please select</option>
                             <option value="admission">Admission</option>
                             <option value="employment">Employment</option>
                         </select>
@@ -301,9 +302,6 @@
 
             <div class="copyrights">
                 <span>Copyright © 2023 Luminus Education Group</span>
-                <span>All rights reserved</span>
-                <a href="none"><span>Privacy &amp; Policy</span></a>
-
             </div>
 
             <div class="footer-social-media">
@@ -362,84 +360,6 @@
                 d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z" />
         </svg>
     </div>
-    <!-- contact form js -->
-    <script type="text/javascript">
-        let contactForm = document.getElementById('contactForm')
-        var customAlert = document.getElementById("customAlert");
-        let closeButton = document.getElementById("closeButton");
-        let alertContent = document.getElementById('alertContent');
-        let category = document.getElementById('q-category').value;
-        let recipientEmail = getRecipientEmail(category);
-
-        (function () {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init(recipientEmail.publicKey);
-        })();
-        let templateParams = {
-            to_name: 'James',
-            firstname: 'Check this out!',
-            lastname: "",
-            message: '',
-            phone: '',
-            mail: ''
-        };
-
-        contactForm.addEventListener('submit', sendContact)
-        function sendContact(e) {
-            e.preventDefault()
-
-            templateParams = {
-                to_name: category,
-                firstname: e.target.firstName.value,
-                lastname: e.target.lastName.value,
-                from_name: `${e.target.firstName.value} ${e.target.lastName.value}`,
-                message: e.target.message.value,
-                phone: e.target.phoneNumber.value,
-                mail: e.target.email.value
-            }
-            function showCustomAlert(message, type) {
-                var alertClass = type === "success" ? "custom-alert-success" : "custom-alert-error";
-                alertContent.innerHTML = `${message}`;
-                customAlert.classList.add(alertClass, "show");
-            }
-            console.log('serviceID', recipientEmail.serviceID);
-            console.log('templateID', recipientEmail.templateID);
-
-            emailjs.send(recipientEmail.serviceID, recipientEmail.templateID, templateParams)
-                .then(function (response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    showCustomAlert('Your email send Successfully', 'success')
-                }, function (error) {
-                    console.log('FAILED...', error);
-                });
-            e.target.firstName.value = ''
-            e.target.lastName.value = ""
-            e.target.message.value = ''
-            e.target.phoneNumber.value = ''
-            e.target.email.value = ''
-        }
-        closeButton.addEventListener("click", function () {
-            customAlert.classList.remove("show");
-        });
-
-        function getRecipientEmail(category) {
-            let query_categories = {
-                'admission': {
-                    email: 'admissions.asac@ltuc.com',
-                    serviceID: 'service_39y7nsc',
-                    templateID: 'template_7kv3m3t',
-                    publicKey: 'fjjm4jfjrRHgjJeYs'
-                },
-                'employment': {
-                    email: 'employment.asac@ltuc.com',
-                    serviceID: '',
-                    templateID: 'template_0l2zsoc',
-                    publicKey: 'Lw1TDWJ761Q3KfwdH'
-                },
-            };
-            return query_categories[category];
-        }
-    </script>
 </body>
 
 </html>

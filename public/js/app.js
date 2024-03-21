@@ -1,5 +1,3 @@
-// const asac_programs = require("./programs.json");
-// import asac_programs from "./programs.json";
 document.addEventListener("DOMContentLoaded", () => {
     class Header {
         constructor() {
@@ -393,6 +391,88 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    class ContactUs {
+        constructor() {
+            this.contactForm = document.getElementById('contactForm');
+            this.customAlert = document.getElementById("customAlert");
+            this.closeButton = document.getElementById("closeButton");
+            this.alertContent = document.getElementById('alertContent');
+            this.select_el = document.getElementById('q-category');
+            this.category = "";
+            this.recipientEmail = null;
+        }
+
+        initializeEmailjs() {
+            // initialize email js using public key
+            console.log('initialize email js');
+            emailjs.init(this.recipientEmail.publicKey);
+        }
+
+        getRecipientEmailOnChange() {
+            // event listener to listen on change the selected category
+            this.select_el.addEventListener('change', () => {
+                this.sendEmail()
+            });
+        }
+
+        getRecipientEmail(category) {
+            // to get category info from selected category
+            let query_categories = {
+                'admission': {
+                    email: 'admissions.asac@ltuc.com',
+                    serviceID: 'service_39y7nsc',
+                    templateID: 'template_7kv3m3t',
+                    publicKey: 'fjjm4jfjrRHgjJeYs'
+                },
+                'employment': {
+                    email: 'employment.asac@ltuc.com',
+                    serviceID: '',
+                    templateID: 'template_0l2zsoc',
+                    publicKey: 'Lw1TDWJ761Q3KfwdH'
+                },
+            };
+            return query_categories[category];
+        }
+
+        sendContact(e) {
+            // send email body
+            e.preventDefault();
+
+            let templateParams = {
+                to_name: this.category,
+                firstname: e.target.firstName.value,
+                lastname: e.target.lastName.value,
+                from_name: `${e.target.firstName.value} ${e.target.lastName.value}`,
+                message: e.target.message.value,
+                phone: e.target.phoneNumber.value,
+                mail: e.target.email.value
+            };
+
+            emailjs.send(this.recipientEmail.serviceID, this.recipientEmail.templateID, templateParams)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Your email send Successfully');
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    alert(`error when sending email ${error}`);
+                });
+
+            e.target.firstName.value = '';
+            e.target.lastName.value = '';
+            e.target.message.value = '';
+            e.target.phoneNumber.value = '';
+            e.target.email.value = '';
+        }
+
+        sendEmail() {
+            // main functionality for sending email debeds on the category
+            this.category = this.select_el.value;
+            this.recipientEmail = this.getRecipientEmail(this.category);
+            this.initializeEmailjs();
+            this.contactForm.addEventListener('submit', (e) => { this.sendContact(e) });
+        }
+    }
+
     // CALLING IS HERE vvvvvvv
     // header
     let header_obj = new Header();
@@ -426,8 +506,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // accordion
     let main_acc = new Accordion();
-    if (main_acc.acc) {
+    try{
         main_acc.activate_accordion();
+    } catch (err){
+        //
     }
 
     // programs
@@ -438,9 +520,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // pass
     }
 
-
-
-
-
-    
+    // contact
+    let contact = new ContactUs()
+    try {
+        contact.getRecipientEmailOnChange()
+    } catch {
+        // pass
+    }
 });
